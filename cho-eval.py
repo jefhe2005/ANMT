@@ -60,7 +60,7 @@ def check_sentence_pair(line_src, line_tgt, tag):
                 print('copy tag is good, but token inside is wrong')
                 print(src_tokens[open_pos_src + 3] + ' OR ' + src_tokens[open_pos_src + 5])
                 print('to')
-                print(tgt_tokens_tokens[open_pos_tgt + 1])
+                print(tgt_tokens[open_pos_tgt + 1])
                 return 2
         return -1
 
@@ -70,10 +70,10 @@ def main():
     ratio = 0.01
 
     # path for source text (before processing)
-    source_txt_rd = './UNv1.0.testset.encho'
+    source_txt_rd = './UNv1.0.testset.en'
 
     # path for target text(before processing)
-    target_txt_rd = './UNv1.0.testset.zhcho'
+    target_txt_rd = './UNv1.0.testset.zh.hyp_model_step_95000'
 
     # compare the number of lines in source and target, if not same, quit
     total_lines = cal_lines(source_txt_rd)
