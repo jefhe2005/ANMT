@@ -105,7 +105,7 @@ def pos_process_src(read_file, write_file, src_noun_list, src_verb_list, src_adj
                                                                         encoding='utf-8') as target_file:
         for line in source_file:
             if line_number % 3000 == 0:
-                print(atetime.datetime.now(), 'reading and writing, line  ', line_number)
+                print(datetime.datetime.now(), 'reading and writing, line  ', line_number)
             if j_noun < total_process_lines_noun and line_number == line_number_noun:
                 # insert pos tag with token to the specific line
                 flag_noun = 1
