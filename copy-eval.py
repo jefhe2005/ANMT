@@ -59,7 +59,7 @@ def check_sentence_pair(line_src, line_tgt, tag):
                 print('copy tag is good, but token inside is wrong')
                 print(src_tokens[open_pos_src + 1])
                 print('to')
-                print(tgt_tokens_tokens[open_pos_tgt + 1])
+                print(tgt_tokens[open_pos_tgt + 1])
                 return 2
         return -1
 

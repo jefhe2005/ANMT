@@ -17,7 +17,7 @@ def file_to_list(src_file, total_list):
 def check_pos_token(src_line, stoplist):
     src_tokens = src_line.split()
     tagged = nltk.pos_tag(src_tokens)
-    pos_tokens = [[-1, -1, '', ''], [-1, -1, '', ''], [-1, -1, '', '']]
+    pos_tokens = [[-1, False, '', ''], [-1, False, '', ''], [-1, False, '', '']]
 
     for i in range(len(src_tokens)):
         # not process stopwords and non-unique words in the same sentence
@@ -25,18 +25,19 @@ def check_pos_token(src_line, stoplist):
             continue
         if src_tokens.count(src_tokens[i]) != 1:
             continue
+        # if tagged[i][1].startswith('N') == True and pos_tokens[0][0] < 0:
         if tagged[i][1].find('N') == 0 and pos_tokens[0][0] < 0:
-            pos_tokens[0][0] = 1
+            pos_tokens[0][0] = True
             pos_tokens[0][1] = i
             pos_tokens[0][2] = src_tokens[i]
             pos_tokens[0][3] = tagged[i][1]
         if tagged[i][1].find('V') == 0 and pos_tokens[1][0] < 0:
-            pos_tokens[1][0] = 1
+            pos_tokens[1][0] = True
             pos_tokens[1][1] = i
             pos_tokens[1][2] = src_tokens[i]
             pos_tokens[1][3] = tagged[i][1]
         if tagged[i][1].find('J') == 0 and pos_tokens[2][0] < 0:
-            pos_tokens[2][0] = 1
+            pos_tokens[2][0] = True
             pos_tokens[2][1] = i
             pos_tokens[2][2] = src_tokens[i]
             pos_tokens[2][3] = tagged[i][1]
@@ -181,14 +182,14 @@ def main():
     print(total_process_lines)
 
     # initial toke_list(one tokens a sentence maximum)
-    src_noun_list = [[-1, -1, -1, '', '']]  # line number, match, token position, token, pos
-    src_verb_list = [[-1, -1, -1, '', '']]  # line number, match, token position, token, pos
-    src_adj_list = [[-1, -1, -1, '', '']]  # line number, match, token position, token, pos
+    src_noun_list = [[-1, False, -1, '', '']]  # line number, match, token position, token, pos
+    src_verb_list = [[-1, False, -1, '', '']]  # line number, match, token position, token, pos
+    src_adj_list = [[-1, False, -1, '', '']]  # line number, match, token position, token, pos
     # tgt_token_list = [[-1, -1, '']]  #line number, token position, token
     for i in range(total_lines - 1):
-        src_noun_list.append([-1, -1, -1, '', ''])
-        src_verb_list.append([-1, -1, -1, '', ''])
-        src_adj_list.append([-1, -1, -1, '', ''])
+        src_noun_list.append([-1, False, -1, '', ''])
+        src_verb_list.append([-1, False, -1, '', ''])
+        src_adj_list.append([-1, False, -1, '', ''])
         # tgt_token_list.append([-1, -1, ''])
     # print(len(src_token_list))
 
@@ -206,7 +207,7 @@ def main():
     for i in range(total_lines):
         if i % 3000 == 0:
             print(datetime.datetime.now(), 'check pos, line:', i, 'length= ', len(src_total_list[i]))
-        if len(src_total_list[i]) > 2048:
+        if len(src_total_list[i]) > 4096:
             print('skip long sentence > 4096 char; line :', i)
             continue
         # process line by line,
@@ -229,15 +230,18 @@ def main():
         src_adj_list[i][4] = pos_tokens[2][3]  # pos attribute
 
     # delete the no-match record in the token list
-    for i in range(total_lines):
-        if i % 3000 == 0:
+    for i in reversed(range(total_lines)):
+        if i % 20000 == 0:
             print(datetime.datetime.now(), 'delete no-match records, line:', i)
-        if src_noun_list[total_lines - 1 - i][1] < 0:
-            src_noun_list.pop(total_lines - 1 - i)
-        if src_verb_list[total_lines - 1 - i][1] < 0:
-            src_verb_list.pop(total_lines - 1 - i)
-        if src_adj_list[total_lines - 1 - i][1] < 0:
-            src_adj_list.pop(total_lines - 1 - i)
+        if not src_noun_list[i][1]:
+            # src_noun_list.pop(i)
+            del src_noun_list[i]
+        if not src_verb_list[i][1]:
+            # src_verb_list.pop(i)
+            del src_verb_list[i]
+        if not src_adj_list[i][1]:
+            # src_adj_list.pop(i)
+            del src_adj_list[i]
     # shuffle the list and get the first "n" of the token list
     list_length = len(src_noun_list)
     if list_length > total_process_lines:
@@ -255,7 +259,7 @@ def main():
             src_verb_list.pop(list_length - 1 - i)
     list_length = len(src_adj_list)
     if list_length > total_process_lines:
-        print('src list larger than ratio')
+        print('adj list larger than ratio')
         print(list_length)
         random.shuffle(src_adj_list)
         for i in range(list_length - total_process_lines):
