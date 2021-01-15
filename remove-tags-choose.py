@@ -1,6 +1,6 @@
 import sys
 
-# remove tags before bleu
+# this is for zh-en, to delete the unusual choose subtokens and tokens
 # 1st argv: original file, such as test.zh
 # 2nd argv: number of checkpoints from 55k, (4 for 55~70k, 10 for 55~100k)
 
@@ -18,6 +18,7 @@ def main(para):
             sourceTxt = './' + para[1]
             targetTxt = './' + para[1] + '-rm'
         tag_removed = 0
+        cho_removed = 0
         with open(sourceTxt, 'r', encoding='utf-8') as sourceFile, open(targetTxt, 'w', encoding='utf-8') as targetFile:
             print(' open file', sourceTxt)
             for line in sourceFile:
@@ -26,6 +27,14 @@ def main(para):
                     if tokens[j].startswith('<') and tokens[j].endswith('>'):
                         del tokens[j]
                         tag_removed += 1
+                        continue
+                    if tokens[j].count('choose') > 0:
+                        print('before remove', tokens[j])
+                        rm = tokens[j].replace('choose', '')
+                        tokens[j] = rm
+                        print('after remove', tokens[j])
+                        cho_removed += 1
+                        print('dup choose found', cho_removed)
                         # print('one tag removed!')
                 output = ' '.join(tokens)
                 targetFile.write(output)
@@ -35,6 +44,7 @@ def main(para):
         print('remove tags from file : ', sourceTxt)
         print('write to file : ', targetTxt)
         print('total tags removed:', tag_removed)
+        print('total dup choose removed', cho_removed)
     return
 
 

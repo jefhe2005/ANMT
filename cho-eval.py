@@ -67,13 +67,13 @@ def check_sentence_pair(line_src, line_tgt, tag):
 def main():
     # parameters: ratio, filenames
     # percentage of lines for processing
-    ratio = 0.01
+    ratio = 0.5
 
     # path for source text (before processing)
-    source_txt_rd = './UNv1.0.testset.en'
+    source_txt_rd = './test.en'
 
     # path for target text(before processing)
-    target_txt_rd = './UNv1.0.testset.zh.hyp_model_step_95000'
+    target_txt_rd = './test.de.hyp_model_step_95000'
 
     # compare the number of lines in source and target, if not same, quit
     total_lines = cal_lines(source_txt_rd)
