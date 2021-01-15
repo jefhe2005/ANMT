@@ -1,0 +1,300 @@
+# Translating with checkpoint data/wmt/run/model_step_100000.pt
+[2020-12-29 16:34:08,558 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_55000.pt
+[2020-12-29 16:34:13,009 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_60000.pt
+[2020-12-29 16:34:17,432 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_65000.pt
+[2020-12-29 16:34:21,746 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_70000.pt
+[2020-12-29 16:34:26,078 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_75000.pt
+[2020-12-29 16:34:31,003 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_80000.pt
+[2020-12-29 16:34:35,619 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_85000.pt
+[2020-12-29 16:34:40,283 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_90000.pt
+[2020-12-29 16:34:44,962 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_95000.pt
+[2020-12-29 16:34:49,172 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 644, in _translate_batch_with_strategy
+    src, enc_states, memory_bank, src_lengths = self._run_encoder(batch)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 553, in _run_encoder
+    enc_states, memory_bank, src_lengths = self.model.encoder(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/encoders/transformer.py", line 121, in forward
+    emb = self.embeddings(src)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/embeddings.py", line 245, in forward
+    source = module(source)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/modules/util_class.py", line 30, in forward
+    return torch.cat(outputs, 2)
+RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 6; 10.92 GiB total capacity; 282.33 MiB already allocated; 15.38 MiB free; 290.00 MiB reserved in total by PyTorch)

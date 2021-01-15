@@ -1,0 +1,11 @@
+[2020-12-27 17:32:25,785 INFO] Counter vocab from -1 samples.
+[2020-12-27 17:32:25,785 INFO] n_sample=-1: Save full transformed corpus.
+[2020-12-27 17:32:25,786 INFO] commoncrawl's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-27 17:32:26,429 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 17:55:22,277 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 54289 sent
+Subword(SP/Tokenizer): 767926914 -> 977079123 tok
+
+[2020-12-27 17:55:22,312 INFO] Counters src:20630
+[2020-12-27 17:55:22,312 INFO] Counters tgt:27366
+[2020-12-27 17:55:22,333 INFO] Counters after share:32061

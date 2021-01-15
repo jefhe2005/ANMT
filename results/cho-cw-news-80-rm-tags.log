@@ -1,0 +1,30 @@
+ open file ./test.zh.hyp_model_step_55000
+finish--remove tags: ./test.zh.hyp_model_step_55000
+tag removed: 2254
+ open file ./test.zh.hyp_model_step_60000
+finish--remove tags: ./test.zh.hyp_model_step_60000
+tag removed: 2252
+ open file ./test.zh.hyp_model_step_65000
+finish--remove tags: ./test.zh.hyp_model_step_65000
+tag removed: 2248
+ open file ./test.zh.hyp_model_step_70000
+finish--remove tags: ./test.zh.hyp_model_step_70000
+tag removed: 2251
+ open file ./test.zh.hyp_model_step_75000
+finish--remove tags: ./test.zh.hyp_model_step_75000
+tag removed: 2251
+ open file ./test.zh.hyp_model_step_80000
+finish--remove tags: ./test.zh.hyp_model_step_80000
+tag removed: 2249
+ open file ./test.zh.hyp_model_step_85000
+finish--remove tags: ./test.zh.hyp_model_step_85000
+tag removed: 2247
+ open file ./test.zh.hyp_model_step_90000
+finish--remove tags: ./test.zh.hyp_model_step_90000
+tag removed: 2249
+ open file ./test.zh.hyp_model_step_95000
+finish--remove tags: ./test.zh.hyp_model_step_95000
+tag removed: 2249
+ open file ./test.zh.hyp_model_step_100000
+finish--remove tags: ./test.zh.hyp_model_step_100000
+tag removed: 2254

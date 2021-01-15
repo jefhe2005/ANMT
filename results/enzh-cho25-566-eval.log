@@ -1,0 +1,635 @@
+total lines in file = 
+566
+total processing lines = 
+452
+initial result list = 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+copy tag is good, but token inside is wrong
+近日 OR 死
+to
+近期
+copy tag is good, but token inside is wrong
+。 OR 但
+to
+但是
+copy tag is good, but token inside is wrong
+为 OR 早上
+to
+上午
+copy tag is good, but token inside is wrong
+粗 OR 招待所
+to
+粗略
+copy tag is good, but token inside is wrong
+近日 OR 提议
+to
+近期
+copy tag is good, but token inside is wrong
+六 OR 圣彼德
+to
+六方
+copy tag is good, but token inside is wrong
+俄罗斯 OR 北
+to
+北部
+copy tag is good, but token inside is wrong
+比分 OR 后勤部门
+to
+比索
+copy tag is good, but token inside is wrong
+女 OR Adam
+to
+女性
+copy tag is good, but token inside is wrong
+大部分 OR 关注
+to
+大多数
+copy tag is good, but token inside is wrong
+警方 OR 我
+to
+警察
+copy tag is good, but token inside is wrong
+在 OR 法庭
+to
+法院
+copy tag is good, but token inside is wrong
+舞弊 OR 这一
+to
+欺诈
+copy tag is good, but token inside is wrong
+舞弊 OR 脱颖而出
+to
+欺诈
+copy tag is good, but token inside is wrong
+， OR 警方
+to
+警察
+copy tag is good, but token inside is wrong
+法庭 OR ，
+to
+法院
+copy tag is good, but token inside is wrong
+瓦伊 OR 射箭
+to
+炮舰
+copy tag is good, but token inside is wrong
+花花公子 OR 吗
+to
+花样
+copy tag is good, but token inside is wrong
+和 OR 对
+to
+也
+copy tag is good, but token inside is wrong
+吗 OR 像
+to
+喜
+copy tag is good, but token inside is wrong
+白痴 OR 也
+to
+白痴呆
+copy tag is good, but token inside is wrong
+直播 OR 上台
+to
+播出
+copy tag is good, but token inside is wrong
+店 OR 费里
+to
+店里
+copy tag is good, but token inside is wrong
+月 OR 店
+to
+店铺
+copy tag is good, but token inside is wrong
+女人 OR 000
+to
+女性
+copy tag is good, but token inside is wrong
+商品 OR 。
+to
+产品
+copy tag is good, but token inside is wrong
+前面 OR 费里
+to
+前线
+copy tag is good, but token inside is wrong
+项目 OR 前臂
+to
+前辈
+copy tag is good, but token inside is wrong
+非常 OR 警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方 OR 的
+to
+警察
+copy tag is good, but token inside is wrong
+警方 OR 飞吻
+to
+警察
+copy tag is good, but token inside is wrong
+模特 OR 简直
+to
+模板
+copy tag is good, but token inside is wrong
+。 OR 哥哥
+to
+哥
+copy tag is good, but token inside is wrong
+他们 OR 信用
+to
+信贷
+copy tag is good, but token inside is wrong
+说 OR 但
+to
+但是
+copy tag is good, but token inside is wrong
+人 OR 俄
+to
+俄罗斯
+copy tag is good, but token inside is wrong
+。 OR 人
+to
+人民
+copy tag is good, but token inside is wrong
+近日 OR 。
+to
+近期
+copy tag is good, but token inside is wrong
+， OR 玩
+to
+玩耍
+copy tag is good, but token inside is wrong
+的 OR 玩
+to
+玩耍
+copy tag is good, but token inside is wrong
+但 OR 健康
+to
+但是
+copy tag is good, but token inside is wrong
+脂肪 OR 梅
+to
+梅伊
+copy tag is good, but token inside is wrong
+能量 OR 会
+to
+能源
+copy tag is good, but token inside is wrong
+主持人 OR 这样
+to
+东道人
+copy tag is good, but token inside is wrong
+特雷莎 OR 主持人
+to
+东道人
+copy tag is good, but token inside is wrong
+及 OR 忙
+to
+忙碌
+copy tag is good, but token inside is wrong
+射箭 OR 除外
+to
+射程
+copy tag is good, but token inside is wrong
+刺痛 OR 开心
+to
+刺杀
+copy tag is good, but token inside is wrong
+刺痛 OR ：
+to
+刺杀
+copy tag is good, but token inside is wrong
+警方 OR ：
+to
+警察
+copy tag is good, but token inside is wrong
+秩序 OR 还
+to
+命令
+copy tag is good, but token inside is wrong
+加拿大 OR 站台
+to
+平台
+copy tag is good, but token inside is wrong
+喙 OR 迅速
+to
+浩劫
+copy tag is good, but token inside is wrong
+， OR 喙
+to
+裸露
+copy tag is good, but token inside is wrong
+喙 OR ，
+to
+渗漏
+copy tag is good, but token inside is wrong
+喙 OR 厚颜无耻
+to
+厚颜色
+copy tag is good, but token inside is wrong
+喙 OR 四条
+to
+四处
+copy tag is good, but token inside is wrong
+喙 OR 的
+to
+渗漏
+copy tag is good, but token inside is wrong
+喙 OR 了
+to
+渗
+copy tag is good, but token inside is wrong
+满意 OR 星球
+to
+⁇
+copy tag is good, but token inside is wrong
+硫磺 OR 买
+to
+硫
+copy tag is good, but token inside is wrong
+硫磺 OR Primark
+to
+硫
+copy tag is good, but token inside is wrong
+油 OR 商品
+to
+石油
+copy tag is good, but token inside is wrong
+大家 OR ，
+to
+每个
+copy tag is good, but token inside is wrong
+警方 OR 社会
+to
+警察
+copy tag is good, but token inside is wrong
+警方 OR 遭到
+to
+警察
+copy tag is good, but token inside is wrong
+无数次 OR 物流
+to
+后勤
+copy tag is good, but token inside is wrong
+物流 OR 呢
+to
+后勤
+copy tag is good, but token inside is wrong
+但 OR 要
+to
+但是
+copy tag is good, but token inside is wrong
+成堆 OR 王
+to
+王后
+copy tag is good, but token inside is wrong
+人生 OR 说
+to
+生活
+copy tag is good, but token inside is wrong
+患者 OR 。
+to
+病人
+copy tag is good, but token inside is wrong
+激流 OR 也
+to
+激增
+copy tag is good, but token inside is wrong
+彩排 OR 京
+to
+演练
+copy tag is good, but token inside is wrong
+姚 OR 暂行条例
+to
+橙色
+copy tag is good, but token inside is wrong
+被告人 OR 生态
+to
+被告
+copy tag is good, but token inside is wrong
+被告人 OR 42
+to
+被告
+copy tag is good, but token inside is wrong
+去年 OR 被告人
+to
+被告
+copy tag is good, but token inside is wrong
+使领馆 OR 被告人
+to
+被告
+copy tag is good, but token inside is wrong
+俄 OR 山东省
+to
+俄罗斯
+copy tag is good, but token inside is wrong
+分别 OR 俄
+to
+俄罗斯
+copy tag is good, but token inside is wrong
+俄 OR 此次
+to
+俄罗斯
+copy tag is good, but token inside is wrong
+去年 OR 睡
+to
+睡觉
+copy tag is good, but token inside is wrong
+但 OR 报告书
+to
+但是
+copy tag is good, but token inside is wrong
+一些 OR 青岛市
+to
+有些
+copy tag is good, but token inside is wrong
+工业 OR 市民
+to
+公民
+copy tag is good, but token inside is wrong
+积极性 OR 安倍
+to
+也
+copy tag is good, but token inside is wrong
+的 OR 和
+to
+也
+copy tag is good, but token inside is wrong
+海口 OR 70
+to
+海库
+copy tag is good, but token inside is wrong
+我国 OR 海口
+to
+海库
+copy tag is good, but token inside is wrong
+夫妻 OR 恐怖组织
+to
+夫妇
+copy tag is good, but token inside is wrong
+盛宴 OR 月
+to
+苗
+copy tag is good, but token inside is wrong
+防守 OR 年龄
+to
+防务
+copy tag is good, but token inside is wrong
+油 OR 总收入
+to
+油箱
+copy tag is good, but token inside is wrong
+主任 OR 球
+to
+球球球
+copy tag is good, but token inside is wrong
+可惜 OR 需求
+to
+可悲
+copy tag is good, but token inside is wrong
+像 OR 。
+to
+喜欢
+copy tag is good, but token inside is wrong
+首先 OR 排名
+to
+第一
+copy tag is good, but token inside is wrong
+仙人掌 OR 与
+to
+镜头
+copy tag is good, but token inside is wrong
+改造 OR “
+to
+转移
+copy tag is good, but token inside is wrong
+但 OR 开展
+to
+但是
+copy tag is good, but token inside is wrong
+钻石 OR 比分
+to
+比率
+copy tag is good, but token inside is wrong
+珍 OR ”
+to
+珍妮
+copy tag is good, but token inside is wrong
+菜 OR 瑞士
+to
+菜单
+copy tag is good, but token inside is wrong
+成员国 OR 夫妻
+to
+夫妇
+copy tag is good, but token inside is wrong
+尤其 OR 赴
+to
+特别
+copy tag is good, but token inside is wrong
+奶油 OR 介绍
+to
+奶牛
+copy tag is good, but token inside is wrong
+进行 OR 尤其
+to
+特别
+copy tag is good, but token inside is wrong
+热 OR 像
+to
+喜欢
+copy tag is good, but token inside is wrong
+聘用 OR 和
+to
+雇用
+copy tag is good, but token inside is wrong
+1 OR 夫妻
+to
+夫妇
+copy tag is good, but token inside is wrong
+% OR 人
+to
+人民
+copy tag is good, but token inside is wrong
+大家 OR 气动
+to
+每个
+copy tag is good, but token inside is wrong
+核桃 OR 探测器
+to
+通道
+copy tag is good, but token inside is wrong
+要 OR 可惜
+to
+可悲
+copy tag is good, but token inside is wrong
+需求 OR 副
+to
+需要
+copy tag is good, but token inside is wrong
+后 OR 同行
+to
+同伴
+copy tag is good, but token inside is wrong
+近日 OR 年初
+to
+近期
+copy tag is good, but token inside is wrong
+首播 OR ，
+to
+首次
+copy tag is good, but token inside is wrong
+市民 OR 带来
+to
+公民
+copy tag is good, but token inside is wrong
+市民 OR 展开
+to
+公民
+copy tag is good, but token inside is wrong
+市民 OR 默默
+to
+公民
+copy tag is good, but token inside is wrong
+安倍 OR 一定
+to
+安保
+copy tag is good, but token inside is wrong
+加剧 OR 安倍
+to
+安曼
+copy tag is good, but token inside is wrong
+人 OR ”
+to
+人民
+copy tag is good, but token inside is wrong
+将 OR 柏林
+to
+⁇
+copy tag is good, but token inside is wrong
+浜 OR 柏林
+to
+⁇
+copy tag is good, but token inside is wrong
+回答 OR 。
+to
+答案
+copy tag is good, but token inside is wrong
+池 OR 理由
+to
+原因
+copy tag is good, but token inside is wrong
+引用 OR 水球
+to
+引述
+copy tag is good, but token inside is wrong
+警方 OR 程度
+to
+警察
+copy tag is good, but token inside is wrong
+警方 OR 我们
+to
+警察
+copy tag is good, but token inside is wrong
+警方 OR ”
+to
+警察
+copy tag is good, but token inside is wrong
+久 OR 发布
+to
+长
+copy tag is good, but token inside is wrong
+。 OR 感受
+to
+感觉
+copy tag is good, but token inside is wrong
+台北市 OR ，
+to
+台北
+copy tag is good, but token inside is wrong
+代替 OR 常常
+to
+经常
+copy tag is good, but token inside is wrong
+建筑面积 OR 出租
+to
+出租车
+copy tag is good, but token inside is wrong
+核定 OR 个
+to
+批准
+copy tag is good, but token inside is wrong
+新秀 OR 萌萌
+to
+萌芽
+copy tag is good, but token inside is wrong
+折断 OR 助攻
+to
+援助
+copy tag is good, but token inside is wrong
+下方 OR 虐待
+to
+底部
+copy tag is good, but token inside is wrong
+需求量 OR ”
+to
+要求
+copy tag is good, but token inside is wrong
+受害人 OR 探索
+to
+受害者
+copy tag is good, but token inside is wrong
+需求 OR 环保
+to
+需要
+copy tag is good, but token inside is wrong
+含量 OR 法庭
+to
+法院
+copy tag is good, but token inside is wrong
+成为 OR 警方
+to
+警察
+copy tag is good, but token inside is wrong
+时间段 OR 公路
+to
+道路
+copy tag is good, but token inside is wrong
+法庭 OR 班列
+to
+法院
+copy tag is good, but token inside is wrong
+去年同期 OR 公路
+to
+道路
+copy tag is good, but token inside is wrong
+就 OR 警方
+to
+警察
+copy tag is good, but token inside is wrong
+油田 OR 回升
+to
+⁇
+copy tag is good, but token inside is wrong
+的 OR 星球
+to
+⁇
+copy tag is good, but token inside is wrong
+划船 OR 3.7
+to
+漂泊
+real result list = 
+[1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 5, 1, 1, 2, 1, 2, 1, 5, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 1, 5, 2, 2, 2, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 5, 1, 2, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 5, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 2, 1, 2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 5, 1, 1]
+correct = 
+404
+half correct = 
+154
+false_positive = 
+0
+false_negative = 
+8
+ratio_correct = 
+0.9805825242718447
+finish processing!

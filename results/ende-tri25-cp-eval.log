@@ -1,0 +1,491 @@
+total lines in file = 
+1113
+total processing lines = 
+667
+initial result list = 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+klar
+to
+deutlich
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+will
+to
+wird
+copy tag is good, but token inside is wrong
+will
+to
+wird
+copy tag is good, but token inside is wrong
+einschließlich
+to
+inklusive
+copy tag is good, but token inside is wrong
+viele
+to
+vielen
+copy tag is good, but token inside is wrong
+würde
+to
+möchte
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+will
+to
+wird
+copy tag is good, but token inside is wrong
+aber
+to
+jedoch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+einschließlich
+to
+inklusive
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+einschließlich
+to
+inklusive
+copy tag is good, but token inside is wrong
+würde
+to
+möchte
+copy tag is good, but token inside is wrong
+gefährlicher
+to
+gefährliche
+copy tag is good, but token inside is wrong
+benutzt
+to
+verwendet
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+politischer
+to
+politische
+copy tag is good, but token inside is wrong
+muss
+to
+müssen
+copy tag is good, but token inside is wrong
+klar
+to
+deutlich
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+klar
+to
+deutlich
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+bewusst
+to
+bewußt
+copy tag is good, but token inside is wrong
+einen
+to
+ein
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+erster
+to
+ersten
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+sogar
+to
+auch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+sogar
+to
+auch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+die
+copy tag is good, but token inside is wrong
+ebenfalls
+to
+auch
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+erste
+to
+ersten
+copy tag is good, but token inside is wrong
+nahezu
+to
+fast
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+die
+copy tag is good, but token inside is wrong
+einen
+to
+ein
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+beiden
+to
+zwei
+copy tag is good, but token inside is wrong
+komplett
+to
+vollständig
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+aber
+to
+jedoch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+einschließlich
+to
+inklusive
+copy tag is good, but token inside is wrong
+erlauben
+to
+ermöglichen
+copy tag is good, but token inside is wrong
+dem
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+einen
+to
+ein
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+die
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+anscheinend
+to
+scheinbar
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+nahezu
+to
+fast
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+die
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+benutzt
+to
+verwendet
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+will
+to
+werde
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+will
+to
+wird
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+der
+to
+das
+copy tag is good, but token inside is wrong
+häufig
+to
+oft
+copy tag is good, but token inside is wrong
+besseren
+to
+bessere
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+schon
+to
+bereits
+copy tag is good, but token inside is wrong
+einen
+to
+ein
+copy tag is good, but token inside is wrong
+nahezu
+to
+fast
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+aber
+to
+jedoch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+ebenfalls
+to
+auch
+copy tag is good, but token inside is wrong
+die
+to
+das
+copy tag is good, but token inside is wrong
+einen
+to
+ein
+copy tag is good, but token inside is wrong
+die
+to
+das
+real result list = 
+[1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 5, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 5, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 2, 1]
+correct = 
+987
+half correct = 
+118
+false_positive = 
+0
+false_negative = 
+8
+ratio_correct = 
+0.9919597989949749
+finish processing!

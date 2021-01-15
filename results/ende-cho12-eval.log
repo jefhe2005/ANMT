@@ -1,0 +1,487 @@
+total lines in file = 
+1089
+total processing lines = 
+544
+initial result list = 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+copy tag is good, but token inside is wrong
+. OR die
+to
+das
+copy tag is good, but token inside is wrong
+dem OR war
+to
+das
+copy tag is good, but token inside is wrong
+dem OR ''
+to
+das
+copy tag is good, but token inside is wrong
+den OR Samstag
+to
+das
+copy tag is good, but token inside is wrong
+russischen OR amerikanische
+to
+russische
+copy tag is good, but token inside is wrong
+Mindestlohn OR dem
+to
+das
+copy tag is good, but token inside is wrong
+viele OR dem
+to
+vielen
+copy tag is good, but token inside is wrong
+Stockwerke OR die
+to
+das
+copy tag is good, but token inside is wrong
+aber OR streiken
+to
+jedoch
+copy tag is good, but token inside is wrong
+die OR die
+to
+das
+copy tag is good, but token inside is wrong
+der OR dass
+to
+das
+copy tag is good, but token inside is wrong
+die OR hat
+to
+das
+copy tag is good, but token inside is wrong
+laut OR den
+to
+das
+copy tag is good, but token inside is wrong
+Der OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR 2012
+to
+das
+copy tag is good, but token inside is wrong
+die OR er
+to
+das
+copy tag is good, but token inside is wrong
+viele OR aus
+to
+vielen
+copy tag is good, but token inside is wrong
+auf OR ebenfalls
+to
+auch
+copy tag is good, but token inside is wrong
+unglücklich OR forderte
+to
+unglückliche
+copy tag is good, but token inside is wrong
+dem OR die
+to
+das
+copy tag is good, but token inside is wrong
+und OR gefährlicher
+to
+gefährliche
+copy tag is good, but token inside is wrong
+dem OR am
+to
+das
+copy tag is good, but token inside is wrong
+den OR von
+to
+das
+copy tag is good, but token inside is wrong
+dem OR ``
+to
+das
+copy tag is good, but token inside is wrong
+Weststadt OR dem
+to
+das
+copy tag is good, but token inside is wrong
+dem OR Schlag
+to
+das
+copy tag is good, but token inside is wrong
+Weststadt OR den
+to
+das
+copy tag is good, but token inside is wrong
+Wohnungsbaugesellschaften OR den
+to
+die
+copy tag is good, but token inside is wrong
+dem OR ,
+to
+das
+copy tag is good, but token inside is wrong
+den OR war
+to
+das
+copy tag is good, but token inside is wrong
+in OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR die
+to
+das
+copy tag is good, but token inside is wrong
+das OR schon
+to
+bereits
+copy tag is good, but token inside is wrong
+mit OR muss
+to
+müssen
+copy tag is good, but token inside is wrong
+Woche OR dem
+to
+das
+copy tag is good, but token inside is wrong
+laufen OR schon
+to
+bereits
+copy tag is good, but token inside is wrong
+keine OR der
+to
+das
+copy tag is good, but token inside is wrong
+wie OR zweite
+to
+zweiten
+copy tag is good, but token inside is wrong
+? OR der
+to
+die
+copy tag is good, but token inside is wrong
+dem OR dass
+to
+das
+copy tag is good, but token inside is wrong
+Gemeinde OR schon
+to
+bereits
+copy tag is good, but token inside is wrong
+dem OR nur
+to
+das
+copy tag is good, but token inside is wrong
+. OR die
+to
+das
+copy tag is good, but token inside is wrong
+der OR Sie
+to
+die
+copy tag is good, but token inside is wrong
+den OR wie
+to
+das
+copy tag is good, but token inside is wrong
+die OR Das
+to
+das
+copy tag is good, but token inside is wrong
+dem OR ,
+to
+das
+copy tag is good, but token inside is wrong
+, OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR fließen
+to
+das
+copy tag is good, but token inside is wrong
+die OR der
+to
+das
+copy tag is good, but token inside is wrong
+die OR der
+to
+das
+copy tag is good, but token inside is wrong
+die OR Englisch
+to
+das
+copy tag is good, but token inside is wrong
+die OR Ruf
+to
+das
+copy tag is good, but token inside is wrong
+die OR A-Promi
+to
+das
+copy tag is good, but token inside is wrong
+die OR ihre
+to
+das
+copy tag is good, but token inside is wrong
+den OR 14-jährige
+to
+das
+copy tag is good, but token inside is wrong
+ebenfalls OR MacDonald
+to
+auch
+copy tag is good, but token inside is wrong
+schon OR bei
+to
+bereits
+copy tag is good, but token inside is wrong
+und OR den
+to
+das
+copy tag is good, but token inside is wrong
+die OR Primark
+to
+das
+copy tag is good, but token inside is wrong
+die OR Bouverie
+to
+das
+copy tag is good, but token inside is wrong
+erste OR zu
+to
+ersten
+copy tag is good, but token inside is wrong
+dem OR sagte
+to
+das
+copy tag is good, but token inside is wrong
+der OR Krav
+to
+das
+copy tag is good, but token inside is wrong
+Ihnen OR die
+to
+das
+copy tag is good, but token inside is wrong
+der OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR öffentliche
+to
+das
+copy tag is good, but token inside is wrong
+dem OR Humor
+to
+das
+copy tag is good, but token inside is wrong
+ebenfalls OR wurden
+to
+auch
+copy tag is good, but token inside is wrong
+der OR sie
+to
+die
+copy tag is good, but token inside is wrong
+den OR Polizei
+to
+das
+copy tag is good, but token inside is wrong
+aber OR und
+to
+jedoch
+copy tag is good, but token inside is wrong
+die OR die
+to
+das
+copy tag is good, but token inside is wrong
+der OR Dorf
+to
+das
+copy tag is good, but token inside is wrong
+, OR schon
+to
+bereits
+copy tag is good, but token inside is wrong
+schon OR des
+to
+bereits
+copy tag is good, but token inside is wrong
+den OR Es
+to
+das
+copy tag is good, but token inside is wrong
+dem OR gewordene
+to
+das
+copy tag is good, but token inside is wrong
+dem OR ist
+to
+das
+copy tag is good, but token inside is wrong
+Es OR der
+to
+die
+copy tag is good, but token inside is wrong
+dem OR in
+to
+das
+copy tag is good, but token inside is wrong
+Topmodels OR die
+to
+das
+copy tag is good, but token inside is wrong
+der OR rechnet
+to
+das
+copy tag is good, but token inside is wrong
+anscheinend OR ja
+to
+scheinbar
+copy tag is good, but token inside is wrong
+in OR nächstes
+to
+nächste
+copy tag is good, but token inside is wrong
+den OR es
+to
+das
+copy tag is good, but token inside is wrong
+die OR ,
+to
+das
+copy tag is good, but token inside is wrong
+Amt OR nahezu
+to
+fast
+copy tag is good, but token inside is wrong
+der OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR wurde
+to
+das
+copy tag is good, but token inside is wrong
+der OR ``
+to
+das
+copy tag is good, but token inside is wrong
+Da OR der
+to
+das
+copy tag is good, but token inside is wrong
+der OR BSE
+to
+das
+copy tag is good, but token inside is wrong
+die OR Sicherheitspaket
+to
+das
+copy tag is good, but token inside is wrong
+der OR Thomas
+to
+das
+copy tag is good, but token inside is wrong
+Parteien OR der
+to
+die
+copy tag is good, but token inside is wrong
+beiden OR keine
+to
+zwei
+copy tag is good, but token inside is wrong
+der OR er
+to
+das
+copy tag is good, but token inside is wrong
+dem OR Menschen
+to
+das
+copy tag is good, but token inside is wrong
+schon OR .
+to
+bereits
+copy tag is good, but token inside is wrong
+. OR der
+to
+das
+copy tag is good, but token inside is wrong
+spricht OR dem
+to
+das
+copy tag is good, but token inside is wrong
+Jahr OR die
+to
+das
+copy tag is good, but token inside is wrong
+die OR gebe
+to
+das
+copy tag is good, but token inside is wrong
+die OR .
+to
+das
+copy tag is good, but token inside is wrong
+den OR es
+to
+das
+copy tag is good, but token inside is wrong
+den OR Bevor
+to
+bevor
+copy tag is good, but token inside is wrong
+der OR es
+to
+das
+copy tag is good, but token inside is wrong
+den OR .
+to
+das
+copy tag is good, but token inside is wrong
+die OR der
+to
+das
+copy tag is good, but token inside is wrong
+schon OR 41
+to
+bereits
+copy tag is good, but token inside is wrong
+nahezu OR Teenagejungs
+to
+fast
+copy tag is good, but token inside is wrong
+aber OR ,
+to
+jedoch
+copy tag is good, but token inside is wrong
+Weibchen OR die
+to
+das
+copy tag is good, but token inside is wrong
+Abriss OR ebenfalls
+to
+auch
+copy tag is good, but token inside is wrong
+die OR Calais
+to
+das
+copy tag is good, but token inside is wrong
+die OR Erklärung
+to
+das
+real result list = 
+[1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 2, 2, 2, 1, 2, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 5, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 5, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 5, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 5, 1, 1, 5, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 2, 1, 1, 2, 1, 1, 5, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 5, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1, 2, 5, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 5, 1, 5, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 5, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1]
+correct = 
+941
+half correct = 
+117
+false_positive = 
+0
+false_negative = 
+31
+ratio_correct = 
+0.9681069958847737
+finish processing!

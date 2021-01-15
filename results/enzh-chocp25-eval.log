@@ -1,0 +1,243 @@
+total lines in file = 
+559
+total processing lines = 
+559
+initial result list = 
+[-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
+copy tag is good, but token inside is wrong
+比分
+to
+比值
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+女
+to
+女性
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+花花公子
+to
+花花子
+copy tag is good, but token inside is wrong
+店
+to
+店内
+copy tag is good, but token inside is wrong
+店
+to
+店铺
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+玩
+to
+玩具
+copy tag is good, but token inside is wrong
+忙
+to
+忙碌
+copy tag is good, but token inside is wrong
+一代
+to
+一代人
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+秩序
+to
+制度
+copy tag is good, but token inside is wrong
+喙
+to
+IPBES
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+喙
+to
+thcommittee
+copy tag is good, but token inside is wrong
+大家
+to
+旅客
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+彩排
+to
+彩礼
+copy tag is good, but token inside is wrong
+姚
+to
+脸
+copy tag is good, but token inside is wrong
+被告人
+to
+被告
+copy tag is good, but token inside is wrong
+被告人
+to
+被告
+copy tag is good, but token inside is wrong
+睡
+to
+睡眠
+copy tag is good, but token inside is wrong
+一些
+to
+有些
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+作用
+to
+角色
+copy tag is good, but token inside is wrong
+仍然
+to
+依然
+copy tag is good, but token inside is wrong
+球
+to
+球球
+copy tag is good, but token inside is wrong
+比分
+to
+比率
+copy tag is good, but token inside is wrong
+丹
+to
+丹国
+copy tag is good, but token inside is wrong
+仙人掌
+to
+仙人
+copy tag is good, but token inside is wrong
+比分
+to
+比率
+copy tag is good, but token inside is wrong
+珍
+to
+珍贵
+copy tag is good, but token inside is wrong
+奶油
+to
+奶牛油
+copy tag is good, but token inside is wrong
+聘用
+to
+雇用
+copy tag is good, but token inside is wrong
+大家
+to
+人们
+copy tag is good, but token inside is wrong
+需求
+to
+需要
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+copy tag is good, but token inside is wrong
+久
+to
+久拖
+copy tag is good, but token inside is wrong
+台北市
+to
+台北
+copy tag is good, but token inside is wrong
+新秀
+to
+新版
+copy tag is good, but token inside is wrong
+需求量
+to
+需要量
+copy tag is good, but token inside is wrong
+受害人
+to
+受害者
+copy tag is good, but token inside is wrong
+警方
+to
+警察
+real result list = 
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 5, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 2, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 5, 2, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 1, 1]
+correct = 
+500
+half correct = 
+56
+false_positive = 
+0
+false_negative = 
+3
+ratio_correct = 
+0.9940357852882704
+finish processing!

@@ -1,0 +1,176 @@
+argv number  6
+2020-12-24 17:46:30.658060 ---start main...
+2020-12-24 17:46:30.658816 cal line numbers  0
+2020-12-24 17:46:30.968249 cal line numbers  1000000
+2020-12-24 17:46:31.294563 cal line numbers  2000000
+2020-12-24 17:46:31.584228 cal line numbers  3000000
+2020-12-24 17:46:31.856233 cal line numbers  4000000
+2020-12-24 17:46:31.930726 cal line numbers  0
+2020-12-24 17:46:32.324880 cal line numbers  1000000
+2020-12-24 17:46:32.740391 cal line numbers  2000000
+2020-12-24 17:46:33.146731 cal line numbers  3000000
+2020-12-24 17:46:33.542414 cal line numbers  4000000
+total lines in file = 
+4319332
+total processing lines = 
+43193
+appending src ad tgt: 0
+appending randoms: 0
+2020-12-24 17:46:41.653975 choose tokens, line: 0 length=  143
+skip long sentence > 4096 char; line : 105393
+skip long sentence > 4096 char; line : 247822
+skip long sentence > 4096 char; line : 472727
+skip long sentence > 4096 char; line : 472733
+skip long sentence > 4096 char; line : 472739
+skip long sentence > 4096 char; line : 482958
+skip long sentence > 4096 char; line : 632908
+skip long sentence > 4096 char; line : 635851
+skip long sentence > 4096 char; line : 672529
+skip long sentence > 4096 char; line : 672536
+skip long sentence > 4096 char; line : 672546
+skip long sentence > 4096 char; line : 871256
+skip long sentence > 4096 char; line : 871258
+skip long sentence > 4096 char; line : 871259
+skip long sentence > 4096 char; line : 922583
+skip long sentence > 4096 char; line : 922588
+skip long sentence > 4096 char; line : 922590
+skip long sentence > 4096 char; line : 937851
+skip long sentence > 4096 char; line : 937852
+skip long sentence > 4096 char; line : 971754
+skip long sentence > 4096 char; line : 971756
+2020-12-24 17:47:25.545559 choose tokens, line: 1000000 length=  105
+skip long sentence > 4096 char; line : 1015253
+skip long sentence > 4096 char; line : 1087650
+skip long sentence > 4096 char; line : 1156989
+skip long sentence > 4096 char; line : 1156990
+skip long sentence > 4096 char; line : 1267886
+skip long sentence > 4096 char; line : 1292275
+skip long sentence > 4096 char; line : 1292277
+skip long sentence > 4096 char; line : 1292287
+skip long sentence > 4096 char; line : 1338006
+skip long sentence > 4096 char; line : 1401993
+skip long sentence > 4096 char; line : 1401998
+skip long sentence > 4096 char; line : 1583614
+skip long sentence > 4096 char; line : 1964146
+skip long sentence > 4096 char; line : 1993940
+2020-12-24 17:48:06.257918 choose tokens, line: 2000000 length=  217
+skip long sentence > 4096 char; line : 2001620
+skip long sentence > 4096 char; line : 2027116
+skip long sentence > 4096 char; line : 2027118
+skip long sentence > 4096 char; line : 2027119
+skip long sentence > 4096 char; line : 2052018
+skip long sentence > 4096 char; line : 2058243
+skip long sentence > 4096 char; line : 2059917
+skip long sentence > 4096 char; line : 2059923
+skip long sentence > 4096 char; line : 2059924
+skip long sentence > 4096 char; line : 2109030
+skip long sentence > 4096 char; line : 2109031
+skip long sentence > 4096 char; line : 2109032
+skip long sentence > 4096 char; line : 2109033
+skip long sentence > 4096 char; line : 2109034
+skip long sentence > 4096 char; line : 2143280
+skip long sentence > 4096 char; line : 2151095
+skip long sentence > 4096 char; line : 2151098
+skip long sentence > 4096 char; line : 2151100
+skip long sentence > 4096 char; line : 2207832
+skip long sentence > 4096 char; line : 2310323
+skip long sentence > 4096 char; line : 2319593
+skip long sentence > 4096 char; line : 2319596
+skip long sentence > 4096 char; line : 2319597
+skip long sentence > 4096 char; line : 2324516
+2020-12-24 17:48:47.437926 choose tokens, line: 3000000 length=  153
+2020-12-24 17:49:26.999712 choose tokens, line: 4000000 length=  42
+2020-12-24 17:49:39.845319 sorting src list and cut the useless
+cut pos =  1426172
+remain src list 1426172
+2020-12-24 17:49:40.983484 sorting tgt list and cut the useless
+cut pos =  1426172
+remain tgt list 1426172
+list larger than ratio
+1426172
+trim the list, now:  0
+trim the list, now:  1000000
+cut pos =  43193
+length of src: 43193  length of tgt:  43193
+2020-12-24 17:49:46.805954 sorting src list
+2020-12-24 17:49:46.831595 sorting tgt list
+lott size =  4319332
+random line no:  0  =  1258490
+random tokens =  0
+random tokens =  1000000
+random tokens =  2000000
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+random tokens =  3000000
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+random tokens =  4000000
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+token number =  0  length =  0
+empty lines in random
+line number with random target tokens(www)
+before inserting : line number with real random tokens www
+length: src=  43193  tgt =  43193  random =  43193
+processing 
+finish processing!

@@ -1,0 +1,148 @@
+argv number  6
+2020-12-27 15:26:37.137504 ---start main...
+2020-12-27 15:26:37.138285 cal line numbers  0
+2020-12-27 15:26:37.447779 cal line numbers  1000000
+2020-12-27 15:26:37.711376 cal line numbers  2000000
+2020-12-27 15:26:37.919559 cal line numbers  3000000
+2020-12-27 15:26:38.131721 cal line numbers  4000000
+2020-12-27 15:26:38.340907 cal line numbers  5000000
+2020-12-27 15:26:38.554223 cal line numbers  6000000
+2020-12-27 15:26:38.764813 cal line numbers  7000000
+2020-12-27 15:26:38.977535 cal line numbers  8000000
+2020-12-27 15:26:39.191173 cal line numbers  9000000
+2020-12-27 15:26:39.403328 cal line numbers  10000000
+2020-12-27 15:26:39.616573 cal line numbers  11000000
+2020-12-27 15:26:39.829823 cal line numbers  12000000
+2020-12-27 15:26:40.043482 cal line numbers  13000000
+2020-12-27 15:26:40.258154 cal line numbers  14000000
+2020-12-27 15:26:40.472339 cal line numbers  15000000
+2020-12-27 15:26:40.667191 cal line numbers  0
+2020-12-27 15:26:41.257331 cal line numbers  1000000
+2020-12-27 15:26:41.845316 cal line numbers  2000000
+2020-12-27 15:26:42.428827 cal line numbers  3000000
+2020-12-27 15:26:43.019335 cal line numbers  4000000
+2020-12-27 15:26:43.608030 cal line numbers  5000000
+2020-12-27 15:26:44.203681 cal line numbers  6000000
+2020-12-27 15:26:44.789527 cal line numbers  7000000
+2020-12-27 15:26:45.384009 cal line numbers  8000000
+2020-12-27 15:26:45.978765 cal line numbers  9000000
+2020-12-27 15:26:46.575643 cal line numbers  10000000
+2020-12-27 15:26:47.170919 cal line numbers  11000000
+2020-12-27 15:26:47.770235 cal line numbers  12000000
+2020-12-27 15:26:48.367192 cal line numbers  13000000
+2020-12-27 15:26:48.974358 cal line numbers  14000000
+2020-12-27 15:26:49.583809 cal line numbers  15000000
+total lines in file = 
+15886041
+total processing lines = 
+3971510
+appending src ad tgt: 0
+appending src ad tgt: 5000000
+appending src ad tgt: 10000000
+appending src ad tgt: 15000000
+appending randoms: 0
+appending randoms: 1000000
+appending randoms: 2000000
+appending randoms: 3000000
+2020-12-27 15:27:22.334997 choose tokens, line: 0 length=  22
+skip long sentence > 4096 char; line : 56274
+skip long sentence > 4096 char; line : 337569
+skip long sentence > 4096 char; line : 707871
+skip long sentence > 4096 char; line : 729006
+skip long sentence > 4096 char; line : 926874
+2020-12-27 15:27:56.118287 choose tokens, line: 1000000 length=  252
+skip long sentence > 4096 char; line : 1347491
+2020-12-27 15:28:29.456513 choose tokens, line: 2000000 length=  36
+skip long sentence > 4096 char; line : 2079937
+skip long sentence > 4096 char; line : 2143269
+skip long sentence > 4096 char; line : 2143867
+skip long sentence > 4096 char; line : 2145163
+skip long sentence > 4096 char; line : 2182866
+2020-12-27 15:29:02.252171 choose tokens, line: 3000000 length=  168
+skip long sentence > 4096 char; line : 3112765
+skip long sentence > 4096 char; line : 3620376
+skip long sentence > 4096 char; line : 3620513
+skip long sentence > 4096 char; line : 3620888
+skip long sentence > 4096 char; line : 3621026
+skip long sentence > 4096 char; line : 3945870
+2020-12-27 15:29:35.153747 choose tokens, line: 4000000 length=  389
+skip long sentence > 4096 char; line : 4342080
+2020-12-27 15:30:08.374120 choose tokens, line: 5000000 length=  92
+skip long sentence > 4096 char; line : 5812628
+skip long sentence > 4096 char; line : 5883331
+2020-12-27 15:30:41.417500 choose tokens, line: 6000000 length=  439
+skip long sentence > 4096 char; line : 6791713
+skip long sentence > 4096 char; line : 6955931
+2020-12-27 15:31:13.957194 choose tokens, line: 7000000 length=  10
+skip long sentence > 4096 char; line : 7259466
+skip long sentence > 4096 char; line : 7259685
+2020-12-27 15:31:46.524193 choose tokens, line: 8000000 length=  143
+skip long sentence > 4096 char; line : 8638009
+skip long sentence > 4096 char; line : 8706469
+2020-12-27 15:32:19.202717 choose tokens, line: 9000000 length=  297
+2020-12-27 15:32:51.926377 choose tokens, line: 10000000 length=  144
+skip long sentence > 4096 char; line : 10432030
+skip long sentence > 4096 char; line : 10434391
+skip long sentence > 4096 char; line : 10893738
+skip long sentence > 4096 char; line : 10935254
+skip long sentence > 4096 char; line : 10937828
+2020-12-27 15:33:24.431917 choose tokens, line: 11000000 length=  145
+skip long sentence > 4096 char; line : 11627848
+skip long sentence > 4096 char; line : 11815483
+skip long sentence > 4096 char; line : 11816290
+skip long sentence > 4096 char; line : 11992750
+skip long sentence > 4096 char; line : 11999350
+2020-12-27 15:33:57.244080 choose tokens, line: 12000000 length=  372
+skip long sentence > 4096 char; line : 12771394
+2020-12-27 15:34:29.600163 choose tokens, line: 13000000 length=  124
+skip long sentence > 4096 char; line : 13852679
+2020-12-27 15:35:02.585393 choose tokens, line: 14000000 length=  12
+skip long sentence > 4096 char; line : 14207374
+skip long sentence > 4096 char; line : 14950388
+2020-12-27 15:35:35.654879 choose tokens, line: 15000000 length=  79
+skip long sentence > 4096 char; line : 15017875
+skip long sentence > 4096 char; line : 15021587
+skip long sentence > 4096 char; line : 15697810
+2020-12-27 15:36:05.197130 sorting src list and cut the useless
+cut pos =  8581320
+remain src list 8581320
+2020-12-27 15:36:10.447994 sorting tgt list and cut the useless
+cut pos =  8581320
+remain tgt list 8581320
+list larger than ratio
+8581320
+trim the list, now:  0
+trim the list, now:  1000000
+trim the list, now:  2000000
+trim the list, now:  3000000
+trim the list, now:  4000000
+cut pos =  3971510
+length of src: 3971510  length of tgt:  3971510
+2020-12-27 15:36:40.152395 sorting src list
+2020-12-27 15:36:43.544820 sorting tgt list
+lott size =  15886041
+random line no:  0  =  15379957
+random line no:  1000000  =  14501107
+random line no:  2000000  =  570048
+random line no:  3000000  =  8844621
+random tokens =  0
+random tokens =  1000000
+random tokens =  2000000
+random tokens =  3000000
+random tokens =  4000000
+random tokens =  5000000
+random tokens =  6000000
+random tokens =  7000000
+random tokens =  8000000
+random tokens =  9000000
+random tokens =  10000000
+random tokens =  11000000
+random tokens =  12000000
+random tokens =  13000000
+random tokens =  14000000
+random tokens =  15000000
+line number with random target tokens(www)
+before inserting : line number with real random tokens www
+length: src=  3971510  tgt =  3971510  random =  3971510
+processing 
+finish processing!

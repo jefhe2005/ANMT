@@ -1,0 +1,18 @@
+data/wmt/run/model_step_30000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 17.7 44.1/20.3/12.4/8.8 (BP = 1.000 ratio = 1.010 hyp_len = 51215 ref_len = 50726)
+data/wmt/run/model_step_35000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.0 44.6/20.7/12.8/9.0 (BP = 1.000 ratio = 1.007 hyp_len = 51057 ref_len = 50726)
+data/wmt/run/model_step_40000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.3 45.0/21.0/13.0/9.2 (BP = 1.000 ratio = 1.004 hyp_len = 50920 ref_len = 50726)
+data/wmt/run/model_step_45000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.6 45.7/21.5/13.2/9.3 (BP = 0.999 ratio = 0.999 hyp_len = 50677 ref_len = 50726)
+data/wmt/run/model_step_50000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.7 45.7/21.6/13.3/9.4 (BP = 0.999 ratio = 0.999 hyp_len = 50677 ref_len = 50726)
+data/wmt/run/model_step_55000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.3 45.0/21.1/12.9/9.1 (BP = 1.000 ratio = 1.009 hyp_len = 51167 ref_len = 50726)
+data/wmt/run/model_step_60000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.5 45.4/21.4/13.1/9.2 (BP = 1.000 ratio = 1.006 hyp_len = 51026 ref_len = 50726)
+data/wmt/run/model_step_65000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 18.8 45.7/21.7/13.4/9.4 (BP = 1.000 ratio = 1.006 hyp_len = 51007 ref_len = 50726)
+data/wmt/run/model_step_70000.pt
+BLEU+case.mixed+numrefs.1+smooth.exp+tok.13a+version.1.4.14 = 19.0 46.5/22.1/13.6/9.5 (BP = 0.996 ratio = 0.996 hyp_len = 50547 ref_len = 50726)

@@ -1,0 +1,138 @@
+./prepare_ende.sh: line 72: :
+echo "Downloading and extracting Commoncrawl data (919 MB) for training..."
+wget --trust-server-names http://www.statmt.org/wmt13/training-parallel-commoncrawl.tgz
+tar zxvf training-parallel-commoncrawl.tgz
+ls | grep -v commoncrawl.de-en.[de,en] | xargs rm
+
+echo "Downloading and extracting Europarl data (658 MB) for training..."
+wget --trust-server-names http://www.statmt.org/wmt13/training-parallel-europarl-v7.tgz
+tar zxvf training-parallel-europarl-v7.tgz
+cd training && ls | grep -v europarl-v7.de-en.[de,en] | xargs rm
+cd .. && mv training/europarl* . && rm -r training training-parallel-europarl-v7.tgz
+
+echo "Downloading and extracting News Commentary data (76 MB) for training..."
+wget --trust-server-names http://data.statmt.org/wmt16/translation-task/training-parallel-nc-v11.tgz
+tar zxvf training-parallel-nc-v11.tgz
+cd training-parallel-nc-v11 && ls | grep -v news-commentary-v11.de-en.[de,en] | xargs rm
+cd .. && mv training-parallel-nc-v11/* . && rm -r training-parallel-nc-v11 training-parallel-nc-v11.tgz
+
+# Validation and test data are put into the $DATA_PATH/test folder
+echo "Downloading and extracting newstest2014 data (4 MB) for validation..."
+wget --trust-server-names http://www.statmt.org/wmt14/test-filtered.tgz
+echo "Downloading and extracting newstest2017 data (5 MB) for testing..."
+wget --trust-server-names http://data.statmt.org/wmt17/translation-task/test.tgz
+tar zxvf test-filtered.tgz && tar zxvf test.tgz
+cd test && ls | grep -v .*deen|.*ende | xargs rm
+cd .. && rm test-filtered.tgz test.tgz && cd ..
+: No such file or directory
+File ‘data/wmt/test/input-from-sgm.perl’ already there; not retrieving.
+./prepare_ende.sh: Training sentencepiece model
+sentencepiece_trainer.cc(79) LOG(INFO) Starts training with : 
+trainer_spec {
+  input: data/wmt/train.txt
+  input_format: 
+  model_prefix: data/wmt/wmtende
+  model_type: UNIGRAM
+  vocab_size: 32000
+  self_test_sample_size: 0
+  character_coverage: 1
+  input_sentence_size: 0
+  shuffle_input_sentence: 1
+  seed_sentencepiece_size: 1000000
+  shrinking_factor: 0.75
+  max_sentence_length: 4192
+  num_threads: 16
+  num_sub_iterations: 2
+  max_sentencepiece_length: 16
+  split_by_unicode_script: 1
+  split_by_number: 1
+  split_by_whitespace: 1
+  split_digits: 0
+  treat_whitespace_as_suffix: 0
+  required_chars: 
+  byte_fallback: 0
+  vocabulary_output_piece_score: 1
+  train_extremely_large_corpus: 0
+  hard_vocab_limit: 1
+  use_all_vocab: 0
+  unk_id: 0
+  bos_id: 1
+  eos_id: 2
+  pad_id: -1
+  unk_piece: <unk>
+  bos_piece: <s>
+  eos_piece: </s>
+  pad_piece: <pad>
+  unk_surface:  ⁇ 
+}
+normalizer_spec {
+  name: nmt_nfkc
+  add_dummy_prefix: 1
+  remove_extra_whitespaces: 1
+  escape_whitespaces: 1
+  normalization_rule_tsv: 
+}
+denormalizer_spec {}
+trainer_interface.cc(320) LOG(INFO) SentenceIterator is not specified. Using MultiFileSentenceIterator.
+trainer_interface.cc(175) LOG(INFO) Loading corpus: data/wmt/train.txt
+trainer_interface.cc(347) LOG(WARNING) Found too long line (25081 > 4192).
+trainer_interface.cc(349) LOG(WARNING) Too long lines are skipped in the training.
+trainer_interface.cc(350) LOG(WARNING) The maximum length can be changed with --max_sentence_length=<size> flag.
+trainer_interface.cc(137) LOG(INFO) Loaded 1000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 2000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 3000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 4000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 5000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 6000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 7000000 lines
+trainer_interface.cc(137) LOG(INFO) Loaded 8000000 lines
+trainer_interface.cc(112) LOG(WARNING) Too many sentences are loaded! (8627277), which may slow down training.
+trainer_interface.cc(114) LOG(WARNING) Consider using --input_sentence_size=<size> and --shuffle_input_sentence=true.
+trainer_interface.cc(117) LOG(WARNING) They allow to randomly sample <size> sentences from the entire corpus.
+trainer_interface.cc(376) LOG(INFO) Loaded all 8627277 sentences
+trainer_interface.cc(382) LOG(INFO) Skipped 98 too long sentences.
+trainer_interface.cc(391) LOG(INFO) Adding meta_piece: <unk>
+trainer_interface.cc(391) LOG(INFO) Adding meta_piece: <s>
+trainer_interface.cc(391) LOG(INFO) Adding meta_piece: </s>
+trainer_interface.cc(396) LOG(INFO) Normalizing sentences...
+trainer_interface.cc(457) LOG(INFO) all chars count=1298840291
+trainer_interface.cc(468) LOG(INFO) Done: 100% characters are covered.
+trainer_interface.cc(478) LOG(INFO) Alphabet size=3451
+trainer_interface.cc(479) LOG(INFO) Final character coverage=1
+trainer_interface.cc(511) LOG(INFO) Done! preprocessed 8627277 sentences.
+tcmalloc: large alloc 1073741824 bytes == 0x559a38cc8000 @ 
+tcmalloc: large alloc 2147483648 bytes == 0x559a78cc8000 @ 
+tcmalloc: large alloc 4294967296 bytes == 0x559af9552000 @ 
+tcmalloc: large alloc 8589934592 bytes == 0x559bf9552000 @ 
+tcmalloc: large alloc 5195366400 bytes == 0x559df9d52000 @ 
+tcmalloc: large alloc 5195366400 bytes == 0x559f30002000 @ 
+tcmalloc: large alloc 5195366400 bytes == 0x55a065ab2000 @ 
+tcmalloc: large alloc 5195366400 bytes == 0x55a19bd62000 @ 
+unigram_model_trainer.cc(138) LOG(INFO) Making suffix array...
+unigram_model_trainer.cc(142) LOG(INFO) Extracting frequent sub strings...
+unigram_model_trainer.cc(193) LOG(INFO) Initialized 1000000 seed sentencepieces
+trainer_interface.cc(517) LOG(INFO) Tokenizing input sentences with whitespace: 8627277
+trainer_interface.cc(527) LOG(INFO) Done! 4149604
+unigram_model_trainer.cc(488) LOG(INFO) Using 4149604 sentences for EM training
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=603617 obj=12.8382 num_tokens=11859210 num_tokens/piece=19.6469
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=455999 obj=9.96648 num_tokens=11872550 num_tokens/piece=26.0364
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=341872 obj=9.92992 num_tokens=11934391 num_tokens/piece=34.9089
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=341240 obj=9.92589 num_tokens=11945333 num_tokens/piece=35.0057
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=255920 obj=9.93274 num_tokens=12131072 num_tokens/piece=47.4018
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=255893 obj=9.93131 num_tokens=12135905 num_tokens/piece=47.4257
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=191917 obj=9.95458 num_tokens=12518626 num_tokens/piece=65.2294
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=191909 obj=9.94838 num_tokens=12518740 num_tokens/piece=65.2327
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=143928 obj=10.0039 num_tokens=13058283 num_tokens/piece=90.7279
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=143925 obj=9.9906 num_tokens=13058995 num_tokens/piece=90.7347
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=107943 obj=10.0801 num_tokens=13649617 num_tokens/piece=126.452
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=107943 obj=10.0612 num_tokens=13650741 num_tokens/piece=126.462
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=80957 obj=10.1794 num_tokens=14283840 num_tokens/piece=176.437
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=80955 obj=10.1564 num_tokens=14284643 num_tokens/piece=176.452
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=60716 obj=10.3055 num_tokens=14982556 num_tokens/piece=246.765
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=60716 obj=10.2782 num_tokens=14983893 num_tokens/piece=246.787
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=45537 obj=10.4642 num_tokens=15768417 num_tokens/piece=346.277
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=45537 obj=10.4297 num_tokens=15773355 num_tokens/piece=346.385
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=0 size=35200 obj=10.6327 num_tokens=16521394 num_tokens/piece=469.358
+unigram_model_trainer.cc(504) LOG(INFO) EM sub_iter=1 size=35200 obj=10.5948 num_tokens=16526008 num_tokens/piece=469.489
+trainer_interface.cc(605) LOG(INFO) Saving model: data/wmt/wmtende.model
+trainer_interface.cc(616) LOG(INFO) Saving vocabs: data/wmt/wmtende.vocab

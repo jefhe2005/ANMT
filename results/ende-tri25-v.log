@@ -1,0 +1,11 @@
+[2020-12-25 18:20:58,040 INFO] Counter vocab from -1 samples.
+[2020-12-25 18:20:58,040 INFO] n_sample=-1: Save full transformed corpus.
+[2020-12-25 18:20:58,040 INFO] 2in1's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtende.model, tgt_subword_model=data/wmt/wmtende.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-25 18:20:58,040 INFO] Loading ParallelCorpus(data/wmt/en-de.en, data/wmt/en-de.de, align=None)...
+[2020-12-25 18:28:06,480 INFO] Transform statistics for 2in1:
+Filtred sentence: 7618 sent
+Subword(SP/Tokenizer): 197323895 -> 277318361 tok
+
+[2020-12-25 18:28:06,526 INFO] Counters src:31281
+[2020-12-25 18:28:06,526 INFO] Counters tgt:30958
+[2020-12-25 18:28:06,550 INFO] Counters after share:31763

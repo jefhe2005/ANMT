@@ -1,0 +1,236 @@
+# Translating with checkpoint data/wmt/run/model_step_100000.pt
+[2020-12-24 10:55:45,351 INFO] Translating shard 0.
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 25, in translate
+    translator.translate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 356, in translate
+    batch_data = self.translate_batch(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 546, in translate_batch
+    return self._translate_batch_with_strategy(batch, src_vocabs,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 652, in _translate_batch_with_strategy
+    "gold_score": self._gold_score(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 278, in _gold_score
+    gs = self._score_target(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 720, in _score_target
+    log_probs, attn = self._decode_and_generate(
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 594, in _decode_and_generate
+    log_probs = self.model.generator(dec_out.squeeze(0))
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/container.py", line 117, in forward
+    input = module(input)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1269, in forward
+    return F.log_softmax(input, self.dim, _stacklevel=5)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/functional.py", line 1605, in log_softmax
+    ret = input.log_softmax(dim)
+RuntimeError: CUDA out of memory. Tried to allocate 2.14 GiB (GPU 0; 10.92 GiB total capacity; 2.48 GiB already allocated; 1.07 GiB free; 2.50 GiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_55000.pt
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 18, in translate
+    translator = build_translator(opt, logger=logger, report_score=True)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 29, in build_translator
+    fields, model, model_opt = load_test_model(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 91, in load_test_model
+    model = build_base_model(model_opt, fields, use_gpu(opt), checkpoint,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 217, in build_base_model
+    model.to(device)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 612, in to
+    return self._apply(convert)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 10.92 GiB total capacity; 190.82 MiB already allocated; 3.38 MiB free; 210.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_60000.pt
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 18, in translate
+    translator = build_translator(opt, logger=logger, report_score=True)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 29, in build_translator
+    fields, model, model_opt = load_test_model(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 91, in load_test_model
+    model = build_base_model(model_opt, fields, use_gpu(opt), checkpoint,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 217, in build_base_model
+    model.to(device)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 612, in to
+    return self._apply(convert)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 10.92 GiB total capacity; 172.78 MiB already allocated; 3.38 MiB free; 180.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_65000.pt
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 18, in translate
+    translator = build_translator(opt, logger=logger, report_score=True)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 29, in build_translator
+    fields, model, model_opt = load_test_model(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 91, in load_test_model
+    model = build_base_model(model_opt, fields, use_gpu(opt), checkpoint,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 217, in build_base_model
+    model.to(device)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 612, in to
+    return self._apply(convert)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 10.92 GiB total capacity; 170.78 MiB already allocated; 3.38 MiB free; 178.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_70000.pt
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 18, in translate
+    translator = build_translator(opt, logger=logger, report_score=True)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 29, in build_translator
+    fields, model, model_opt = load_test_model(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 91, in load_test_model
+    model = build_base_model(model_opt, fields, use_gpu(opt), checkpoint,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 217, in build_base_model
+    model.to(device)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 612, in to
+    return self._apply(convert)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 10.92 GiB total capacity; 170.78 MiB already allocated; 3.38 MiB free; 178.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_75000.pt
+Traceback (most recent call last):
+  File "/home/jefhe/anaconda3/envs/opennmt/bin/onmt_translate", line 8, in <module>
+    sys.exit(main())
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 47, in main
+    translate(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/bin/translate.py", line 18, in translate
+    translator = build_translator(opt, logger=logger, report_score=True)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/translator.py", line 29, in build_translator
+    fields, model, model_opt = load_test_model(opt)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 91, in load_test_model
+    model = build_base_model(model_opt, fields, use_gpu(opt), checkpoint,
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/model_builder.py", line 217, in build_base_model
+    model.to(device)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 612, in to
+    return self._apply(convert)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 359, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 381, in _apply
+    param_applied = fn(param)
+  File "/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/torch/nn/modules/module.py", line 610, in convert
+    return t.to(device, dtype if t.is_floating_point() else None, non_blocking)
+RuntimeError: CUDA out of memory. Tried to allocate 2.00 MiB (GPU 0; 10.92 GiB total capacity; 170.78 MiB already allocated; 3.38 MiB free; 178.00 MiB reserved in total by PyTorch)
+# Translating with checkpoint data/wmt/run/model_step_80000.pt
+[2020-12-24 10:56:15,309 INFO] Translating shard 0.
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1100], which does not match the required output shape [220, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [900], which does not match the required output shape [180, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1020], which does not match the required output shape [204, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [880], which does not match the required output shape [176, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [800], which does not match the required output shape [160, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [955], which does not match the required output shape [191, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+[2020-12-24 10:56:37,326 INFO] PRED AVG SCORE: -0.4734, PRED PPL: 1.6055
+[2020-12-24 10:56:37,327 INFO] GOLD AVG SCORE: -1.5877, GOLD PPL: 4.8923
+# Translating with checkpoint data/wmt/run/model_step_85000.pt
+[2020-12-24 10:56:41,628 INFO] Translating shard 0.
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1100], which does not match the required output shape [220, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [900], which does not match the required output shape [180, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1020], which does not match the required output shape [204, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [880], which does not match the required output shape [176, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [800], which does not match the required output shape [160, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [955], which does not match the required output shape [191, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+[2020-12-24 10:57:01,948 INFO] PRED AVG SCORE: -0.4864, PRED PPL: 1.6265
+[2020-12-24 10:57:01,948 INFO] GOLD AVG SCORE: -1.5725, GOLD PPL: 4.8188
+# Translating with checkpoint data/wmt/run/model_step_90000.pt
+[2020-12-24 10:57:06,290 INFO] Translating shard 0.
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1100], which does not match the required output shape [220, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [900], which does not match the required output shape [180, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1020], which does not match the required output shape [204, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [880], which does not match the required output shape [176, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [800], which does not match the required output shape [160, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [955], which does not match the required output shape [191, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+[2020-12-24 10:57:26,813 INFO] PRED AVG SCORE: -0.4745, PRED PPL: 1.6073
+[2020-12-24 10:57:26,813 INFO] GOLD AVG SCORE: -1.5694, GOLD PPL: 4.8038
+# Translating with checkpoint data/wmt/run/model_step_95000.pt
+[2020-12-24 10:57:31,156 INFO] Translating shard 0.
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1100], which does not match the required output shape [220, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [900], which does not match the required output shape [180, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [1020], which does not match the required output shape [204, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [880], which does not match the required output shape [176, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [800], which does not match the required output shape [160, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+/home/jefhe/anaconda3/envs/opennmt/lib/python3.8/site-packages/onmt/translate/beam_search.py:209: UserWarning: An output with one or more elements was resized since it had shape [955], which does not match the required output shape [191, 5].This behavior is deprecated, and in a future PyTorch release outputs will not be resized unless they have zero elements. You can explicitly reuse an out tensor t by resizing it, inplace, to zero elements with t.resize_(0). (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/aten/src/ATen/native/Resize.cpp:19.)
+  torch.mul(self.topk_scores, length_penalty, out=self.topk_log_probs)
+[2020-12-24 10:57:51,402 INFO] PRED AVG SCORE: -0.4730, PRED PPL: 1.6048
+[2020-12-24 10:57:51,403 INFO] GOLD AVG SCORE: -1.5666, GOLD PPL: 4.7905

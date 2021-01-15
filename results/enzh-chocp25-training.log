@@ -1,0 +1,1585 @@
+[2020-12-27 18:13:49,301 INFO] Parsed 2 corpora from -data.
+[2020-12-27 18:13:49,301 INFO] Get special vocabs from Transforms: {'src': set(), 'tgt': set()}.
+[2020-12-27 18:13:49,301 INFO] Loading vocab from text file...
+[2020-12-27 18:13:49,301 INFO] Loading src vocabulary from data/wmt/run/example.vocab.src
+[2020-12-27 18:13:49,358 INFO] Loaded src vocab has 32061 tokens.
+[2020-12-27 18:13:49,370 INFO] Loading tgt vocabulary from data/wmt/run/example.vocab.src
+[2020-12-27 18:13:49,425 INFO] Loaded tgt vocab has 32061 tokens.
+[2020-12-27 18:13:49,438 INFO] Building fields with vocab in counters...
+[2020-12-27 18:13:49,511 INFO]  * tgt vocab size: 32065.
+[2020-12-27 18:13:49,558 INFO]  * src vocab size: 32063.
+[2020-12-27 18:13:49,559 INFO]  * merging src and tgt vocab...
+[2020-12-27 18:13:49,638 INFO]  * merged vocab size: 32065.
+[2020-12-27 18:13:49,641 INFO]  * src vocab size = 32065
+[2020-12-27 18:13:49,641 INFO]  * tgt vocab size = 32065
+[2020-12-27 18:13:50,242 INFO]  Starting process pid: 39906  
+[2020-12-27 18:13:50,840 INFO]  Starting process pid: 39909  
+[2020-12-27 18:13:51,465 INFO]  Starting process pid: 39911  
+[2020-12-27 18:13:52,097 INFO]  Starting process pid: 39917  
+[2020-12-27 18:13:52,772 INFO]  Starting producer process pid: 39923  
+[2020-12-27 18:13:52,779 INFO] commoncrawl's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-27 18:13:52,780 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 18:13:53,484 INFO]  Starting producer process pid: 39931  
+[2020-12-27 18:13:53,490 INFO] commoncrawl's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-27 18:13:53,491 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 18:13:54,170 INFO]  Starting producer process pid: 39935  
+[2020-12-27 18:13:54,176 INFO] commoncrawl's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-27 18:13:54,177 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 18:13:54,845 INFO]  Starting producer process pid: 39937  
+[2020-12-27 18:13:54,852 INFO] commoncrawl's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1), FilterTooLongTransform(src_seq_length=150, tgt_seq_length=150))
+[2020-12-27 18:13:54,853 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 18:13:56,217 INFO] Building model...
+[2020-12-27 18:13:57,910 INFO] NMTModel(
+  (encoder): TransformerEncoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(32065, 512, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (transformer): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (decoder): TransformerDecoder(
+    (embeddings): Embeddings(
+      (make_embedding): Sequential(
+        (emb_luts): Elementwise(
+          (0): Embedding(32065, 512, padding_idx=1)
+        )
+        (pe): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+    (transformer_layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (1): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (2): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (3): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (4): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+      (5): TransformerDecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (context_attn): MultiHeadedAttention(
+          (linear_keys): Linear(in_features=512, out_features=512, bias=True)
+          (linear_values): Linear(in_features=512, out_features=512, bias=True)
+          (linear_query): Linear(in_features=512, out_features=512, bias=True)
+          (softmax): Softmax(dim=-1)
+          (dropout): Dropout(p=0.1, inplace=False)
+          (final_linear): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=512, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=512, bias=True)
+          (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+          (dropout_1): Dropout(p=0.1, inplace=False)
+          (relu): ReLU()
+          (dropout_2): Dropout(p=0.1, inplace=False)
+        )
+        (layer_norm_1): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (layer_norm_2): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+        (drop): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (layer_norm): LayerNorm((512,), eps=1e-06, elementwise_affine=True)
+  )
+  (generator): Sequential(
+    (0): Linear(in_features=512, out_features=32065, bias=True)
+    (1): Cast()
+    (2): LogSoftmax(dim=-1)
+  )
+)
+[2020-12-27 18:13:57,913 INFO] encoder: 35332608
+[2020-12-27 18:13:57,914 INFO] decoder: 25257281
+[2020-12-27 18:13:57,914 INFO] * number of parameters: 60589889
+[2020-12-27 18:13:57,964 INFO] Starting training on GPU: [0, 1, 2, 3]
+[2020-12-27 18:13:57,964 INFO] Start training loop and validate every 5000 steps...
+[2020-12-27 18:14:55,689 INFO] Step 100/100000; acc:   3.35; ppl: 6221.37; xent: 8.74; lr: 0.00001; 34486/35948 tok/s;     58 sec
+[2020-12-27 18:15:52,515 INFO] Step 200/100000; acc:   4.52; ppl: 2542.88; xent: 7.84; lr: 0.00002; 35113/36414 tok/s;    115 sec
+[2020-12-27 18:16:52,633 INFO] Step 300/100000; acc:   4.82; ppl: 813.25; xent: 6.70; lr: 0.00004; 33037/34307 tok/s;    175 sec
+[2020-12-27 18:17:53,250 INFO] Step 400/100000; acc:   9.36; ppl: 395.95; xent: 5.98; lr: 0.00005; 32920/34198 tok/s;    235 sec
+[2020-12-27 18:18:53,926 INFO] Step 500/100000; acc:  14.71; ppl: 291.77; xent: 5.68; lr: 0.00006; 32367/34147 tok/s;    296 sec
+[2020-12-27 18:19:54,259 INFO] Step 600/100000; acc:  17.50; ppl: 209.70; xent: 5.35; lr: 0.00007; 32749/34378 tok/s;    356 sec
+[2020-12-27 18:20:55,045 INFO] Step 700/100000; acc:  19.34; ppl: 155.11; xent: 5.04; lr: 0.00009; 33074/34507 tok/s;    417 sec
+[2020-12-27 18:21:55,659 INFO] Step 800/100000; acc:  22.15; ppl: 116.57; xent: 4.76; lr: 0.00010; 33249/34380 tok/s;    478 sec
+[2020-12-27 18:22:56,330 INFO] Step 900/100000; acc:  24.78; ppl: 92.65; xent: 4.53; lr: 0.00011; 33253/34557 tok/s;    538 sec
+[2020-12-27 18:23:56,665 INFO] Step 1000/100000; acc:  27.02; ppl: 72.19; xent: 4.28; lr: 0.00012; 32827/34536 tok/s;    599 sec
+[2020-12-27 18:24:57,094 INFO] Step 1100/100000; acc:  30.09; ppl: 55.25; xent: 4.01; lr: 0.00014; 32879/34328 tok/s;    659 sec
+[2020-12-27 18:25:57,397 INFO] Step 1200/100000; acc:  32.27; ppl: 46.54; xent: 3.84; lr: 0.00015; 32742/34358 tok/s;    719 sec
+[2020-12-27 18:26:57,999 INFO] Step 1300/100000; acc:  33.81; ppl: 42.63; xent: 3.75; lr: 0.00016; 32671/33785 tok/s;    780 sec
+[2020-12-27 18:27:58,379 INFO] Step 1400/100000; acc:  37.45; ppl: 32.19; xent: 3.47; lr: 0.00017; 33011/34469 tok/s;    840 sec
+[2020-12-27 18:28:59,197 INFO] Step 1500/100000; acc:  42.43; ppl: 22.98; xent: 3.13; lr: 0.00019; 32783/34362 tok/s;    901 sec
+[2020-12-27 18:29:59,729 INFO] Step 1600/100000; acc:  45.05; ppl: 19.36; xent: 2.96; lr: 0.00020; 33032/34532 tok/s;    962 sec
+[2020-12-27 18:31:00,481 INFO] Step 1700/100000; acc:  45.67; ppl: 18.59; xent: 2.92; lr: 0.00021; 32983/34340 tok/s;   1023 sec
+[2020-12-27 18:32:01,578 INFO] Step 1800/100000; acc:  48.14; ppl: 15.92; xent: 2.77; lr: 0.00022; 33004/34542 tok/s;   1084 sec
+[2020-12-27 18:33:02,361 INFO] Step 1900/100000; acc:  49.46; ppl: 14.80; xent: 2.69; lr: 0.00023; 32574/34156 tok/s;   1144 sec
+[2020-12-27 18:34:02,556 INFO] Step 2000/100000; acc:  52.14; ppl: 12.36; xent: 2.51; lr: 0.00025; 32893/34572 tok/s;   1205 sec
+[2020-12-27 18:35:02,634 INFO] Step 2100/100000; acc:  54.91; ppl: 10.40; xent: 2.34; lr: 0.00026; 32712/34508 tok/s;   1265 sec
+[2020-12-27 18:36:02,774 INFO] Step 2200/100000; acc:  55.12; ppl: 10.38; xent: 2.34; lr: 0.00027; 32586/34298 tok/s;   1325 sec
+[2020-12-27 18:37:02,848 INFO] Step 2300/100000; acc:  55.88; ppl:  9.87; xent: 2.29; lr: 0.00028; 32721/34185 tok/s;   1385 sec
+[2020-12-27 18:38:03,216 INFO] Step 2400/100000; acc:  58.69; ppl:  8.11; xent: 2.09; lr: 0.00030; 32843/34620 tok/s;   1445 sec
+[2020-12-27 18:39:03,632 INFO] Step 2500/100000; acc:  62.38; ppl:  6.44; xent: 1.86; lr: 0.00031; 32373/34500 tok/s;   1506 sec
+[2020-12-27 18:40:03,753 INFO] Step 2600/100000; acc:  61.62; ppl:  6.59; xent: 1.89; lr: 0.00032; 33213/35028 tok/s;   1566 sec
+[2020-12-27 18:41:03,893 INFO] Step 2700/100000; acc:  61.46; ppl:  6.52; xent: 1.87; lr: 0.00033; 33168/35261 tok/s;   1626 sec
+[2020-12-27 18:42:04,188 INFO] Step 2800/100000; acc:  61.36; ppl:  6.56; xent: 1.88; lr: 0.00035; 33030/34937 tok/s;   1686 sec
+[2020-12-27 18:43:04,504 INFO] Step 2900/100000; acc:  62.20; ppl:  6.25; xent: 1.83; lr: 0.00036; 32133/34677 tok/s;   1747 sec
+[2020-12-27 18:44:05,390 INFO] Step 3000/100000; acc:  63.21; ppl:  5.91; xent: 1.78; lr: 0.00037; 32203/34127 tok/s;   1807 sec
+[2020-12-27 18:45:05,352 INFO] Step 3100/100000; acc:  66.81; ppl:  4.89; xent: 1.59; lr: 0.00038; 32398/34356 tok/s;   1867 sec
+[2020-12-27 18:46:06,007 INFO] Step 3200/100000; acc:  66.58; ppl:  4.92; xent: 1.59; lr: 0.00040; 32150/34213 tok/s;   1928 sec
+[2020-12-27 18:47:06,288 INFO] Step 3300/100000; acc:  67.94; ppl:  4.54; xent: 1.51; lr: 0.00041; 32621/34574 tok/s;   1988 sec
+[2020-12-27 18:48:06,894 INFO] Step 3400/100000; acc:  66.07; ppl:  4.92; xent: 1.59; lr: 0.00042; 32719/34404 tok/s;   2049 sec
+[2020-12-27 18:49:08,081 INFO] Step 3500/100000; acc:  66.64; ppl:  4.71; xent: 1.55; lr: 0.00043; 32488/34222 tok/s;   2110 sec
+[2020-12-27 18:50:09,168 INFO] Step 3600/100000; acc:  65.82; ppl:  4.94; xent: 1.60; lr: 0.00044; 31737/33964 tok/s;   2171 sec
+[2020-12-27 18:51:09,005 INFO] Step 3700/100000; acc:  66.60; ppl:  4.70; xent: 1.55; lr: 0.00046; 32054/34439 tok/s;   2231 sec
+[2020-12-27 18:52:09,029 INFO] Step 3800/100000; acc:  67.36; ppl:  4.65; xent: 1.54; lr: 0.00047; 32360/34234 tok/s;   2291 sec
+[2020-12-27 18:53:09,156 INFO] Step 3900/100000; acc:  69.66; ppl:  4.12; xent: 1.42; lr: 0.00048; 32380/34546 tok/s;   2351 sec
+[2020-12-27 18:54:09,250 INFO] Step 4000/100000; acc:  68.26; ppl:  4.29; xent: 1.46; lr: 0.00049; 32513/34662 tok/s;   2411 sec
+[2020-12-27 18:55:09,196 INFO] Step 4100/100000; acc:  69.22; ppl:  4.04; xent: 1.40; lr: 0.00051; 32702/34805 tok/s;   2471 sec
+[2020-12-27 18:56:09,426 INFO] Step 4200/100000; acc:  69.79; ppl:  3.87; xent: 1.35; lr: 0.00052; 33016/34898 tok/s;   2531 sec
+[2020-12-27 18:57:10,100 INFO] Step 4300/100000; acc:  70.00; ppl:  3.80; xent: 1.33; lr: 0.00053; 32809/34595 tok/s;   2592 sec
+[2020-12-27 18:58:10,589 INFO] Step 4400/100000; acc:  70.21; ppl:  3.76; xent: 1.32; lr: 0.00054; 32796/34588 tok/s;   2653 sec
+[2020-12-27 18:59:11,154 INFO] Step 4500/100000; acc:  69.66; ppl:  3.86; xent: 1.35; lr: 0.00056; 32269/34359 tok/s;   2713 sec
+[2020-12-27 19:00:11,290 INFO] Step 4600/100000; acc:  65.92; ppl:  4.77; xent: 1.56; lr: 0.00057; 32261/33929 tok/s;   2773 sec
+[2020-12-27 19:01:11,530 INFO] Step 4700/100000; acc:  67.31; ppl:  4.39; xent: 1.48; lr: 0.00058; 31972/33840 tok/s;   2834 sec
+[2020-12-27 19:02:11,562 INFO] Step 4800/100000; acc:  70.91; ppl:  3.71; xent: 1.31; lr: 0.00059; 32400/34376 tok/s;   2894 sec
+[2020-12-27 19:03:11,147 INFO] Step 4900/100000; acc:  70.31; ppl:  3.82; xent: 1.34; lr: 0.00061; 32454/34764 tok/s;   2953 sec
+[2020-12-27 19:04:12,001 INFO] Step 5000/100000; acc:  68.81; ppl:  4.11; xent: 1.41; lr: 0.00062; 32385/34295 tok/s;   3014 sec
+[2020-12-27 19:04:12,004 INFO] valid's transforms: TransformPipe(SentencePieceTransform(share_vocab=True, src_subword_model=data/wmt/wmtenzh.model, tgt_subword_model=data/wmt/wmtenzh.model, src_subword_alpha=0.0, tgt_subword_alpha=0.0, src_subword_nbest=1, tgt_subword_nbest=1))
+[2020-12-27 19:04:12,004 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 19:04:22,560 INFO] Validation perplexity: 4.81006
+[2020-12-27 19:04:22,560 INFO] Validation accuracy: 69.5597
+[2020-12-27 19:04:22,640 INFO] Saving checkpoint data/wmt/run/model_step_5000.pt
+[2020-12-27 19:05:24,445 INFO] Step 5100/100000; acc:  69.60; ppl:  3.89; xent: 1.36; lr: 0.00063; 27050/28688 tok/s;   3086 sec
+[2020-12-27 19:06:24,667 INFO] Step 5200/100000; acc:  71.47; ppl:  3.52; xent: 1.26; lr: 0.00064; 32451/34489 tok/s;   3147 sec
+[2020-12-27 19:07:25,484 INFO] Step 5300/100000; acc:  71.60; ppl:  3.47; xent: 1.24; lr: 0.00065; 32538/34576 tok/s;   3208 sec
+[2020-12-27 19:08:25,766 INFO] Step 5400/100000; acc:  72.31; ppl:  3.33; xent: 1.20; lr: 0.00067; 32553/34918 tok/s;   3268 sec
+[2020-12-27 19:09:26,146 INFO] Step 5500/100000; acc:  71.31; ppl:  3.48; xent: 1.25; lr: 0.00068; 33012/34952 tok/s;   3328 sec
+[2020-12-27 19:10:25,950 INFO] Step 5600/100000; acc:  70.97; ppl:  3.54; xent: 1.26; lr: 0.00069; 32736/34948 tok/s;   3388 sec
+[2020-12-27 19:11:26,365 INFO] Step 5700/100000; acc:  70.15; ppl:  3.67; xent: 1.30; lr: 0.00070; 32770/34562 tok/s;   3448 sec
+[2020-12-27 19:12:26,284 INFO] Step 5800/100000; acc:  69.48; ppl:  3.79; xent: 1.33; lr: 0.00072; 32733/34536 tok/s;   3508 sec
+[2020-12-27 19:13:27,626 INFO] Step 5900/100000; acc:  69.85; ppl:  3.72; xent: 1.31; lr: 0.00073; 31926/33848 tok/s;   3570 sec
+[2020-12-27 19:14:28,916 INFO] Step 6000/100000; acc:  70.56; ppl:  3.63; xent: 1.29; lr: 0.00074; 30565/33543 tok/s;   3631 sec
+[2020-12-27 19:15:30,367 INFO] Step 6100/100000; acc:  70.98; ppl:  3.56; xent: 1.27; lr: 0.00075; 31365/33769 tok/s;   3692 sec
+[2020-12-27 19:16:31,853 INFO] Step 6200/100000; acc:  72.71; ppl:  3.30; xent: 1.19; lr: 0.00077; 31780/33507 tok/s;   3754 sec
+[2020-12-27 19:17:33,264 INFO] Step 6300/100000; acc:  71.25; ppl:  3.52; xent: 1.26; lr: 0.00078; 31873/34025 tok/s;   3815 sec
+[2020-12-27 19:18:34,486 INFO] Step 6400/100000; acc:  71.39; ppl:  3.49; xent: 1.25; lr: 0.00079; 31939/34121 tok/s;   3877 sec
+[2020-12-27 19:19:35,940 INFO] Step 6500/100000; acc:  71.38; ppl:  3.46; xent: 1.24; lr: 0.00080; 31842/34074 tok/s;   3938 sec
+[2020-12-27 19:20:37,416 INFO] Step 6600/100000; acc:  72.76; ppl:  3.22; xent: 1.17; lr: 0.00082; 31868/34130 tok/s;   3999 sec
+[2020-12-27 19:21:38,875 INFO] Step 6700/100000; acc:  72.78; ppl:  3.17; xent: 1.15; lr: 0.00083; 32410/34510 tok/s;   4061 sec
+[2020-12-27 19:22:40,231 INFO] Step 6800/100000; acc:  73.47; ppl:  3.03; xent: 1.11; lr: 0.00084; 32200/34238 tok/s;   4122 sec
+[2020-12-27 19:23:40,239 INFO] Step 6900/100000; acc:  71.81; ppl:  3.34; xent: 1.21; lr: 0.00085; 32896/34710 tok/s;   4182 sec
+[2020-12-27 19:24:40,626 INFO] Step 7000/100000; acc:  71.65; ppl:  3.36; xent: 1.21; lr: 0.00086; 32665/34524 tok/s;   4243 sec
+[2020-12-27 19:25:40,787 INFO] Step 7100/100000; acc:  68.38; ppl:  4.02; xent: 1.39; lr: 0.00088; 32635/34732 tok/s;   4303 sec
+[2020-12-27 19:26:41,494 INFO] Step 7200/100000; acc:  67.58; ppl:  4.14; xent: 1.42; lr: 0.00089; 32008/34006 tok/s;   4364 sec
+[2020-12-27 19:27:42,936 INFO] Step 7300/100000; acc:  69.83; ppl:  3.66; xent: 1.30; lr: 0.00090; 31588/33936 tok/s;   4425 sec
+[2020-12-27 19:28:43,774 INFO] Step 7400/100000; acc:  71.32; ppl:  3.37; xent: 1.21; lr: 0.00091; 31969/34562 tok/s;   4486 sec
+[2020-12-27 19:29:44,327 INFO] Step 7500/100000; acc:  71.88; ppl:  3.34; xent: 1.21; lr: 0.00093; 32398/34548 tok/s;   4546 sec
+[2020-12-27 19:30:44,612 INFO] Step 7600/100000; acc:  73.45; ppl:  3.10; xent: 1.13; lr: 0.00094; 32842/34722 tok/s;   4607 sec
+[2020-12-27 19:31:45,207 INFO] Step 7700/100000; acc:  71.28; ppl:  3.44; xent: 1.23; lr: 0.00095; 32012/34703 tok/s;   4667 sec
+[2020-12-27 19:32:45,172 INFO] Step 7800/100000; acc:  72.29; ppl:  3.25; xent: 1.18; lr: 0.00096; 31830/34844 tok/s;   4727 sec
+[2020-12-27 19:33:45,803 INFO] Step 7900/100000; acc:  72.83; ppl:  3.17; xent: 1.15; lr: 0.00098; 32382/34610 tok/s;   4788 sec
+[2020-12-27 19:34:46,270 INFO] Step 8000/100000; acc:  73.90; ppl:  3.01; xent: 1.10; lr: 0.00099; 32381/34620 tok/s;   4848 sec
+[2020-12-27 19:35:46,898 INFO] Step 8100/100000; acc:  73.55; ppl:  3.04; xent: 1.11; lr: 0.00098; 32400/34688 tok/s;   4909 sec
+[2020-12-27 19:36:47,079 INFO] Step 8200/100000; acc:  74.28; ppl:  2.91; xent: 1.07; lr: 0.00098; 32620/35065 tok/s;   4969 sec
+[2020-12-27 19:37:47,713 INFO] Step 8300/100000; acc:  72.30; ppl:  3.20; xent: 1.16; lr: 0.00097; 32966/35089 tok/s;   5030 sec
+[2020-12-27 19:38:48,406 INFO] Step 8400/100000; acc:  72.74; ppl:  3.10; xent: 1.13; lr: 0.00096; 32789/35004 tok/s;   5090 sec
+[2020-12-27 19:39:48,928 INFO] Step 8500/100000; acc:  70.25; ppl:  3.54; xent: 1.26; lr: 0.00096; 32490/34369 tok/s;   5151 sec
+[2020-12-27 19:40:48,990 INFO] Step 8600/100000; acc:  70.56; ppl:  3.46; xent: 1.24; lr: 0.00095; 32871/34903 tok/s;   5211 sec
+[2020-12-27 19:41:50,002 INFO] Step 8700/100000; acc:  72.45; ppl:  3.17; xent: 1.15; lr: 0.00095; 32096/34222 tok/s;   5272 sec
+[2020-12-27 19:42:50,056 INFO] Step 8800/100000; acc:  73.50; ppl:  2.99; xent: 1.10; lr: 0.00094; 32726/34652 tok/s;   5332 sec
+[2020-12-27 19:43:50,015 INFO] Step 8900/100000; acc:  75.32; ppl:  2.81; xent: 1.03; lr: 0.00094; 32045/34494 tok/s;   5392 sec
+[2020-12-27 19:44:50,281 INFO] Step 9000/100000; acc:  77.14; ppl:  2.58; xent: 0.95; lr: 0.00093; 32031/34614 tok/s;   5452 sec
+[2020-12-27 19:45:49,848 INFO] Step 9100/100000; acc:  71.34; ppl:  3.38; xent: 1.22; lr: 0.00093; 32322/34800 tok/s;   5512 sec
+[2020-12-27 19:46:50,884 INFO] Step 9200/100000; acc:  72.48; ppl:  3.18; xent: 1.16; lr: 0.00092; 31682/34223 tok/s;   5573 sec
+[2020-12-27 19:47:51,137 INFO] Step 9300/100000; acc:  73.47; ppl:  3.04; xent: 1.11; lr: 0.00092; 32055/34564 tok/s;   5633 sec
+[2020-12-27 19:48:51,548 INFO] Step 9400/100000; acc:  74.28; ppl:  2.90; xent: 1.06; lr: 0.00091; 32224/34656 tok/s;   5694 sec
+[2020-12-27 19:49:52,777 INFO] Step 9500/100000; acc:  75.12; ppl:  2.79; xent: 1.03; lr: 0.00091; 32061/34078 tok/s;   5755 sec
+[2020-12-27 19:50:53,037 INFO] Step 9600/100000; acc:  75.39; ppl:  2.73; xent: 1.01; lr: 0.00090; 32796/35010 tok/s;   5815 sec
+[2020-12-27 19:51:54,120 INFO] Step 9700/100000; acc:  75.17; ppl:  2.74; xent: 1.01; lr: 0.00090; 32728/34860 tok/s;   5876 sec
+[2020-12-27 19:52:55,082 INFO] Step 9800/100000; acc:  74.74; ppl:  2.79; xent: 1.03; lr: 0.00089; 32840/35026 tok/s;   5937 sec
+[2020-12-27 19:53:55,443 INFO] Step 9900/100000; acc:  73.85; ppl:  2.94; xent: 1.08; lr: 0.00089; 32365/34062 tok/s;   5997 sec
+[2020-12-27 19:54:55,617 INFO] Step 10000/100000; acc:  73.19; ppl:  3.02; xent: 1.11; lr: 0.00088; 32700/34403 tok/s;   6058 sec
+[2020-12-27 19:54:55,620 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 19:54:55,657 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-27 19:55:06,134 INFO] Validation perplexity: 3.2941
+[2020-12-27 19:55:06,135 INFO] Validation accuracy: 74.7018
+[2020-12-27 19:55:06,214 INFO] Saving checkpoint data/wmt/run/model_step_10000.pt
+[2020-12-27 19:56:09,074 INFO] Step 10100/100000; acc:  70.99; ppl:  3.34; xent: 1.20; lr: 0.00088; 26648/28339 tok/s;   6131 sec
+[2020-12-27 19:57:09,188 INFO] Step 10200/100000; acc:  71.38; ppl:  3.25; xent: 1.18; lr: 0.00088; 32631/34755 tok/s;   6191 sec
+[2020-12-27 19:58:09,012 INFO] Step 10300/100000; acc:  72.22; ppl:  3.14; xent: 1.15; lr: 0.00087; 31736/34782 tok/s;   6251 sec
+[2020-12-27 19:59:08,991 INFO] Step 10400/100000; acc:  73.22; ppl:  3.02; xent: 1.10; lr: 0.00087; 32314/35036 tok/s;   6311 sec
+[2020-12-27 20:00:09,017 INFO] Step 10500/100000; acc:  75.68; ppl:  2.76; xent: 1.02; lr: 0.00086; 32786/34604 tok/s;   6371 sec
+[2020-12-27 20:01:09,414 INFO] Step 10600/100000; acc:  75.15; ppl:  2.82; xent: 1.04; lr: 0.00086; 32462/34715 tok/s;   6431 sec
+[2020-12-27 20:02:08,740 INFO] Step 10700/100000; acc:  75.17; ppl:  2.80; xent: 1.03; lr: 0.00085; 31571/34880 tok/s;   6491 sec
+[2020-12-27 20:03:08,690 INFO] Step 10800/100000; acc:  75.38; ppl:  2.73; xent: 1.01; lr: 0.00085; 32242/34947 tok/s;   6551 sec
+[2020-12-27 20:04:08,875 INFO] Step 10900/100000; acc:  76.64; ppl:  2.58; xent: 0.95; lr: 0.00085; 32446/34596 tok/s;   6611 sec
+[2020-12-27 20:05:09,610 INFO] Step 11000/100000; acc:  76.17; ppl:  2.62; xent: 0.96; lr: 0.00084; 32528/34661 tok/s;   6672 sec
+[2020-12-27 20:06:09,941 INFO] Step 11100/100000; acc:  76.87; ppl:  2.54; xent: 0.93; lr: 0.00084; 32298/34612 tok/s;   6732 sec
+[2020-12-27 20:07:10,990 INFO] Step 11200/100000; acc:  75.84; ppl:  2.64; xent: 0.97; lr: 0.00084; 32590/34664 tok/s;   6793 sec
+[2020-12-27 20:08:11,168 INFO] Step 11300/100000; acc:  75.48; ppl:  2.66; xent: 0.98; lr: 0.00083; 33166/35120 tok/s;   6853 sec
+[2020-12-27 20:09:11,805 INFO] Step 11400/100000; acc:  74.02; ppl:  2.86; xent: 1.05; lr: 0.00083; 32896/34917 tok/s;   6914 sec
+[2020-12-27 20:10:12,588 INFO] Step 11500/100000; acc:  73.86; ppl:  2.90; xent: 1.07; lr: 0.00082; 32476/34660 tok/s;   6975 sec
+[2020-12-27 20:11:13,250 INFO] Step 11600/100000; acc:  72.98; ppl:  3.01; xent: 1.10; lr: 0.00082; 32263/34425 tok/s;   7035 sec
+[2020-12-27 20:12:14,071 INFO] Step 11700/100000; acc:  72.53; ppl:  3.06; xent: 1.12; lr: 0.00082; 32353/34599 tok/s;   7096 sec
+[2020-12-27 20:13:14,031 INFO] Step 11800/100000; acc:  73.50; ppl:  2.93; xent: 1.07; lr: 0.00081; 32182/34859 tok/s;   7156 sec
+[2020-12-27 20:14:14,013 INFO] Step 11900/100000; acc:  75.33; ppl:  2.72; xent: 1.00; lr: 0.00081; 31339/34583 tok/s;   7216 sec
+[2020-12-27 20:15:14,352 INFO] Step 12000/100000; acc:  75.13; ppl:  2.77; xent: 1.02; lr: 0.00081; 31940/34519 tok/s;   7276 sec
+[2020-12-27 20:16:14,421 INFO] Step 12100/100000; acc:  76.61; ppl:  2.60; xent: 0.95; lr: 0.00080; 32473/34956 tok/s;   7336 sec
+[2020-12-27 20:17:14,119 INFO] Step 12200/100000; acc:  75.53; ppl:  2.71; xent: 1.00; lr: 0.00080; 32538/35130 tok/s;   7396 sec
+[2020-12-27 20:18:14,268 INFO] Step 12300/100000; acc:  76.40; ppl:  2.59; xent: 0.95; lr: 0.00080; 31811/35077 tok/s;   7456 sec
+[2020-12-27 20:19:14,677 INFO] Step 12400/100000; acc:  76.59; ppl:  2.55; xent: 0.94; lr: 0.00079; 32213/34626 tok/s;   7517 sec
+[2020-12-27 20:20:15,172 INFO] Step 12500/100000; acc:  77.26; ppl:  2.46; xent: 0.90; lr: 0.00079; 32877/35096 tok/s;   7577 sec
+[2020-12-27 20:21:15,803 INFO] Step 12600/100000; acc:  76.64; ppl:  2.54; xent: 0.93; lr: 0.00079; 32526/34676 tok/s;   7638 sec
+[2020-12-27 20:22:16,442 INFO] Step 12700/100000; acc:  77.26; ppl:  2.47; xent: 0.90; lr: 0.00078; 32542/34624 tok/s;   7698 sec
+[2020-12-27 20:23:17,906 INFO] Step 12800/100000; acc:  75.63; ppl:  2.65; xent: 0.98; lr: 0.00078; 32597/34558 tok/s;   7760 sec
+[2020-12-27 20:24:18,761 INFO] Step 12900/100000; acc:  75.96; ppl:  2.60; xent: 0.96; lr: 0.00078; 33036/34824 tok/s;   7821 sec
+[2020-12-27 20:25:19,763 INFO] Step 13000/100000; acc:  74.09; ppl:  2.88; xent: 1.06; lr: 0.00078; 32052/34101 tok/s;   7882 sec
+[2020-12-27 20:26:20,171 INFO] Step 13100/100000; acc:  74.50; ppl:  2.81; xent: 1.03; lr: 0.00077; 32254/34721 tok/s;   7942 sec
+[2020-12-27 20:27:21,016 INFO] Step 13200/100000; acc:  72.12; ppl:  3.13; xent: 1.14; lr: 0.00077; 32108/34404 tok/s;   8003 sec
+[2020-12-27 20:28:21,822 INFO] Step 13300/100000; acc:  71.88; ppl:  3.13; xent: 1.14; lr: 0.00077; 32578/34741 tok/s;   8064 sec
+[2020-12-27 20:29:23,266 INFO] Step 13400/100000; acc:  72.83; ppl:  3.03; xent: 1.11; lr: 0.00076; 31361/33800 tok/s;   8125 sec
+[2020-12-27 20:30:24,482 INFO] Step 13500/100000; acc:  73.66; ppl:  2.90; xent: 1.06; lr: 0.00076; 31312/34213 tok/s;   8187 sec
+[2020-12-27 20:31:25,803 INFO] Step 13600/100000; acc:  77.50; ppl:  2.48; xent: 0.91; lr: 0.00076; 32361/34375 tok/s;   8248 sec
+[2020-12-27 20:32:26,966 INFO] Step 13700/100000; acc:  78.96; ppl:  2.32; xent: 0.84; lr: 0.00076; 32126/34406 tok/s;   8309 sec
+[2020-12-27 20:33:28,280 INFO] Step 13800/100000; acc:  75.67; ppl:  2.67; xent: 0.98; lr: 0.00075; 31358/34244 tok/s;   8370 sec
+[2020-12-27 20:34:28,896 INFO] Step 13900/100000; acc:  76.61; ppl:  2.54; xent: 0.93; lr: 0.00075; 31764/34623 tok/s;   8431 sec
+[2020-12-27 20:35:30,414 INFO] Step 14000/100000; acc:  77.32; ppl:  2.45; xent: 0.90; lr: 0.00075; 32211/34227 tok/s;   8492 sec
+[2020-12-27 20:36:31,798 INFO] Step 14100/100000; acc:  77.75; ppl:  2.40; xent: 0.88; lr: 0.00074; 32096/34073 tok/s;   8554 sec
+[2020-12-27 20:37:33,056 INFO] Step 14200/100000; acc:  78.93; ppl:  2.28; xent: 0.82; lr: 0.00074; 31977/34338 tok/s;   8615 sec
+[2020-12-27 20:38:34,487 INFO] Step 14300/100000; acc:  78.96; ppl:  2.27; xent: 0.82; lr: 0.00074; 31911/34233 tok/s;   8677 sec
+[2020-12-27 20:39:35,909 INFO] Step 14400/100000; acc:  75.80; ppl:  2.63; xent: 0.97; lr: 0.00074; 32999/34957 tok/s;   8738 sec
+[2020-12-27 20:40:37,160 INFO] Step 14500/100000; acc:  76.13; ppl:  2.59; xent: 0.95; lr: 0.00073; 32474/34447 tok/s;   8799 sec
+[2020-12-27 20:41:38,330 INFO] Step 14600/100000; acc:  74.43; ppl:  2.78; xent: 1.02; lr: 0.00073; 32211/34459 tok/s;   8860 sec
+[2020-12-27 20:42:39,623 INFO] Step 14700/100000; acc:  74.92; ppl:  2.71; xent: 1.00; lr: 0.00073; 32044/34442 tok/s;   8922 sec
+[2020-12-27 20:43:40,632 INFO] Step 14800/100000; acc:  74.81; ppl:  2.71; xent: 1.00; lr: 0.00073; 32276/34414 tok/s;   8983 sec
+[2020-12-27 20:44:41,629 INFO] Step 14900/100000; acc:  75.32; ppl:  2.64; xent: 0.97; lr: 0.00072; 32193/34424 tok/s;   9044 sec
+[2020-12-27 20:45:42,076 INFO] Step 15000/100000; acc:  74.33; ppl:  2.82; xent: 1.04; lr: 0.00072; 32280/34953 tok/s;   9104 sec
+[2020-12-27 20:45:42,079 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 20:45:42,115 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-27 20:45:52,808 INFO] Validation perplexity: 2.88377
+[2020-12-27 20:45:52,808 INFO] Validation accuracy: 76.8827
+[2020-12-27 20:45:52,892 INFO] Saving checkpoint data/wmt/run/model_step_15000.pt
+[2020-12-27 20:46:55,369 INFO] Step 15100/100000; acc:  75.46; ppl:  2.67; xent: 0.98; lr: 0.00072; 26625/28601 tok/s;   9177 sec
+[2020-12-27 20:47:56,838 INFO] Step 15200/100000; acc:  79.34; ppl:  2.29; xent: 0.83; lr: 0.00072; 31753/34077 tok/s;   9239 sec
+[2020-12-27 20:48:57,446 INFO] Step 15300/100000; acc:  79.00; ppl:  2.30; xent: 0.83; lr: 0.00071; 32280/34780 tok/s;   9299 sec
+[2020-12-27 20:49:57,848 INFO] Step 15400/100000; acc:  77.34; ppl:  2.46; xent: 0.90; lr: 0.00071; 32241/34605 tok/s;   9360 sec
+[2020-12-27 20:50:58,997 INFO] Step 15500/100000; acc:  77.65; ppl:  2.42; xent: 0.88; lr: 0.00071; 31803/34314 tok/s;   9421 sec
+[2020-12-27 20:52:00,146 INFO] Step 15600/100000; acc:  78.03; ppl:  2.37; xent: 0.86; lr: 0.00071; 32314/34715 tok/s;   9482 sec
+[2020-12-27 20:53:00,366 INFO] Step 15700/100000; acc:  78.33; ppl:  2.33; xent: 0.85; lr: 0.00071; 32832/35038 tok/s;   9542 sec
+[2020-12-27 20:54:00,789 INFO] Step 15800/100000; acc:  78.78; ppl:  2.28; xent: 0.82; lr: 0.00070; 32763/34833 tok/s;   9603 sec
+[2020-12-27 20:55:01,453 INFO] Step 15900/100000; acc:  78.25; ppl:  2.33; xent: 0.85; lr: 0.00070; 32567/34814 tok/s;   9663 sec
+[2020-12-27 20:56:02,182 INFO] Step 16000/100000; acc:  77.79; ppl:  2.38; xent: 0.87; lr: 0.00070; 32642/34837 tok/s;   9724 sec
+[2020-12-27 20:57:02,579 INFO] Step 16100/100000; acc:  76.62; ppl:  2.50; xent: 0.92; lr: 0.00070; 33158/35431 tok/s;   9785 sec
+[2020-12-27 20:58:03,693 INFO] Step 16200/100000; acc:  75.76; ppl:  2.60; xent: 0.95; lr: 0.00069; 32438/34528 tok/s;   9846 sec
+[2020-12-27 20:59:05,042 INFO] Step 16300/100000; acc:  75.43; ppl:  2.63; xent: 0.97; lr: 0.00069; 32893/34870 tok/s;   9907 sec
+[2020-12-27 21:00:04,713 INFO] Step 16400/100000; acc:  75.65; ppl:  2.62; xent: 0.96; lr: 0.00069; 32700/35019 tok/s;   9967 sec
+[2020-12-27 21:01:04,309 INFO] Step 16500/100000; acc:  75.13; ppl:  2.67; xent: 0.98; lr: 0.00069; 32698/35082 tok/s;  10026 sec
+[2020-12-27 21:02:04,735 INFO] Step 16600/100000; acc:  74.84; ppl:  2.71; xent: 1.00; lr: 0.00069; 32556/34823 tok/s;  10087 sec
+[2020-12-27 21:03:05,389 INFO] Step 16700/100000; acc:  74.79; ppl:  2.71; xent: 1.00; lr: 0.00068; 32532/34764 tok/s;  10147 sec
+[2020-12-27 21:04:05,091 INFO] Step 16800/100000; acc:  75.32; ppl:  2.68; xent: 0.99; lr: 0.00068; 32561/35279 tok/s;  10207 sec
+[2020-12-27 21:05:05,161 INFO] Step 16900/100000; acc:  77.00; ppl:  2.50; xent: 0.92; lr: 0.00068; 32645/35120 tok/s;  10267 sec
+[2020-12-27 21:06:05,168 INFO] Step 17000/100000; acc:  80.54; ppl:  2.17; xent: 0.77; lr: 0.00068; 32278/34916 tok/s;  10327 sec
+[2020-12-27 21:07:05,796 INFO] Step 17100/100000; acc:  78.34; ppl:  2.36; xent: 0.86; lr: 0.00068; 32179/34531 tok/s;  10388 sec
+[2020-12-27 21:08:06,444 INFO] Step 17200/100000; acc:  77.63; ppl:  2.42; xent: 0.88; lr: 0.00067; 32433/34865 tok/s;  10448 sec
+[2020-12-27 21:09:07,468 INFO] Step 17300/100000; acc:  77.76; ppl:  2.39; xent: 0.87; lr: 0.00067; 32334/34513 tok/s;  10510 sec
+[2020-12-27 21:10:07,464 INFO] Step 17400/100000; acc:  78.67; ppl:  2.30; xent: 0.83; lr: 0.00067; 32919/35119 tok/s;  10569 sec
+[2020-12-27 21:11:08,284 INFO] Step 17500/100000; acc:  78.29; ppl:  2.33; xent: 0.84; lr: 0.00067; 32692/34728 tok/s;  10630 sec
+[2020-12-27 21:12:09,388 INFO] Step 17600/100000; acc:  78.92; ppl:  2.26; xent: 0.82; lr: 0.00067; 32553/34654 tok/s;  10691 sec
+[2020-12-27 21:13:10,298 INFO] Step 17700/100000; acc:  78.69; ppl:  2.28; xent: 0.82; lr: 0.00066; 32291/34655 tok/s;  10752 sec
+[2020-12-27 21:14:10,597 INFO] Step 17800/100000; acc:  79.06; ppl:  2.25; xent: 0.81; lr: 0.00066; 32080/34483 tok/s;  10813 sec
+[2020-12-27 21:15:11,041 INFO] Step 17900/100000; acc:  77.42; ppl:  2.42; xent: 0.88; lr: 0.00066; 32682/35085 tok/s;  10873 sec
+[2020-12-27 21:16:11,418 INFO] Step 18000/100000; acc:  77.06; ppl:  2.45; xent: 0.89; lr: 0.00066; 33027/35134 tok/s;  10933 sec
+[2020-12-27 21:17:12,187 INFO] Step 18100/100000; acc:  76.73; ppl:  2.47; xent: 0.91; lr: 0.00066; 32283/34414 tok/s;  10994 sec
+[2020-12-27 21:18:12,861 INFO] Step 18200/100000; acc:  77.38; ppl:  2.40; xent: 0.88; lr: 0.00066; 32650/34642 tok/s;  11055 sec
+[2020-12-27 21:19:13,128 INFO] Step 18300/100000; acc:  75.62; ppl:  2.61; xent: 0.96; lr: 0.00065; 32704/34827 tok/s;  11115 sec
+[2020-12-27 21:20:13,853 INFO] Step 18400/100000; acc:  74.24; ppl:  2.79; xent: 1.03; lr: 0.00065; 32424/34633 tok/s;  11176 sec
+[2020-12-27 21:21:14,488 INFO] Step 18500/100000; acc:  75.34; ppl:  2.63; xent: 0.97; lr: 0.00065; 32543/34878 tok/s;  11237 sec
+[2020-12-27 21:22:15,340 INFO] Step 18600/100000; acc:  77.73; ppl:  2.37; xent: 0.86; lr: 0.00065; 31839/34777 tok/s;  11297 sec
+[2020-12-27 21:23:15,094 INFO] Step 18700/100000; acc:  78.81; ppl:  2.32; xent: 0.84; lr: 0.00065; 32538/34927 tok/s;  11357 sec
+[2020-12-27 21:24:14,630 INFO] Step 18800/100000; acc:  81.67; ppl:  2.09; xent: 0.74; lr: 0.00064; 32524/34784 tok/s;  11417 sec
+[2020-12-27 21:25:14,668 INFO] Step 18900/100000; acc:  78.52; ppl:  2.35; xent: 0.85; lr: 0.00064; 32242/34979 tok/s;  11477 sec
+[2020-12-27 21:26:14,346 INFO] Step 19000/100000; acc:  77.54; ppl:  2.42; xent: 0.88; lr: 0.00064; 32467/34928 tok/s;  11536 sec
+[2020-12-27 21:27:14,546 INFO] Step 19100/100000; acc:  78.25; ppl:  2.33; xent: 0.85; lr: 0.00064; 32765/34828 tok/s;  11597 sec
+[2020-12-27 21:28:14,849 INFO] Step 19200/100000; acc:  79.08; ppl:  2.24; xent: 0.81; lr: 0.00064; 32864/35421 tok/s;  11657 sec
+[2020-12-27 21:29:15,168 INFO] Step 19300/100000; acc:  79.07; ppl:  2.24; xent: 0.81; lr: 0.00064; 32834/34838 tok/s;  11717 sec
+[2020-12-27 21:30:15,459 INFO] Step 19400/100000; acc:  79.63; ppl:  2.18; xent: 0.78; lr: 0.00063; 32849/35038 tok/s;  11777 sec
+[2020-12-27 21:31:15,815 INFO] Step 19500/100000; acc:  78.68; ppl:  2.27; xent: 0.82; lr: 0.00063; 33125/35168 tok/s;  11838 sec
+[2020-12-27 21:32:16,247 INFO] Step 19600/100000; acc:  78.86; ppl:  2.25; xent: 0.81; lr: 0.00063; 32905/35108 tok/s;  11898 sec
+[2020-12-27 21:33:16,259 INFO] Step 19700/100000; acc:  77.54; ppl:  2.40; xent: 0.88; lr: 0.00063; 32727/35203 tok/s;  11958 sec
+[2020-12-27 21:34:16,087 INFO] Step 19800/100000; acc:  77.63; ppl:  2.39; xent: 0.87; lr: 0.00063; 32767/35059 tok/s;  12018 sec
+[2020-12-27 21:35:16,296 INFO] Step 19900/100000; acc:  75.33; ppl:  2.63; xent: 0.97; lr: 0.00063; 32943/35171 tok/s;  12078 sec
+[2020-12-27 21:36:16,583 INFO] Step 20000/100000; acc:  74.66; ppl:  2.71; xent: 1.00; lr: 0.00062; 33104/35365 tok/s;  12139 sec
+[2020-12-27 21:36:16,586 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 21:36:16,622 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-27 21:36:27,104 INFO] Validation perplexity: 2.64557
+[2020-12-27 21:36:27,104 INFO] Validation accuracy: 78.3504
+[2020-12-27 21:36:27,184 INFO] Saving checkpoint data/wmt/run/model_step_20000.pt
+[2020-12-27 21:37:28,500 INFO] Step 20100/100000; acc:  76.36; ppl:  2.53; xent: 0.93; lr: 0.00062; 27192/29348 tok/s;  12211 sec
+[2020-12-27 21:38:28,425 INFO] Step 20200/100000; acc:  77.49; ppl:  2.40; xent: 0.87; lr: 0.00062; 32930/35534 tok/s;  12270 sec
+[2020-12-27 21:39:28,215 INFO] Step 20300/100000; acc:  79.05; ppl:  2.31; xent: 0.84; lr: 0.00062; 32553/35106 tok/s;  12330 sec
+[2020-12-27 21:40:28,012 INFO] Step 20400/100000; acc:  80.47; ppl:  2.18; xent: 0.78; lr: 0.00062; 32452/34856 tok/s;  12390 sec
+[2020-12-27 21:41:27,636 INFO] Step 20500/100000; acc:  77.39; ppl:  2.44; xent: 0.89; lr: 0.00062; 32517/35342 tok/s;  12450 sec
+[2020-12-27 21:41:30,090 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13718 sent
+Subword(SP/Tokenizer): 191718689 -> 243918084 tok
+
+[2020-12-27 21:41:30,090 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 21:41:33,075 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13425 sent
+Subword(SP/Tokenizer): 191620224 -> 243773266 tok
+
+[2020-12-27 21:41:33,076 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 21:41:35,478 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13581 sent
+Subword(SP/Tokenizer): 191692745 -> 243887231 tok
+
+[2020-12-27 21:41:35,479 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 21:41:42,137 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13500 sent
+Subword(SP/Tokenizer): 191694673 -> 243909828 tok
+
+[2020-12-27 21:41:42,137 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-27 21:42:27,659 INFO] Step 20600/100000; acc:  78.19; ppl:  2.34; xent: 0.85; lr: 0.00062; 32434/34981 tok/s;  12510 sec
+[2020-12-27 21:43:27,996 INFO] Step 20700/100000; acc:  80.08; ppl:  2.16; xent: 0.77; lr: 0.00061; 32686/35091 tok/s;  12570 sec
+[2020-12-27 21:44:28,406 INFO] Step 20800/100000; acc:  80.61; ppl:  2.10; xent: 0.74; lr: 0.00061; 32568/34632 tok/s;  12630 sec
+[2020-12-27 21:45:28,690 INFO] Step 20900/100000; acc:  78.89; ppl:  2.25; xent: 0.81; lr: 0.00061; 32735/34720 tok/s;  12691 sec
+[2020-12-27 21:46:29,266 INFO] Step 21000/100000; acc:  79.25; ppl:  2.21; xent: 0.79; lr: 0.00061; 32996/35049 tok/s;  12751 sec
+[2020-12-27 21:47:29,594 INFO] Step 21100/100000; acc:  80.22; ppl:  2.14; xent: 0.76; lr: 0.00061; 32358/34761 tok/s;  12812 sec
+[2020-12-27 21:48:30,102 INFO] Step 21200/100000; acc:  80.85; ppl:  2.08; xent: 0.73; lr: 0.00061; 32423/35103 tok/s;  12872 sec
+[2020-12-27 21:49:30,694 INFO] Step 21300/100000; acc:  77.71; ppl:  2.38; xent: 0.87; lr: 0.00061; 32556/34901 tok/s;  12933 sec
+[2020-12-27 21:50:31,004 INFO] Step 21400/100000; acc:  77.62; ppl:  2.38; xent: 0.87; lr: 0.00060; 32760/34891 tok/s;  12993 sec
+[2020-12-27 21:51:31,694 INFO] Step 21500/100000; acc:  76.40; ppl:  2.52; xent: 0.92; lr: 0.00060; 32707/34761 tok/s;  13054 sec
+[2020-12-27 21:52:31,422 INFO] Step 21600/100000; acc:  76.35; ppl:  2.51; xent: 0.92; lr: 0.00060; 33133/35053 tok/s;  13113 sec
+[2020-12-27 21:53:31,299 INFO] Step 21700/100000; acc:  76.19; ppl:  2.53; xent: 0.93; lr: 0.00060; 33297/35398 tok/s;  13173 sec
+[2020-12-27 21:54:32,140 INFO] Step 21800/100000; acc:  76.38; ppl:  2.50; xent: 0.92; lr: 0.00060; 32815/34821 tok/s;  13234 sec
+[2020-12-27 21:55:32,517 INFO] Step 21900/100000; acc:  77.12; ppl:  2.43; xent: 0.89; lr: 0.00060; 32204/35018 tok/s;  13295 sec
+[2020-12-27 21:56:32,581 INFO] Step 22000/100000; acc:  78.15; ppl:  2.32; xent: 0.84; lr: 0.00060; 31997/35128 tok/s;  13355 sec
+[2020-12-27 21:57:32,882 INFO] Step 22100/100000; acc:  80.00; ppl:  2.17; xent: 0.78; lr: 0.00059; 32584/34925 tok/s;  13415 sec
+[2020-12-27 21:58:33,020 INFO] Step 22200/100000; acc:  82.53; ppl:  1.98; xent: 0.68; lr: 0.00059; 32844/35024 tok/s;  13475 sec
+[2020-12-27 21:59:33,091 INFO] Step 22300/100000; acc:  79.93; ppl:  2.20; xent: 0.79; lr: 0.00059; 32805/35175 tok/s;  13535 sec
+[2020-12-27 22:00:33,005 INFO] Step 22400/100000; acc:  79.20; ppl:  2.26; xent: 0.82; lr: 0.00059; 32365/35037 tok/s;  13595 sec
+[2020-12-27 22:01:33,650 INFO] Step 22500/100000; acc:  78.98; ppl:  2.26; xent: 0.82; lr: 0.00059; 32585/34810 tok/s;  13656 sec
+[2020-12-27 22:02:34,892 INFO] Step 22600/100000; acc:  79.44; ppl:  2.20; xent: 0.79; lr: 0.00059; 32595/34919 tok/s;  13717 sec
+[2020-12-27 22:03:36,356 INFO] Step 22700/100000; acc:  80.21; ppl:  2.13; xent: 0.75; lr: 0.00059; 32332/34408 tok/s;  13778 sec
+[2020-12-27 22:04:36,988 INFO] Step 22800/100000; acc:  81.16; ppl:  2.04; xent: 0.71; lr: 0.00059; 32762/34818 tok/s;  13839 sec
+[2020-12-27 22:05:37,054 INFO] Step 22900/100000; acc:  79.92; ppl:  2.15; xent: 0.77; lr: 0.00058; 32915/34929 tok/s;  13899 sec
+[2020-12-27 22:06:37,063 INFO] Step 23000/100000; acc:  79.85; ppl:  2.15; xent: 0.77; lr: 0.00058; 33384/35126 tok/s;  13959 sec
+[2020-12-27 22:07:37,832 INFO] Step 23100/100000; acc:  78.02; ppl:  2.34; xent: 0.85; lr: 0.00058; 32868/34819 tok/s;  14020 sec
+[2020-12-27 22:08:38,384 INFO] Step 23200/100000; acc:  77.14; ppl:  2.44; xent: 0.89; lr: 0.00058; 32595/34809 tok/s;  14080 sec
+[2020-12-27 22:09:38,414 INFO] Step 23300/100000; acc:  76.76; ppl:  2.47; xent: 0.90; lr: 0.00058; 32950/35334 tok/s;  14140 sec
+[2020-12-27 22:10:38,709 INFO] Step 23400/100000; acc:  76.98; ppl:  2.45; xent: 0.89; lr: 0.00058; 32954/35006 tok/s;  14201 sec
+[2020-12-27 22:11:38,647 INFO] Step 23500/100000; acc:  78.90; ppl:  2.27; xent: 0.82; lr: 0.00058; 32983/35435 tok/s;  14261 sec
+[2020-12-27 22:12:38,265 INFO] Step 23600/100000; acc:  82.04; ppl:  2.02; xent: 0.70; lr: 0.00058; 32195/34954 tok/s;  14320 sec
+[2020-12-27 22:13:38,500 INFO] Step 23700/100000; acc:  79.53; ppl:  2.23; xent: 0.80; lr: 0.00057; 32680/35102 tok/s;  14381 sec
+[2020-12-27 22:14:38,817 INFO] Step 23800/100000; acc:  79.25; ppl:  2.24; xent: 0.80; lr: 0.00057; 33033/34980 tok/s;  14441 sec
+[2020-12-27 22:15:38,808 INFO] Step 23900/100000; acc:  75.96; ppl:  2.61; xent: 0.96; lr: 0.00057; 33232/34975 tok/s;  14501 sec
+[2020-12-27 22:16:38,892 INFO] Step 24000/100000; acc:  74.16; ppl:  2.84; xent: 1.04; lr: 0.00057; 32624/34538 tok/s;  14561 sec
+[2020-12-27 22:17:38,852 INFO] Step 24100/100000; acc:  73.55; ppl:  2.89; xent: 1.06; lr: 0.00057; 33081/34419 tok/s;  14621 sec
+[2020-12-27 22:18:38,949 INFO] Step 24200/100000; acc:  73.77; ppl:  2.85; xent: 1.05; lr: 0.00057; 33384/34579 tok/s;  14681 sec
+[2020-12-27 22:19:39,062 INFO] Step 24300/100000; acc:  74.71; ppl:  2.74; xent: 1.01; lr: 0.00057; 32982/34396 tok/s;  14741 sec
+[2020-12-27 22:20:39,010 INFO] Step 24400/100000; acc:  77.35; ppl:  2.46; xent: 0.90; lr: 0.00057; 32404/34329 tok/s;  14801 sec
+[2020-12-27 22:21:39,171 INFO] Step 24500/100000; acc:  76.00; ppl:  2.58; xent: 0.95; lr: 0.00056; 33056/34538 tok/s;  14861 sec
+[2020-12-27 22:22:39,760 INFO] Step 24600/100000; acc:  75.92; ppl:  2.57; xent: 0.94; lr: 0.00056; 33361/34850 tok/s;  14922 sec
+[2020-12-27 22:23:40,233 INFO] Step 24700/100000; acc:  74.34; ppl:  2.75; xent: 1.01; lr: 0.00056; 33453/34733 tok/s;  14982 sec
+[2020-12-27 22:24:40,262 INFO] Step 24800/100000; acc:  73.84; ppl:  2.80; xent: 1.03; lr: 0.00056; 33379/34818 tok/s;  15042 sec
+[2020-12-27 22:25:40,473 INFO] Step 24900/100000; acc:  74.00; ppl:  2.77; xent: 1.02; lr: 0.00056; 33081/34589 tok/s;  15103 sec
+[2020-12-27 22:26:41,043 INFO] Step 25000/100000; acc:  74.61; ppl:  2.69; xent: 0.99; lr: 0.00056; 33070/34655 tok/s;  15163 sec
+[2020-12-27 22:26:41,045 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 22:26:41,113 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-27 22:26:51,571 INFO] Validation perplexity: 2.49739
+[2020-12-27 22:26:51,571 INFO] Validation accuracy: 79.2826
+[2020-12-27 22:26:51,651 INFO] Saving checkpoint data/wmt/run/model_step_25000.pt
+[2020-12-27 22:27:52,571 INFO] Step 25100/100000; acc:  75.78; ppl:  2.62; xent: 0.96; lr: 0.00056; 27539/28715 tok/s;  15235 sec
+[2020-12-27 22:28:52,392 INFO] Step 25200/100000; acc:  77.46; ppl:  2.45; xent: 0.90; lr: 0.00056; 33118/34200 tok/s;  15294 sec
+[2020-12-27 22:29:52,922 INFO] Step 25300/100000; acc:  77.13; ppl:  2.45; xent: 0.89; lr: 0.00056; 32988/34435 tok/s;  15355 sec
+[2020-12-27 22:30:53,227 INFO] Step 25400/100000; acc:  77.64; ppl:  2.37; xent: 0.86; lr: 0.00055; 33138/34861 tok/s;  15415 sec
+[2020-12-27 22:31:54,487 INFO] Step 25500/100000; acc:  75.75; ppl:  2.58; xent: 0.95; lr: 0.00055; 32576/34146 tok/s;  15477 sec
+[2020-12-27 22:32:56,154 INFO] Step 25600/100000; acc:  75.64; ppl:  2.58; xent: 0.95; lr: 0.00055; 32461/34109 tok/s;  15538 sec
+[2020-12-27 22:33:57,493 INFO] Step 25700/100000; acc:  75.36; ppl:  2.62; xent: 0.96; lr: 0.00055; 32413/33895 tok/s;  15600 sec
+[2020-12-27 22:34:59,053 INFO] Step 25800/100000; acc:  75.88; ppl:  2.55; xent: 0.94; lr: 0.00055; 32448/33793 tok/s;  15661 sec
+[2020-12-27 22:36:00,492 INFO] Step 25900/100000; acc:  75.12; ppl:  2.65; xent: 0.98; lr: 0.00055; 32206/33827 tok/s;  15723 sec
+[2020-12-27 22:37:01,708 INFO] Step 26000/100000; acc:  75.26; ppl:  2.63; xent: 0.97; lr: 0.00055; 31952/33954 tok/s;  15784 sec
+[2020-12-27 22:38:02,958 INFO] Step 26100/100000; acc:  75.28; ppl:  2.71; xent: 1.00; lr: 0.00055; 31994/33323 tok/s;  15845 sec
+[2020-12-27 22:39:04,405 INFO] Step 26200/100000; acc:  76.43; ppl:  2.56; xent: 0.94; lr: 0.00055; 32103/33419 tok/s;  15906 sec
+[2020-12-27 22:40:06,033 INFO] Step 26300/100000; acc:  77.31; ppl:  2.40; xent: 0.88; lr: 0.00055; 31848/34005 tok/s;  15968 sec
+[2020-12-27 22:41:07,488 INFO] Step 26400/100000; acc:  77.55; ppl:  2.37; xent: 0.86; lr: 0.00054; 32148/34100 tok/s;  16030 sec
+[2020-12-27 22:42:08,939 INFO] Step 26500/100000; acc:  75.49; ppl:  2.56; xent: 0.94; lr: 0.00054; 32662/34462 tok/s;  16091 sec
+[2020-12-27 22:43:10,224 INFO] Step 26600/100000; acc:  75.80; ppl:  2.52; xent: 0.93; lr: 0.00054; 32614/34530 tok/s;  16152 sec
+[2020-12-27 22:44:10,364 INFO] Step 26700/100000; acc:  75.16; ppl:  2.62; xent: 0.96; lr: 0.00054; 32699/34809 tok/s;  16212 sec
+[2020-12-27 22:45:10,088 INFO] Step 26800/100000; acc:  75.53; ppl:  2.57; xent: 0.94; lr: 0.00054; 32734/34826 tok/s;  16272 sec
+[2020-12-27 22:46:09,938 INFO] Step 26900/100000; acc:  77.80; ppl:  2.38; xent: 0.87; lr: 0.00054; 32576/34645 tok/s;  16332 sec
+[2020-12-27 22:47:10,027 INFO] Step 27000/100000; acc:  78.44; ppl:  2.31; xent: 0.84; lr: 0.00054; 32547/34703 tok/s;  16392 sec
+[2020-12-27 22:48:10,244 INFO] Step 27100/100000; acc:  78.11; ppl:  2.34; xent: 0.85; lr: 0.00054; 32363/34288 tok/s;  16452 sec
+[2020-12-27 22:49:10,401 INFO] Step 27200/100000; acc:  77.70; ppl:  2.36; xent: 0.86; lr: 0.00054; 32952/34809 tok/s;  16512 sec
+[2020-12-27 22:50:10,719 INFO] Step 27300/100000; acc:  76.88; ppl:  2.44; xent: 0.89; lr: 0.00053; 32740/34695 tok/s;  16573 sec
+[2020-12-27 22:51:10,630 INFO] Step 27400/100000; acc:  76.43; ppl:  2.49; xent: 0.91; lr: 0.00053; 32812/34713 tok/s;  16633 sec
+[2020-12-27 22:52:11,304 INFO] Step 27500/100000; acc:  75.64; ppl:  2.56; xent: 0.94; lr: 0.00053; 32043/34179 tok/s;  16693 sec
+[2020-12-27 22:53:11,473 INFO] Step 27600/100000; acc:  76.09; ppl:  2.53; xent: 0.93; lr: 0.00053; 32228/34250 tok/s;  16754 sec
+[2020-12-27 22:54:10,917 INFO] Step 27700/100000; acc:  77.97; ppl:  2.38; xent: 0.87; lr: 0.00053; 32582/34683 tok/s;  16813 sec
+[2020-12-27 22:55:11,120 INFO] Step 27800/100000; acc:  77.59; ppl:  2.39; xent: 0.87; lr: 0.00053; 32599/34874 tok/s;  16873 sec
+[2020-12-27 22:56:10,398 INFO] Step 27900/100000; acc:  77.69; ppl:  2.36; xent: 0.86; lr: 0.00053; 32783/34959 tok/s;  16932 sec
+[2020-12-27 22:57:09,811 INFO] Step 28000/100000; acc:  77.55; ppl:  2.35; xent: 0.85; lr: 0.00053; 32900/34916 tok/s;  16992 sec
+[2020-12-27 22:58:10,466 INFO] Step 28100/100000; acc:  78.14; ppl:  2.27; xent: 0.82; lr: 0.00053; 32779/34761 tok/s;  17053 sec
+[2020-12-27 22:59:11,735 INFO] Step 28200/100000; acc:  77.72; ppl:  2.32; xent: 0.84; lr: 0.00053; 32401/34304 tok/s;  17114 sec
+[2020-12-27 23:00:11,988 INFO] Step 28300/100000; acc:  77.76; ppl:  2.32; xent: 0.84; lr: 0.00053; 32872/34610 tok/s;  17174 sec
+[2020-12-27 23:01:12,780 INFO] Step 28400/100000; acc:  74.86; ppl:  2.67; xent: 0.98; lr: 0.00052; 32040/33714 tok/s;  17235 sec
+[2020-12-27 23:02:12,756 INFO] Step 28500/100000; acc:  74.52; ppl:  2.71; xent: 1.00; lr: 0.00052; 32927/34663 tok/s;  17295 sec
+[2020-12-27 23:03:12,870 INFO] Step 28600/100000; acc:  76.34; ppl:  2.52; xent: 0.92; lr: 0.00052; 32210/34340 tok/s;  17355 sec
+[2020-12-27 23:04:11,753 INFO] Step 28700/100000; acc:  77.58; ppl:  2.40; xent: 0.87; lr: 0.00052; 31822/34449 tok/s;  17414 sec
+[2020-12-27 23:05:12,381 INFO] Step 28800/100000; acc:  76.48; ppl:  2.54; xent: 0.93; lr: 0.00052; 32528/34161 tok/s;  17474 sec
+[2020-12-27 23:06:13,866 INFO] Step 28900/100000; acc:  77.18; ppl:  2.46; xent: 0.90; lr: 0.00052; 32393/33874 tok/s;  17536 sec
+[2020-12-27 23:07:14,265 INFO] Step 29000/100000; acc:  76.81; ppl:  2.44; xent: 0.89; lr: 0.00052; 32262/34338 tok/s;  17596 sec
+[2020-12-27 23:08:14,704 INFO] Step 29100/100000; acc:  77.56; ppl:  2.35; xent: 0.85; lr: 0.00052; 32410/34835 tok/s;  17657 sec
+[2020-12-27 23:09:15,120 INFO] Step 29200/100000; acc:  78.58; ppl:  2.25; xent: 0.81; lr: 0.00052; 32565/34794 tok/s;  17717 sec
+[2020-12-27 23:10:14,709 INFO] Step 29300/100000; acc:  78.74; ppl:  2.23; xent: 0.80; lr: 0.00052; 32814/35126 tok/s;  17777 sec
+[2020-12-27 23:11:14,592 INFO] Step 29400/100000; acc:  76.34; ppl:  2.47; xent: 0.90; lr: 0.00052; 33075/35058 tok/s;  17837 sec
+[2020-12-27 23:12:15,410 INFO] Step 29500/100000; acc:  76.65; ppl:  2.43; xent: 0.89; lr: 0.00051; 32923/34759 tok/s;  17897 sec
+[2020-12-27 23:13:16,435 INFO] Step 29600/100000; acc:  76.00; ppl:  2.51; xent: 0.92; lr: 0.00051; 32046/33782 tok/s;  17958 sec
+[2020-12-27 23:14:17,876 INFO] Step 29700/100000; acc:  76.46; ppl:  2.46; xent: 0.90; lr: 0.00051; 31978/33890 tok/s;  18020 sec
+[2020-12-27 23:15:19,316 INFO] Step 29800/100000; acc:  75.35; ppl:  2.62; xent: 0.96; lr: 0.00051; 30859/33363 tok/s;  18081 sec
+[2020-12-27 23:16:20,720 INFO] Step 29900/100000; acc:  75.92; ppl:  2.54; xent: 0.93; lr: 0.00051; 31106/33477 tok/s;  18143 sec
+[2020-12-27 23:17:22,181 INFO] Step 30000/100000; acc:  77.65; ppl:  2.37; xent: 0.86; lr: 0.00051; 31604/33744 tok/s;  18204 sec
+[2020-12-27 23:17:22,184 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-27 23:17:22,222 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-27 23:17:33,669 INFO] Validation perplexity: 2.62587
+[2020-12-27 23:17:33,669 INFO] Validation accuracy: 78.0268
+[2020-12-27 23:17:33,757 INFO] Saving checkpoint data/wmt/run/model_step_30000.pt
+[2020-12-27 23:18:36,945 INFO] Step 30100/100000; acc:  78.37; ppl:  2.30; xent: 0.83; lr: 0.00051; 25935/27800 tok/s;  18279 sec
+[2020-12-27 23:19:38,431 INFO] Step 30200/100000; acc:  76.02; ppl:  2.55; xent: 0.94; lr: 0.00051; 31995/33945 tok/s;  18340 sec
+[2020-12-27 23:20:39,875 INFO] Step 30300/100000; acc:  76.85; ppl:  2.45; xent: 0.90; lr: 0.00051; 31940/33945 tok/s;  18402 sec
+[2020-12-27 23:21:41,310 INFO] Step 30400/100000; acc:  78.27; ppl:  2.30; xent: 0.83; lr: 0.00051; 31576/34027 tok/s;  18463 sec
+[2020-12-27 23:22:42,734 INFO] Step 30500/100000; acc:  78.22; ppl:  2.29; xent: 0.83; lr: 0.00051; 32130/34294 tok/s;  18525 sec
+[2020-12-27 23:23:44,146 INFO] Step 30600/100000; acc:  77.64; ppl:  2.31; xent: 0.84; lr: 0.00051; 32087/34327 tok/s;  18586 sec
+[2020-12-27 23:24:44,161 INFO] Step 30700/100000; acc:  77.13; ppl:  2.37; xent: 0.86; lr: 0.00050; 32980/35080 tok/s;  18646 sec
+[2020-12-27 23:25:43,932 INFO] Step 30800/100000; acc:  75.85; ppl:  2.53; xent: 0.93; lr: 0.00050; 32773/34730 tok/s;  18706 sec
+[2020-12-27 23:26:44,342 INFO] Step 30900/100000; acc:  75.17; ppl:  2.61; xent: 0.96; lr: 0.00050; 32882/34930 tok/s;  18766 sec
+[2020-12-27 23:27:43,985 INFO] Step 31000/100000; acc:  73.12; ppl:  2.91; xent: 1.07; lr: 0.00050; 32907/34733 tok/s;  18826 sec
+[2020-12-27 23:28:43,515 INFO] Step 31100/100000; acc:  74.06; ppl:  2.77; xent: 1.02; lr: 0.00050; 32861/34897 tok/s;  18886 sec
+[2020-12-27 23:29:43,750 INFO] Step 31200/100000; acc:  76.34; ppl:  2.48; xent: 0.91; lr: 0.00050; 31868/34230 tok/s;  18946 sec
+[2020-12-27 23:30:43,409 INFO] Step 31300/100000; acc:  76.75; ppl:  2.43; xent: 0.89; lr: 0.00050; 32703/35048 tok/s;  19005 sec
+[2020-12-27 23:31:42,788 INFO] Step 31400/100000; acc:  78.04; ppl:  2.32; xent: 0.84; lr: 0.00050; 32993/35192 tok/s;  19065 sec
+[2020-12-27 23:32:42,825 INFO] Step 31500/100000; acc:  77.17; ppl:  2.40; xent: 0.88; lr: 0.00050; 32697/35019 tok/s;  19125 sec
+[2020-12-27 23:33:42,808 INFO] Step 31600/100000; acc:  75.42; ppl:  2.60; xent: 0.96; lr: 0.00050; 32083/34935 tok/s;  19185 sec
+[2020-12-27 23:34:42,624 INFO] Step 31700/100000; acc:  76.44; ppl:  2.47; xent: 0.90; lr: 0.00050; 32562/35208 tok/s;  19245 sec
+[2020-12-27 23:35:43,047 INFO] Step 31800/100000; acc:  78.35; ppl:  2.28; xent: 0.82; lr: 0.00050; 32512/34726 tok/s;  19305 sec
+[2020-12-27 23:36:44,502 INFO] Step 31900/100000; acc:  78.40; ppl:  2.27; xent: 0.82; lr: 0.00049; 32005/34179 tok/s;  19367 sec
+[2020-12-27 23:37:45,716 INFO] Step 32000/100000; acc:  79.00; ppl:  2.22; xent: 0.80; lr: 0.00049; 31885/34311 tok/s;  19428 sec
+[2020-12-27 23:38:45,718 INFO] Step 32100/100000; acc:  77.63; ppl:  2.33; xent: 0.85; lr: 0.00049; 32809/35147 tok/s;  19488 sec
+[2020-12-27 23:39:46,972 INFO] Step 32200/100000; acc:  76.96; ppl:  2.38; xent: 0.87; lr: 0.00049; 32563/34595 tok/s;  19549 sec
+[2020-12-27 23:40:46,989 INFO] Step 32300/100000; acc:  75.77; ppl:  2.52; xent: 0.92; lr: 0.00049; 33204/35244 tok/s;  19609 sec
+[2020-12-27 23:41:47,413 INFO] Step 32400/100000; acc:  74.94; ppl:  2.64; xent: 0.97; lr: 0.00049; 32589/34573 tok/s;  19669 sec
+[2020-12-27 23:42:48,044 INFO] Step 32500/100000; acc:  75.53; ppl:  2.55; xent: 0.94; lr: 0.00049; 32647/34643 tok/s;  19730 sec
+[2020-12-27 23:43:48,679 INFO] Step 32600/100000; acc:  76.92; ppl:  2.40; xent: 0.88; lr: 0.00049; 32176/34281 tok/s;  19791 sec
+[2020-12-27 23:44:49,232 INFO] Step 32700/100000; acc:  77.78; ppl:  2.32; xent: 0.84; lr: 0.00049; 32282/34618 tok/s;  19851 sec
+[2020-12-27 23:45:49,217 INFO] Step 32800/100000; acc:  79.77; ppl:  2.17; xent: 0.77; lr: 0.00049; 31713/34422 tok/s;  19911 sec
+[2020-12-27 23:46:49,395 INFO] Step 32900/100000; acc:  77.94; ppl:  2.33; xent: 0.84; lr: 0.00049; 32734/34902 tok/s;  19971 sec
+[2020-12-27 23:47:48,872 INFO] Step 33000/100000; acc:  76.71; ppl:  2.45; xent: 0.89; lr: 0.00049; 32730/34919 tok/s;  20031 sec
+[2020-12-27 23:48:48,731 INFO] Step 33100/100000; acc:  76.63; ppl:  2.45; xent: 0.90; lr: 0.00049; 32275/34858 tok/s;  20091 sec
+[2020-12-27 23:49:48,252 INFO] Step 33200/100000; acc:  77.36; ppl:  2.38; xent: 0.87; lr: 0.00049; 32015/34786 tok/s;  20150 sec
+[2020-12-27 23:50:49,065 INFO] Step 33300/100000; acc:  77.96; ppl:  2.30; xent: 0.83; lr: 0.00048; 32220/34612 tok/s;  20211 sec
+[2020-12-27 23:51:48,911 INFO] Step 33400/100000; acc:  78.73; ppl:  2.22; xent: 0.80; lr: 0.00048; 32713/34889 tok/s;  20271 sec
+[2020-12-27 23:52:49,100 INFO] Step 33500/100000; acc:  78.30; ppl:  2.26; xent: 0.82; lr: 0.00048; 32677/34931 tok/s;  20331 sec
+[2020-12-27 23:53:49,337 INFO] Step 33600/100000; acc:  78.71; ppl:  2.22; xent: 0.80; lr: 0.00048; 33023/35239 tok/s;  20391 sec
+[2020-12-27 23:54:49,136 INFO] Step 33700/100000; acc:  77.93; ppl:  2.30; xent: 0.83; lr: 0.00048; 33153/34954 tok/s;  20451 sec
+[2020-12-27 23:55:50,024 INFO] Step 33800/100000; acc:  78.11; ppl:  2.27; xent: 0.82; lr: 0.00048; 32728/34440 tok/s;  20512 sec
+[2020-12-27 23:56:50,871 INFO] Step 33900/100000; acc:  75.32; ppl:  2.57; xent: 0.94; lr: 0.00048; 32514/34654 tok/s;  20573 sec
+[2020-12-27 23:57:52,244 INFO] Step 34000/100000; acc:  74.72; ppl:  2.62; xent: 0.96; lr: 0.00048; 32408/34176 tok/s;  20634 sec
+[2020-12-27 23:58:53,139 INFO] Step 34100/100000; acc:  74.76; ppl:  2.66; xent: 0.98; lr: 0.00048; 31550/33946 tok/s;  20695 sec
+[2020-12-27 23:59:53,522 INFO] Step 34200/100000; acc:  75.40; ppl:  2.59; xent: 0.95; lr: 0.00048; 31370/34462 tok/s;  20756 sec
+[2020-12-28 00:00:54,516 INFO] Step 34300/100000; acc:  78.02; ppl:  2.32; xent: 0.84; lr: 0.00048; 32207/34365 tok/s;  20817 sec
+[2020-12-28 00:01:55,808 INFO] Step 34400/100000; acc:  79.02; ppl:  2.23; xent: 0.80; lr: 0.00048; 32215/34048 tok/s;  20878 sec
+[2020-12-28 00:02:57,054 INFO] Step 34500/100000; acc:  77.04; ppl:  2.44; xent: 0.89; lr: 0.00048; 31106/33907 tok/s;  20939 sec
+[2020-12-28 00:03:57,870 INFO] Step 34600/100000; acc:  77.75; ppl:  2.36; xent: 0.86; lr: 0.00048; 30871/34128 tok/s;  21000 sec
+[2020-12-28 00:04:58,894 INFO] Step 34700/100000; acc:  78.97; ppl:  2.21; xent: 0.79; lr: 0.00047; 32132/34321 tok/s;  21061 sec
+[2020-12-28 00:05:59,719 INFO] Step 34800/100000; acc:  79.39; ppl:  2.16; xent: 0.77; lr: 0.00047; 32366/34480 tok/s;  21122 sec
+[2020-12-28 00:07:00,810 INFO] Step 34900/100000; acc:  79.79; ppl:  2.13; xent: 0.75; lr: 0.00047; 32130/34508 tok/s;  21183 sec
+[2020-12-28 00:08:02,210 INFO] Step 35000/100000; acc:  79.79; ppl:  2.12; xent: 0.75; lr: 0.00047; 32076/34163 tok/s;  21244 sec
+[2020-12-28 00:08:02,213 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 00:08:02,251 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 00:08:12,880 INFO] Validation perplexity: 2.58123
+[2020-12-28 00:08:12,880 INFO] Validation accuracy: 78.374
+[2020-12-28 00:08:12,964 INFO] Saving checkpoint data/wmt/run/model_step_35000.pt
+[2020-12-28 00:09:15,691 INFO] Step 35100/100000; acc:  77.93; ppl:  2.29; xent: 0.83; lr: 0.00047; 26798/28632 tok/s;  21318 sec
+[2020-12-28 00:10:16,590 INFO] Step 35200/100000; acc:  78.08; ppl:  2.27; xent: 0.82; lr: 0.00047; 32739/34867 tok/s;  21379 sec
+[2020-12-28 00:11:17,171 INFO] Step 35300/100000; acc:  77.37; ppl:  2.34; xent: 0.85; lr: 0.00047; 32700/34767 tok/s;  21439 sec
+[2020-12-28 00:12:18,224 INFO] Step 35400/100000; acc:  77.75; ppl:  2.30; xent: 0.83; lr: 0.00047; 32369/34326 tok/s;  21500 sec
+[2020-12-28 00:13:18,650 INFO] Step 35500/100000; acc:  75.35; ppl:  2.56; xent: 0.94; lr: 0.00047; 32611/34679 tok/s;  21561 sec
+[2020-12-28 00:14:19,460 INFO] Step 35600/100000; acc:  75.74; ppl:  2.50; xent: 0.92; lr: 0.00047; 32352/34682 tok/s;  21621 sec
+[2020-12-28 00:15:19,852 INFO] Step 35700/100000; acc:  74.90; ppl:  2.65; xent: 0.97; lr: 0.00047; 31392/34548 tok/s;  21682 sec
+[2020-12-28 00:16:19,935 INFO] Step 35800/100000; acc:  75.71; ppl:  2.55; xent: 0.94; lr: 0.00047; 31385/34445 tok/s;  21742 sec
+[2020-12-28 00:17:20,078 INFO] Step 35900/100000; acc:  80.15; ppl:  2.14; xent: 0.76; lr: 0.00047; 32870/34941 tok/s;  21802 sec
+[2020-12-28 00:18:20,906 INFO] Step 36000/100000; acc:  79.70; ppl:  2.17; xent: 0.78; lr: 0.00047; 32217/34295 tok/s;  21863 sec
+[2020-12-28 00:19:21,555 INFO] Step 36100/100000; acc:  77.45; ppl:  2.37; xent: 0.86; lr: 0.00047; 31373/34703 tok/s;  21924 sec
+[2020-12-28 00:20:21,793 INFO] Step 36200/100000; acc:  78.20; ppl:  2.28; xent: 0.82; lr: 0.00046; 32434/35420 tok/s;  21984 sec
+[2020-12-28 00:21:22,406 INFO] Step 36300/100000; acc:  79.22; ppl:  2.17; xent: 0.78; lr: 0.00046; 32524/34854 tok/s;  22044 sec
+[2020-12-28 00:22:22,492 INFO] Step 36400/100000; acc:  79.46; ppl:  2.15; xent: 0.77; lr: 0.00046; 32691/34888 tok/s;  22105 sec
+[2020-12-28 00:23:22,611 INFO] Step 36500/100000; acc:  80.45; ppl:  2.06; xent: 0.72; lr: 0.00046; 32653/34726 tok/s;  22165 sec
+[2020-12-28 00:24:23,213 INFO] Step 36600/100000; acc:  79.09; ppl:  2.18; xent: 0.78; lr: 0.00046; 33019/34909 tok/s;  22225 sec
+[2020-12-28 00:25:23,251 INFO] Step 36700/100000; acc:  78.11; ppl:  2.28; xent: 0.82; lr: 0.00046; 32894/34996 tok/s;  22285 sec
+[2020-12-28 00:26:23,512 INFO] Step 36800/100000; acc:  77.06; ppl:  2.39; xent: 0.87; lr: 0.00046; 33095/35207 tok/s;  22346 sec
+[2020-12-28 00:27:23,388 INFO] Step 36900/100000; acc:  76.22; ppl:  2.49; xent: 0.91; lr: 0.00046; 32535/34916 tok/s;  22405 sec
+[2020-12-28 00:28:23,646 INFO] Step 37000/100000; acc:  75.51; ppl:  2.56; xent: 0.94; lr: 0.00046; 32798/34758 tok/s;  22466 sec
+[2020-12-28 00:29:23,710 INFO] Step 37100/100000; acc:  74.37; ppl:  2.70; xent: 0.99; lr: 0.00046; 32934/35014 tok/s;  22526 sec
+[2020-12-28 00:30:23,887 INFO] Step 37200/100000; acc:  74.63; ppl:  2.66; xent: 0.98; lr: 0.00046; 32225/34724 tok/s;  22586 sec
+[2020-12-28 00:31:24,008 INFO] Step 37300/100000; acc:  76.03; ppl:  2.52; xent: 0.92; lr: 0.00046; 31759/34401 tok/s;  22646 sec
+[2020-12-28 00:32:24,105 INFO] Step 37400/100000; acc:  77.66; ppl:  2.34; xent: 0.85; lr: 0.00046; 32448/35005 tok/s;  22706 sec
+[2020-12-28 00:33:25,142 INFO] Step 37500/100000; acc:  80.64; ppl:  2.07; xent: 0.73; lr: 0.00046; 31947/34294 tok/s;  22767 sec
+[2020-12-28 00:34:25,989 INFO] Step 37600/100000; acc:  78.79; ppl:  2.24; xent: 0.81; lr: 0.00046; 32134/34666 tok/s;  22828 sec
+[2020-12-28 00:35:25,618 INFO] Step 37700/100000; acc:  78.22; ppl:  2.29; xent: 0.83; lr: 0.00046; 32417/35315 tok/s;  22888 sec
+[2020-12-28 00:36:25,768 INFO] Step 37800/100000; acc:  79.05; ppl:  2.20; xent: 0.79; lr: 0.00045; 32625/35051 tok/s;  22948 sec
+[2020-12-28 00:37:25,779 INFO] Step 37900/100000; acc:  80.02; ppl:  2.11; xent: 0.75; lr: 0.00045; 32732/34703 tok/s;  23008 sec
+[2020-12-28 00:38:25,751 INFO] Step 38000/100000; acc:  79.73; ppl:  2.12; xent: 0.75; lr: 0.00045; 32792/34936 tok/s;  23068 sec
+[2020-12-28 00:39:26,479 INFO] Step 38100/100000; acc:  80.54; ppl:  2.05; xent: 0.72; lr: 0.00045; 32521/34848 tok/s;  23129 sec
+[2020-12-28 00:40:26,815 INFO] Step 38200/100000; acc:  79.48; ppl:  2.15; xent: 0.76; lr: 0.00045; 32661/34998 tok/s;  23189 sec
+[2020-12-28 00:41:27,147 INFO] Step 38300/100000; acc:  79.35; ppl:  2.17; xent: 0.77; lr: 0.00045; 32965/35277 tok/s;  23249 sec
+[2020-12-28 00:42:27,332 INFO] Step 38400/100000; acc:  77.64; ppl:  2.32; xent: 0.84; lr: 0.00045; 32813/35261 tok/s;  23309 sec
+[2020-12-28 00:43:28,141 INFO] Step 38500/100000; acc:  77.58; ppl:  2.32; xent: 0.84; lr: 0.00045; 33081/35043 tok/s;  23370 sec
+[2020-12-28 00:44:28,222 INFO] Step 38600/100000; acc:  76.43; ppl:  2.44; xent: 0.89; lr: 0.00045; 32807/34777 tok/s;  23430 sec
+[2020-12-28 00:45:28,240 INFO] Step 38700/100000; acc:  76.07; ppl:  2.48; xent: 0.91; lr: 0.00045; 32827/35057 tok/s;  23490 sec
+[2020-12-28 00:46:28,469 INFO] Step 38800/100000; acc:  76.14; ppl:  2.49; xent: 0.91; lr: 0.00045; 32721/34811 tok/s;  23551 sec
+[2020-12-28 00:47:28,577 INFO] Step 38900/100000; acc:  76.63; ppl:  2.45; xent: 0.90; lr: 0.00045; 32421/34985 tok/s;  23611 sec
+[2020-12-28 00:48:28,619 INFO] Step 39000/100000; acc:  79.54; ppl:  2.17; xent: 0.78; lr: 0.00045; 32308/34924 tok/s;  23671 sec
+[2020-12-28 00:49:28,337 INFO] Step 39100/100000; acc:  82.64; ppl:  1.93; xent: 0.66; lr: 0.00045; 31886/34936 tok/s;  23730 sec
+[2020-12-28 00:50:28,751 INFO] Step 39200/100000; acc:  78.68; ppl:  2.24; xent: 0.81; lr: 0.00045; 31984/34461 tok/s;  23791 sec
+[2020-12-28 00:51:28,576 INFO] Step 39300/100000; acc:  78.70; ppl:  2.23; xent: 0.80; lr: 0.00045; 32871/35411 tok/s;  23851 sec
+[2020-12-28 00:52:28,419 INFO] Step 39400/100000; acc:  80.04; ppl:  2.11; xent: 0.75; lr: 0.00045; 32815/34995 tok/s;  23910 sec
+[2020-12-28 00:53:28,474 INFO] Step 39500/100000; acc:  80.73; ppl:  2.05; xent: 0.72; lr: 0.00044; 32744/35132 tok/s;  23971 sec
+[2020-12-28 00:54:29,047 INFO] Step 39600/100000; acc:  80.16; ppl:  2.08; xent: 0.73; lr: 0.00044; 32744/34872 tok/s;  24031 sec
+[2020-12-28 00:55:29,690 INFO] Step 39700/100000; acc:  80.51; ppl:  2.05; xent: 0.72; lr: 0.00044; 32434/34767 tok/s;  24092 sec
+[2020-12-28 00:56:30,242 INFO] Step 39800/100000; acc:  79.74; ppl:  2.12; xent: 0.75; lr: 0.00044; 32901/35228 tok/s;  24152 sec
+[2020-12-28 00:57:30,642 INFO] Step 39900/100000; acc:  79.73; ppl:  2.12; xent: 0.75; lr: 0.00044; 32540/34761 tok/s;  24213 sec
+[2020-12-28 00:58:31,471 INFO] Step 40000/100000; acc:  77.76; ppl:  2.31; xent: 0.84; lr: 0.00044; 33015/35008 tok/s;  24274 sec
+[2020-12-28 00:58:31,475 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 00:58:31,511 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 00:58:42,130 INFO] Validation perplexity: 2.49802
+[2020-12-28 00:58:42,130 INFO] Validation accuracy: 79.158
+[2020-12-28 00:58:42,211 INFO] Saving checkpoint data/wmt/run/model_step_40000.pt
+[2020-12-28 00:59:44,303 INFO] Step 40100/100000; acc:  78.12; ppl:  2.27; xent: 0.82; lr: 0.00044; 27546/29062 tok/s;  24346 sec
+[2020-12-28 01:00:45,153 INFO] Step 40200/100000; acc:  77.35; ppl:  2.35; xent: 0.85; lr: 0.00044; 32430/34786 tok/s;  24407 sec
+[2020-12-28 01:01:46,136 INFO] Step 40300/100000; acc:  77.75; ppl:  2.30; xent: 0.83; lr: 0.00044; 31694/34263 tok/s;  24468 sec
+[2020-12-28 01:02:46,904 INFO] Step 40400/100000; acc:  75.46; ppl:  2.55; xent: 0.94; lr: 0.00044; 32528/34912 tok/s;  24529 sec
+[2020-12-28 01:03:47,714 INFO] Step 40500/100000; acc:  75.48; ppl:  2.55; xent: 0.93; lr: 0.00044; 32795/34541 tok/s;  24590 sec
+[2020-12-28 01:04:47,232 INFO] Step 40600/100000; acc:  76.48; ppl:  2.46; xent: 0.90; lr: 0.00044; 32893/35222 tok/s;  24649 sec
+[2020-12-28 01:05:46,693 INFO] Step 40700/100000; acc:  77.06; ppl:  2.40; xent: 0.87; lr: 0.00044; 32781/35361 tok/s;  24709 sec
+[2020-12-28 01:06:46,242 INFO] Step 40800/100000; acc:  81.80; ppl:  1.99; xent: 0.69; lr: 0.00044; 32626/35407 tok/s;  24768 sec
+[2020-12-28 01:07:45,948 INFO] Step 40900/100000; acc:  82.27; ppl:  1.95; xent: 0.67; lr: 0.00044; 32421/35237 tok/s;  24828 sec
+[2020-12-28 01:08:46,580 INFO] Step 41000/100000; acc:  78.76; ppl:  2.23; xent: 0.80; lr: 0.00044; 32261/34660 tok/s;  24889 sec
+[2020-12-28 01:09:46,258 INFO] Step 41100/100000; acc:  79.18; ppl:  2.18; xent: 0.78; lr: 0.00044; 32622/35102 tok/s;  24948 sec
+[2020-12-28 01:10:46,293 INFO] Step 41200/100000; acc:  79.96; ppl:  2.11; xent: 0.75; lr: 0.00044; 33235/35211 tok/s;  25008 sec
+[2020-12-28 01:11:46,334 INFO] Step 41300/100000; acc:  80.27; ppl:  2.09; xent: 0.74; lr: 0.00043; 32925/34929 tok/s;  25068 sec
+[2020-12-28 01:12:46,944 INFO] Step 41400/100000; acc:  79.79; ppl:  2.12; xent: 0.75; lr: 0.00043; 32796/34904 tok/s;  25129 sec
+[2020-12-28 01:13:47,297 INFO] Step 41500/100000; acc:  80.18; ppl:  2.08; xent: 0.73; lr: 0.00043; 33112/35217 tok/s;  25189 sec
+[2020-12-28 01:14:47,949 INFO] Step 41600/100000; acc:  80.63; ppl:  2.04; xent: 0.71; lr: 0.00043; 32459/35002 tok/s;  25250 sec
+[2020-12-28 01:15:48,228 INFO] Step 41700/100000; acc:  80.53; ppl:  2.05; xent: 0.72; lr: 0.00043; 32293/34782 tok/s;  25310 sec
+[2020-12-28 01:16:49,035 INFO] Step 41800/100000; acc:  78.80; ppl:  2.22; xent: 0.80; lr: 0.00043; 32641/34621 tok/s;  25371 sec
+[2020-12-28 01:17:49,534 INFO] Step 41900/100000; acc:  78.95; ppl:  2.20; xent: 0.79; lr: 0.00043; 32393/34458 tok/s;  25432 sec
+[2020-12-28 01:18:50,215 INFO] Step 42000/100000; acc:  78.92; ppl:  2.18; xent: 0.78; lr: 0.00043; 32596/34791 tok/s;  25492 sec
+[2020-12-28 01:19:50,815 INFO] Step 42100/100000; acc:  79.09; ppl:  2.16; xent: 0.77; lr: 0.00043; 32280/34588 tok/s;  25553 sec
+[2020-12-28 01:20:50,943 INFO] Step 42200/100000; acc:  74.65; ppl:  2.67; xent: 0.98; lr: 0.00043; 32918/35068 tok/s;  25613 sec
+[2020-12-28 01:21:51,649 INFO] Step 42300/100000; acc:  75.12; ppl:  2.60; xent: 0.96; lr: 0.00043; 32561/34772 tok/s;  25674 sec
+[2020-12-28 01:22:52,511 INFO] Step 42400/100000; acc:  78.63; ppl:  2.23; xent: 0.80; lr: 0.00043; 32167/34728 tok/s;  25735 sec
+[2020-12-28 01:23:52,384 INFO] Step 42500/100000; acc:  79.54; ppl:  2.14; xent: 0.76; lr: 0.00043; 32558/35079 tok/s;  25794 sec
+[2020-12-28 01:24:51,887 INFO] Step 42600/100000; acc:  82.31; ppl:  1.97; xent: 0.68; lr: 0.00043; 32196/34861 tok/s;  25854 sec
+[2020-12-28 01:25:50,947 INFO] Step 42700/100000; acc:  81.73; ppl:  2.01; xent: 0.70; lr: 0.00043; 32912/35363 tok/s;  25913 sec
+[2020-12-28 01:26:50,845 INFO] Step 42800/100000; acc:  78.72; ppl:  2.25; xent: 0.81; lr: 0.00043; 32504/34835 tok/s;  25973 sec
+[2020-12-28 01:27:50,475 INFO] Step 42900/100000; acc:  79.37; ppl:  2.17; xent: 0.78; lr: 0.00043; 32808/35220 tok/s;  26033 sec
+[2020-12-28 01:28:50,820 INFO] Step 43000/100000; acc:  80.57; ppl:  2.06; xent: 0.72; lr: 0.00043; 32618/34899 tok/s;  26093 sec
+[2020-12-28 01:29:51,306 INFO] Step 43100/100000; acc:  80.48; ppl:  2.06; xent: 0.72; lr: 0.00043; 32706/34912 tok/s;  26153 sec
+[2020-12-28 01:30:51,833 INFO] Step 43200/100000; acc:  80.66; ppl:  2.04; xent: 0.71; lr: 0.00043; 32615/34782 tok/s;  26214 sec
+[2020-12-28 01:31:52,161 INFO] Step 43300/100000; acc:  80.39; ppl:  2.06; xent: 0.72; lr: 0.00042; 33159/35332 tok/s;  26274 sec
+[2020-12-28 01:32:52,772 INFO] Step 43400/100000; acc:  80.58; ppl:  2.05; xent: 0.72; lr: 0.00042; 32749/34848 tok/s;  26335 sec
+[2020-12-28 01:33:53,130 INFO] Step 43500/100000; acc:  79.50; ppl:  2.14; xent: 0.76; lr: 0.00042; 32713/35050 tok/s;  26395 sec
+[2020-12-28 01:34:53,598 INFO] Step 43600/100000; acc:  78.14; ppl:  2.28; xent: 0.82; lr: 0.00042; 32542/35318 tok/s;  26456 sec
+[2020-12-28 01:35:53,824 INFO] Step 43700/100000; acc:  77.56; ppl:  2.33; xent: 0.84; lr: 0.00042; 32655/34948 tok/s;  26516 sec
+[2020-12-28 01:36:54,012 INFO] Step 43800/100000; acc:  76.96; ppl:  2.40; xent: 0.88; lr: 0.00042; 33012/34848 tok/s;  26576 sec
+[2020-12-28 01:37:54,564 INFO] Step 43900/100000; acc:  77.37; ppl:  2.35; xent: 0.85; lr: 0.00042; 33247/35130 tok/s;  26637 sec
+[2020-12-28 01:38:55,021 INFO] Step 44000/100000; acc:  78.58; ppl:  2.24; xent: 0.81; lr: 0.00042; 32584/35210 tok/s;  26697 sec
+[2020-12-28 01:39:55,268 INFO] Step 44100/100000; acc:  79.15; ppl:  2.19; xent: 0.78; lr: 0.00042; 32720/34989 tok/s;  26757 sec
+[2020-12-28 01:40:54,850 INFO] Step 44200/100000; acc:  81.68; ppl:  2.02; xent: 0.70; lr: 0.00042; 32190/35084 tok/s;  26817 sec
+[2020-12-28 01:41:55,469 INFO] Step 44300/100000; acc:  80.55; ppl:  2.10; xent: 0.74; lr: 0.00042; 32004/34670 tok/s;  26878 sec
+[2020-12-28 01:42:27,416 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13725 sent
+Subword(SP/Tokenizer): 191723655 -> 243942043 tok
+
+[2020-12-28 01:42:27,416 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 01:42:31,947 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13429 sent
+Subword(SP/Tokenizer): 191620465 -> 243791323 tok
+
+[2020-12-28 01:42:31,947 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 01:42:33,405 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13581 sent
+Subword(SP/Tokenizer): 191691879 -> 243905440 tok
+
+[2020-12-28 01:42:33,406 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 01:42:39,486 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13500 sent
+Subword(SP/Tokenizer): 191697005 -> 243928905 tok
+
+[2020-12-28 01:42:39,487 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 01:42:55,720 INFO] Step 44400/100000; acc:  79.39; ppl:  2.18; xent: 0.78; lr: 0.00042; 32508/35048 tok/s;  26938 sec
+[2020-12-28 01:43:55,107 INFO] Step 44500/100000; acc:  80.15; ppl:  2.10; xent: 0.74; lr: 0.00042; 32909/35222 tok/s;  26997 sec
+[2020-12-28 01:44:55,372 INFO] Step 44600/100000; acc:  81.45; ppl:  1.99; xent: 0.69; lr: 0.00042; 32435/34816 tok/s;  27057 sec
+[2020-12-28 01:45:55,393 INFO] Step 44700/100000; acc:  80.63; ppl:  2.05; xent: 0.72; lr: 0.00042; 32906/35159 tok/s;  27117 sec
+[2020-12-28 01:46:55,944 INFO] Step 44800/100000; acc:  80.39; ppl:  2.06; xent: 0.72; lr: 0.00042; 32642/34724 tok/s;  27178 sec
+[2020-12-28 01:47:56,182 INFO] Step 44900/100000; acc:  80.71; ppl:  2.04; xent: 0.71; lr: 0.00042; 32885/35222 tok/s;  27238 sec
+[2020-12-28 01:48:56,549 INFO] Step 45000/100000; acc:  81.97; ppl:  1.95; xent: 0.67; lr: 0.00042; 32193/34625 tok/s;  27299 sec
+[2020-12-28 01:48:56,552 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 01:48:56,589 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 01:49:07,053 INFO] Validation perplexity: 2.40571
+[2020-12-28 01:49:07,053 INFO] Validation accuracy: 79.9835
+[2020-12-28 01:49:07,132 INFO] Saving checkpoint data/wmt/run/model_step_45000.pt
+[2020-12-28 01:50:08,947 INFO] Step 45100/100000; acc:  80.57; ppl:  2.06; xent: 0.72; lr: 0.00042; 27173/29103 tok/s;  27371 sec
+[2020-12-28 01:51:09,612 INFO] Step 45200/100000; acc:  79.09; ppl:  2.18; xent: 0.78; lr: 0.00042; 32680/35068 tok/s;  27432 sec
+[2020-12-28 01:52:10,636 INFO] Step 45300/100000; acc:  79.00; ppl:  2.18; xent: 0.78; lr: 0.00042; 32644/34747 tok/s;  27493 sec
+[2020-12-28 01:53:11,813 INFO] Step 45400/100000; acc:  78.96; ppl:  2.20; xent: 0.79; lr: 0.00041; 32060/34115 tok/s;  27554 sec
+[2020-12-28 01:54:13,234 INFO] Step 45500/100000; acc:  78.54; ppl:  2.24; xent: 0.81; lr: 0.00041; 32276/34327 tok/s;  27615 sec
+[2020-12-28 01:55:14,701 INFO] Step 45600/100000; acc:  76.09; ppl:  2.50; xent: 0.92; lr: 0.00041; 32249/34324 tok/s;  27677 sec
+[2020-12-28 01:56:16,137 INFO] Step 45700/100000; acc:  76.60; ppl:  2.43; xent: 0.89; lr: 0.00041; 32310/34678 tok/s;  27738 sec
+[2020-12-28 01:57:17,642 INFO] Step 45800/100000; acc:  78.91; ppl:  2.20; xent: 0.79; lr: 0.00041; 31782/34535 tok/s;  27800 sec
+[2020-12-28 01:58:18,879 INFO] Step 45900/100000; acc:  79.78; ppl:  2.13; xent: 0.75; lr: 0.00041; 32105/34540 tok/s;  27861 sec
+[2020-12-28 01:59:20,101 INFO] Step 46000/100000; acc:  82.69; ppl:  1.93; xent: 0.66; lr: 0.00041; 31767/34217 tok/s;  27922 sec
+[2020-12-28 02:00:20,703 INFO] Step 46100/100000; acc:  82.25; ppl:  1.96; xent: 0.67; lr: 0.00041; 31876/34576 tok/s;  27983 sec
+[2020-12-28 02:01:21,592 INFO] Step 46200/100000; acc:  80.71; ppl:  2.06; xent: 0.72; lr: 0.00041; 32136/34652 tok/s;  28044 sec
+[2020-12-28 02:02:22,973 INFO] Step 46300/100000; acc:  80.85; ppl:  2.05; xent: 0.72; lr: 0.00041; 31846/34227 tok/s;  28105 sec
+[2020-12-28 02:03:24,478 INFO] Step 46400/100000; acc:  80.85; ppl:  2.04; xent: 0.72; lr: 0.00041; 32223/34298 tok/s;  28167 sec
+[2020-12-28 02:04:25,725 INFO] Step 46500/100000; acc:  80.97; ppl:  2.03; xent: 0.71; lr: 0.00041; 32505/34567 tok/s;  28228 sec
+[2020-12-28 02:05:26,885 INFO] Step 46600/100000; acc:  81.52; ppl:  1.98; xent: 0.68; lr: 0.00041; 32316/34395 tok/s;  28289 sec
+[2020-12-28 02:06:28,385 INFO] Step 46700/100000; acc:  81.37; ppl:  1.99; xent: 0.69; lr: 0.00041; 32268/34234 tok/s;  28350 sec
+[2020-12-28 02:07:29,417 INFO] Step 46800/100000; acc:  81.31; ppl:  1.98; xent: 0.68; lr: 0.00041; 32910/34647 tok/s;  28411 sec
+[2020-12-28 02:08:30,787 INFO] Step 46900/100000; acc:  80.99; ppl:  2.01; xent: 0.70; lr: 0.00041; 32554/34375 tok/s;  28473 sec
+[2020-12-28 02:09:32,278 INFO] Step 47000/100000; acc:  78.68; ppl:  2.23; xent: 0.80; lr: 0.00041; 31802/34163 tok/s;  28534 sec
+[2020-12-28 02:10:33,723 INFO] Step 47100/100000; acc:  78.85; ppl:  2.21; xent: 0.79; lr: 0.00041; 32152/34399 tok/s;  28596 sec
+[2020-12-28 02:11:35,117 INFO] Step 47200/100000; acc:  76.92; ppl:  2.40; xent: 0.88; lr: 0.00041; 32414/34460 tok/s;  28657 sec
+[2020-12-28 02:12:35,986 INFO] Step 47300/100000; acc:  77.42; ppl:  2.35; xent: 0.85; lr: 0.00041; 32584/34746 tok/s;  28718 sec
+[2020-12-28 02:13:35,757 INFO] Step 47400/100000; acc:  79.80; ppl:  2.13; xent: 0.76; lr: 0.00041; 33013/35676 tok/s;  28778 sec
+[2020-12-28 02:14:35,717 INFO] Step 47500/100000; acc:  80.43; ppl:  2.09; xent: 0.74; lr: 0.00041; 32408/34747 tok/s;  28838 sec
+[2020-12-28 02:15:35,805 INFO] Step 47600/100000; acc:  82.62; ppl:  1.94; xent: 0.66; lr: 0.00041; 33097/35098 tok/s;  28898 sec
+[2020-12-28 02:16:36,148 INFO] Step 47700/100000; acc:  82.48; ppl:  1.95; xent: 0.67; lr: 0.00040; 32730/34711 tok/s;  28958 sec
+[2020-12-28 02:17:36,053 INFO] Step 47800/100000; acc:  75.59; ppl:  2.60; xent: 0.95; lr: 0.00040; 32824/34786 tok/s;  29018 sec
+[2020-12-28 02:18:35,810 INFO] Step 47900/100000; acc:  76.23; ppl:  2.51; xent: 0.92; lr: 0.00040; 32540/34667 tok/s;  29078 sec
+[2020-12-28 02:19:35,825 INFO] Step 48000/100000; acc:  74.24; ppl:  2.73; xent: 1.01; lr: 0.00040; 33531/34732 tok/s;  29138 sec
+[2020-12-28 02:20:35,860 INFO] Step 48100/100000; acc:  74.64; ppl:  2.68; xent: 0.98; lr: 0.00040; 33392/34404 tok/s;  29198 sec
+[2020-12-28 02:21:35,655 INFO] Step 48200/100000; acc:  77.58; ppl:  2.39; xent: 0.87; lr: 0.00040; 32398/34291 tok/s;  29258 sec
+[2020-12-28 02:22:35,488 INFO] Step 48300/100000; acc:  77.90; ppl:  2.34; xent: 0.85; lr: 0.00040; 32696/34300 tok/s;  29318 sec
+[2020-12-28 02:23:36,727 INFO] Step 48400/100000; acc:  77.24; ppl:  2.38; xent: 0.87; lr: 0.00040; 33028/34407 tok/s;  29379 sec
+[2020-12-28 02:24:37,713 INFO] Step 48500/100000; acc:  76.79; ppl:  2.42; xent: 0.88; lr: 0.00040; 33118/34557 tok/s;  29440 sec
+[2020-12-28 02:25:38,192 INFO] Step 48600/100000; acc:  74.59; ppl:  2.67; xent: 0.98; lr: 0.00040; 33274/34634 tok/s;  29500 sec
+[2020-12-28 02:26:38,359 INFO] Step 48700/100000; acc:  74.82; ppl:  2.63; xent: 0.97; lr: 0.00040; 33522/34999 tok/s;  29560 sec
+[2020-12-28 02:27:39,803 INFO] Step 48800/100000; acc:  75.05; ppl:  2.58; xent: 0.95; lr: 0.00040; 32513/33890 tok/s;  29622 sec
+[2020-12-28 02:28:40,611 INFO] Step 48900/100000; acc:  75.59; ppl:  2.53; xent: 0.93; lr: 0.00040; 32933/34332 tok/s;  29683 sec
+[2020-12-28 02:29:40,097 INFO] Step 49000/100000; acc:  77.53; ppl:  2.38; xent: 0.87; lr: 0.00040; 33174/34270 tok/s;  29742 sec
+[2020-12-28 02:30:41,278 INFO] Step 49100/100000; acc:  77.91; ppl:  2.33; xent: 0.85; lr: 0.00040; 32518/34072 tok/s;  29803 sec
+[2020-12-28 02:31:42,098 INFO] Step 49200/100000; acc:  78.35; ppl:  2.28; xent: 0.82; lr: 0.00040; 32460/34092 tok/s;  29864 sec
+[2020-12-28 02:32:43,525 INFO] Step 49300/100000; acc:  77.95; ppl:  2.30; xent: 0.83; lr: 0.00040; 32657/34232 tok/s;  29926 sec
+[2020-12-28 02:33:43,586 INFO] Step 49400/100000; acc:  77.70; ppl:  2.33; xent: 0.85; lr: 0.00040; 33076/34777 tok/s;  29986 sec
+[2020-12-28 02:34:44,358 INFO] Step 49500/100000; acc:  77.05; ppl:  2.39; xent: 0.87; lr: 0.00040; 32867/34380 tok/s;  30046 sec
+[2020-12-28 02:35:44,439 INFO] Step 49600/100000; acc:  76.02; ppl:  2.50; xent: 0.91; lr: 0.00040; 33084/34503 tok/s;  30106 sec
+[2020-12-28 02:36:45,075 INFO] Step 49700/100000; acc:  75.88; ppl:  2.50; xent: 0.91; lr: 0.00040; 33215/34593 tok/s;  30167 sec
+[2020-12-28 02:37:45,209 INFO] Step 49800/100000; acc:  75.90; ppl:  2.50; xent: 0.92; lr: 0.00040; 32411/34518 tok/s;  30227 sec
+[2020-12-28 02:38:46,464 INFO] Step 49900/100000; acc:  76.12; ppl:  2.50; xent: 0.92; lr: 0.00040; 32463/34147 tok/s;  30288 sec
+[2020-12-28 02:39:47,098 INFO] Step 50000/100000; acc:  77.95; ppl:  2.38; xent: 0.87; lr: 0.00040; 32233/33215 tok/s;  30349 sec
+[2020-12-28 02:39:47,101 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 02:39:47,136 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 02:39:58,066 INFO] Validation perplexity: 2.39686
+[2020-12-28 02:39:58,066 INFO] Validation accuracy: 79.8332
+[2020-12-28 02:39:58,145 INFO] Saving checkpoint data/wmt/run/model_step_50000.pt
+[2020-12-28 02:41:00,603 INFO] Step 50100/100000; acc:  77.69; ppl:  2.35; xent: 0.86; lr: 0.00039; 27060/28458 tok/s;  30423 sec
+[2020-12-28 02:42:01,904 INFO] Step 50200/100000; acc:  77.95; ppl:  2.30; xent: 0.83; lr: 0.00039; 31953/34145 tok/s;  30484 sec
+[2020-12-28 02:43:02,911 INFO] Step 50300/100000; acc:  77.35; ppl:  2.33; xent: 0.85; lr: 0.00039; 32587/34336 tok/s;  30545 sec
+[2020-12-28 02:44:04,159 INFO] Step 50400/100000; acc:  77.30; ppl:  2.33; xent: 0.84; lr: 0.00039; 32714/34839 tok/s;  30606 sec
+[2020-12-28 02:45:05,602 INFO] Step 50500/100000; acc:  76.76; ppl:  2.38; xent: 0.87; lr: 0.00039; 32370/34375 tok/s;  30668 sec
+[2020-12-28 02:46:06,827 INFO] Step 50600/100000; acc:  76.69; ppl:  2.39; xent: 0.87; lr: 0.00039; 32156/34250 tok/s;  30729 sec
+[2020-12-28 02:47:08,061 INFO] Step 50700/100000; acc:  77.44; ppl:  2.34; xent: 0.85; lr: 0.00039; 31894/33929 tok/s;  30790 sec
+[2020-12-28 02:48:08,181 INFO] Step 50800/100000; acc:  78.74; ppl:  2.24; xent: 0.81; lr: 0.00039; 32209/34242 tok/s;  30850 sec
+[2020-12-28 02:49:08,076 INFO] Step 50900/100000; acc:  77.94; ppl:  2.32; xent: 0.84; lr: 0.00039; 32608/34571 tok/s;  30910 sec
+[2020-12-28 02:50:07,812 INFO] Step 51000/100000; acc:  78.27; ppl:  2.29; xent: 0.83; lr: 0.00039; 32760/34881 tok/s;  30970 sec
+[2020-12-28 02:51:07,842 INFO] Step 51100/100000; acc:  78.13; ppl:  2.28; xent: 0.82; lr: 0.00039; 32881/34813 tok/s;  31030 sec
+[2020-12-28 02:52:08,316 INFO] Step 51200/100000; acc:  78.48; ppl:  2.25; xent: 0.81; lr: 0.00039; 32616/34587 tok/s;  31090 sec
+[2020-12-28 02:53:09,353 INFO] Step 51300/100000; acc:  77.17; ppl:  2.36; xent: 0.86; lr: 0.00039; 32243/34069 tok/s;  31151 sec
+[2020-12-28 02:54:10,801 INFO] Step 51400/100000; acc:  77.16; ppl:  2.35; xent: 0.86; lr: 0.00039; 31549/33537 tok/s;  31213 sec
+[2020-12-28 02:55:12,317 INFO] Step 51500/100000; acc:  78.08; ppl:  2.31; xent: 0.84; lr: 0.00039; 31532/33524 tok/s;  31274 sec
+[2020-12-28 02:56:13,706 INFO] Step 51600/100000; acc:  78.79; ppl:  2.25; xent: 0.81; lr: 0.00039; 31675/33715 tok/s;  31336 sec
+[2020-12-28 02:57:15,142 INFO] Step 51700/100000; acc:  78.08; ppl:  2.29; xent: 0.83; lr: 0.00039; 31704/33861 tok/s;  31397 sec
+[2020-12-28 02:58:16,570 INFO] Step 51800/100000; acc:  78.48; ppl:  2.24; xent: 0.81; lr: 0.00039; 31680/33993 tok/s;  31459 sec
+[2020-12-28 02:59:18,055 INFO] Step 51900/100000; acc:  79.07; ppl:  2.17; xent: 0.78; lr: 0.00039; 31871/33839 tok/s;  31520 sec
+[2020-12-28 03:00:19,249 INFO] Step 52000/100000; acc:  78.53; ppl:  2.21; xent: 0.79; lr: 0.00039; 32349/34190 tok/s;  31581 sec
+[2020-12-28 03:01:19,742 INFO] Step 52100/100000; acc:  77.79; ppl:  2.27; xent: 0.82; lr: 0.00039; 32807/34810 tok/s;  31642 sec
+[2020-12-28 03:02:21,171 INFO] Step 52200/100000; acc:  76.87; ppl:  2.37; xent: 0.86; lr: 0.00039; 32476/34225 tok/s;  31703 sec
+[2020-12-28 03:03:22,160 INFO] Step 52300/100000; acc:  75.16; ppl:  2.60; xent: 0.95; lr: 0.00039; 32205/33966 tok/s;  31764 sec
+[2020-12-28 03:04:23,458 INFO] Step 52400/100000; acc:  75.95; ppl:  2.50; xent: 0.92; lr: 0.00039; 31868/33682 tok/s;  31825 sec
+[2020-12-28 03:05:23,879 INFO] Step 52500/100000; acc:  77.77; ppl:  2.32; xent: 0.84; lr: 0.00039; 31618/33654 tok/s;  31886 sec
+[2020-12-28 03:06:24,664 INFO] Step 52600/100000; acc:  77.77; ppl:  2.32; xent: 0.84; lr: 0.00039; 32037/34162 tok/s;  31947 sec
+[2020-12-28 03:07:25,672 INFO] Step 52700/100000; acc:  78.81; ppl:  2.26; xent: 0.81; lr: 0.00039; 32478/34076 tok/s;  32008 sec
+[2020-12-28 03:08:27,181 INFO] Step 52800/100000; acc:  78.49; ppl:  2.27; xent: 0.82; lr: 0.00038; 31945/33721 tok/s;  32069 sec
+[2020-12-28 03:09:28,159 INFO] Step 52900/100000; acc:  78.45; ppl:  2.26; xent: 0.81; lr: 0.00038; 31769/33918 tok/s;  32130 sec
+[2020-12-28 03:10:28,994 INFO] Step 53000/100000; acc:  78.62; ppl:  2.22; xent: 0.80; lr: 0.00038; 32473/34682 tok/s;  32191 sec
+[2020-12-28 03:11:30,483 INFO] Step 53100/100000; acc:  79.34; ppl:  2.15; xent: 0.77; lr: 0.00038; 31901/34195 tok/s;  32253 sec
+[2020-12-28 03:12:31,948 INFO] Step 53200/100000; acc:  78.48; ppl:  2.21; xent: 0.79; lr: 0.00038; 32287/34147 tok/s;  32314 sec
+[2020-12-28 03:13:32,313 INFO] Step 53300/100000; acc:  78.41; ppl:  2.21; xent: 0.79; lr: 0.00038; 32687/34964 tok/s;  32374 sec
+[2020-12-28 03:14:32,154 INFO] Step 53400/100000; acc:  77.50; ppl:  2.32; xent: 0.84; lr: 0.00038; 32981/34355 tok/s;  32434 sec
+[2020-12-28 03:15:32,503 INFO] Step 53500/100000; acc:  77.24; ppl:  2.37; xent: 0.86; lr: 0.00038; 32698/34531 tok/s;  32495 sec
+[2020-12-28 03:16:32,153 INFO] Step 53600/100000; acc:  76.55; ppl:  2.43; xent: 0.89; lr: 0.00038; 32309/34437 tok/s;  32554 sec
+[2020-12-28 03:17:32,509 INFO] Step 53700/100000; acc:  76.12; ppl:  2.48; xent: 0.91; lr: 0.00038; 30956/33845 tok/s;  32615 sec
+[2020-12-28 03:18:33,183 INFO] Step 53800/100000; acc:  77.62; ppl:  2.32; xent: 0.84; lr: 0.00038; 31786/34233 tok/s;  32675 sec
+[2020-12-28 03:19:33,118 INFO] Step 53900/100000; acc:  79.65; ppl:  2.15; xent: 0.76; lr: 0.00038; 32031/34357 tok/s;  32735 sec
+[2020-12-28 03:20:32,887 INFO] Step 54000/100000; acc:  77.46; ppl:  2.36; xent: 0.86; lr: 0.00038; 32964/35137 tok/s;  32795 sec
+[2020-12-28 03:21:32,817 INFO] Step 54100/100000; acc:  76.83; ppl:  2.42; xent: 0.88; lr: 0.00038; 33334/34854 tok/s;  32855 sec
+[2020-12-28 03:22:32,952 INFO] Step 54200/100000; acc:  78.25; ppl:  2.27; xent: 0.82; lr: 0.00038; 32537/34883 tok/s;  32915 sec
+[2020-12-28 03:23:33,008 INFO] Step 54300/100000; acc:  79.19; ppl:  2.18; xent: 0.78; lr: 0.00038; 31985/34668 tok/s;  32975 sec
+[2020-12-28 03:24:33,678 INFO] Step 54400/100000; acc:  78.82; ppl:  2.19; xent: 0.78; lr: 0.00038; 32386/34486 tok/s;  33036 sec
+[2020-12-28 03:25:34,573 INFO] Step 54500/100000; acc:  79.13; ppl:  2.16; xent: 0.77; lr: 0.00038; 32296/34590 tok/s;  33097 sec
+[2020-12-28 03:26:34,735 INFO] Step 54600/100000; acc:  77.28; ppl:  2.33; xent: 0.84; lr: 0.00038; 33048/35005 tok/s;  33157 sec
+[2020-12-28 03:27:35,326 INFO] Step 54700/100000; acc:  76.96; ppl:  2.35; xent: 0.86; lr: 0.00038; 33081/34910 tok/s;  33217 sec
+[2020-12-28 03:28:35,553 INFO] Step 54800/100000; acc:  74.80; ppl:  2.63; xent: 0.97; lr: 0.00038; 32393/34137 tok/s;  33278 sec
+[2020-12-28 03:29:35,653 INFO] Step 54900/100000; acc:  74.62; ppl:  2.66; xent: 0.98; lr: 0.00038; 32710/34438 tok/s;  33338 sec
+[2020-12-28 03:30:36,621 INFO] Step 55000/100000; acc:  76.09; ppl:  2.49; xent: 0.91; lr: 0.00038; 31630/33919 tok/s;  33399 sec
+[2020-12-28 03:30:36,625 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 03:30:36,697 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 03:30:47,156 INFO] Validation perplexity: 2.4784
+[2020-12-28 03:30:47,156 INFO] Validation accuracy: 79.0284
+[2020-12-28 03:30:47,235 INFO] Saving checkpoint data/wmt/run/model_step_55000.pt
+[2020-12-28 03:31:48,996 INFO] Step 55100/100000; acc:  76.69; ppl:  2.42; xent: 0.88; lr: 0.00038; 26600/28681 tok/s;  33471 sec
+[2020-12-28 03:32:49,693 INFO] Step 55200/100000; acc:  78.35; ppl:  2.25; xent: 0.81; lr: 0.00038; 32177/34789 tok/s;  33532 sec
+[2020-12-28 03:33:49,646 INFO] Step 55300/100000; acc:  79.34; ppl:  2.15; xent: 0.77; lr: 0.00038; 32346/34581 tok/s;  33592 sec
+[2020-12-28 03:34:50,386 INFO] Step 55400/100000; acc:  76.57; ppl:  2.43; xent: 0.89; lr: 0.00038; 32660/34739 tok/s;  33652 sec
+[2020-12-28 03:35:51,840 INFO] Step 55500/100000; acc:  76.44; ppl:  2.44; xent: 0.89; lr: 0.00038; 31905/33918 tok/s;  33714 sec
+[2020-12-28 03:36:51,694 INFO] Step 55600/100000; acc:  77.77; ppl:  2.31; xent: 0.84; lr: 0.00037; 32366/35105 tok/s;  33774 sec
+[2020-12-28 03:37:52,213 INFO] Step 55700/100000; acc:  78.60; ppl:  2.23; xent: 0.80; lr: 0.00037; 31898/34746 tok/s;  33834 sec
+[2020-12-28 03:38:53,072 INFO] Step 55800/100000; acc:  79.29; ppl:  2.16; xent: 0.77; lr: 0.00037; 32212/34452 tok/s;  33895 sec
+[2020-12-28 03:39:53,540 INFO] Step 55900/100000; acc:  79.50; ppl:  2.14; xent: 0.76; lr: 0.00037; 32211/34629 tok/s;  33956 sec
+[2020-12-28 03:40:53,941 INFO] Step 56000/100000; acc:  77.94; ppl:  2.26; xent: 0.82; lr: 0.00037; 32889/35152 tok/s;  34016 sec
+[2020-12-28 03:41:54,869 INFO] Step 56100/100000; acc:  77.96; ppl:  2.25; xent: 0.81; lr: 0.00037; 32426/34682 tok/s;  34077 sec
+[2020-12-28 03:42:55,059 INFO] Step 56200/100000; acc:  76.64; ppl:  2.40; xent: 0.88; lr: 0.00037; 32961/34774 tok/s;  34137 sec
+[2020-12-28 03:43:55,545 INFO] Step 56300/100000; acc:  76.73; ppl:  2.39; xent: 0.87; lr: 0.00037; 32641/34524 tok/s;  34198 sec
+[2020-12-28 03:44:56,428 INFO] Step 56400/100000; acc:  76.62; ppl:  2.41; xent: 0.88; lr: 0.00037; 32379/34482 tok/s;  34258 sec
+[2020-12-28 03:45:56,678 INFO] Step 56500/100000; acc:  76.94; ppl:  2.37; xent: 0.86; lr: 0.00037; 32655/34580 tok/s;  34319 sec
+[2020-12-28 03:46:56,433 INFO] Step 56600/100000; acc:  77.45; ppl:  2.31; xent: 0.84; lr: 0.00037; 32050/34829 tok/s;  34378 sec
+[2020-12-28 03:47:56,898 INFO] Step 56700/100000; acc:  78.26; ppl:  2.23; xent: 0.80; lr: 0.00037; 31983/34667 tok/s;  34439 sec
+[2020-12-28 03:48:56,839 INFO] Step 56800/100000; acc:  79.20; ppl:  2.19; xent: 0.78; lr: 0.00037; 32949/35088 tok/s;  34499 sec
+[2020-12-28 03:49:57,492 INFO] Step 56900/100000; acc:  79.68; ppl:  2.15; xent: 0.76; lr: 0.00037; 32693/34627 tok/s;  34560 sec
+[2020-12-28 03:50:57,267 INFO] Step 57000/100000; acc:  77.11; ppl:  2.38; xent: 0.87; lr: 0.00037; 31634/34437 tok/s;  34619 sec
+[2020-12-28 03:51:57,406 INFO] Step 57100/100000; acc:  77.77; ppl:  2.30; xent: 0.83; lr: 0.00037; 32002/34870 tok/s;  34679 sec
+[2020-12-28 03:52:57,502 INFO] Step 57200/100000; acc:  79.25; ppl:  2.15; xent: 0.77; lr: 0.00037; 32405/34663 tok/s;  34740 sec
+[2020-12-28 03:53:57,887 INFO] Step 57300/100000; acc:  79.31; ppl:  2.13; xent: 0.76; lr: 0.00037; 32944/35101 tok/s;  34800 sec
+[2020-12-28 03:54:58,119 INFO] Step 57400/100000; acc:  79.42; ppl:  2.13; xent: 0.75; lr: 0.00037; 32906/35040 tok/s;  34860 sec
+[2020-12-28 03:55:58,542 INFO] Step 57500/100000; acc:  78.85; ppl:  2.17; xent: 0.78; lr: 0.00037; 33023/35084 tok/s;  34921 sec
+[2020-12-28 03:56:58,797 INFO] Step 57600/100000; acc:  78.36; ppl:  2.23; xent: 0.80; lr: 0.00037; 32470/34364 tok/s;  34981 sec
+[2020-12-28 03:58:00,036 INFO] Step 57700/100000; acc:  77.22; ppl:  2.33; xent: 0.85; lr: 0.00037; 32378/34467 tok/s;  35042 sec
+[2020-12-28 03:59:00,839 INFO] Step 57800/100000; acc:  75.73; ppl:  2.49; xent: 0.91; lr: 0.00037; 32611/34381 tok/s;  35103 sec
+[2020-12-28 04:00:01,833 INFO] Step 57900/100000; acc:  75.75; ppl:  2.49; xent: 0.91; lr: 0.00037; 32512/34226 tok/s;  35164 sec
+[2020-12-28 04:01:02,498 INFO] Step 58000/100000; acc:  76.14; ppl:  2.47; xent: 0.90; lr: 0.00037; 31652/34075 tok/s;  35225 sec
+[2020-12-28 04:02:03,765 INFO] Step 58100/100000; acc:  77.37; ppl:  2.34; xent: 0.85; lr: 0.00037; 31642/34078 tok/s;  35286 sec
+[2020-12-28 04:03:04,483 INFO] Step 58200/100000; acc:  80.36; ppl:  2.08; xent: 0.73; lr: 0.00037; 31733/34148 tok/s;  35347 sec
+[2020-12-28 04:04:04,929 INFO] Step 58300/100000; acc:  78.74; ppl:  2.23; xent: 0.80; lr: 0.00037; 31954/34629 tok/s;  35407 sec
+[2020-12-28 04:05:04,488 INFO] Step 58400/100000; acc:  77.21; ppl:  2.38; xent: 0.87; lr: 0.00037; 31838/34761 tok/s;  35467 sec
+[2020-12-28 04:06:05,705 INFO] Step 58500/100000; acc:  78.71; ppl:  2.22; xent: 0.80; lr: 0.00037; 31501/34008 tok/s;  35528 sec
+[2020-12-28 04:07:06,210 INFO] Step 58600/100000; acc:  80.49; ppl:  2.06; xent: 0.72; lr: 0.00037; 32067/34504 tok/s;  35588 sec
+[2020-12-28 04:08:06,889 INFO] Step 58700/100000; acc:  79.87; ppl:  2.10; xent: 0.74; lr: 0.00036; 32519/34665 tok/s;  35649 sec
+[2020-12-28 04:09:07,649 INFO] Step 58800/100000; acc:  80.12; ppl:  2.07; xent: 0.73; lr: 0.00036; 32466/34538 tok/s;  35710 sec
+[2020-12-28 04:10:08,179 INFO] Step 58900/100000; acc:  79.66; ppl:  2.10; xent: 0.74; lr: 0.00036; 32980/35000 tok/s;  35770 sec
+[2020-12-28 04:11:08,082 INFO] Step 59000/100000; acc:  79.59; ppl:  2.11; xent: 0.75; lr: 0.00036; 32514/34965 tok/s;  35830 sec
+[2020-12-28 04:12:08,150 INFO] Step 59100/100000; acc:  78.37; ppl:  2.22; xent: 0.80; lr: 0.00036; 32957/35219 tok/s;  35890 sec
+[2020-12-28 04:13:08,577 INFO] Step 59200/100000; acc:  78.41; ppl:  2.21; xent: 0.79; lr: 0.00036; 32827/35022 tok/s;  35951 sec
+[2020-12-28 04:14:09,151 INFO] Step 59300/100000; acc:  76.90; ppl:  2.36; xent: 0.86; lr: 0.00036; 32750/34929 tok/s;  36011 sec
+[2020-12-28 04:15:09,438 INFO] Step 59400/100000; acc:  75.59; ppl:  2.49; xent: 0.91; lr: 0.00036; 33024/35115 tok/s;  36071 sec
+[2020-12-28 04:16:09,281 INFO] Step 59500/100000; acc:  75.97; ppl:  2.47; xent: 0.90; lr: 0.00036; 32177/34858 tok/s;  36131 sec
+[2020-12-28 04:17:08,652 INFO] Step 59600/100000; acc:  76.95; ppl:  2.40; xent: 0.88; lr: 0.00036; 32032/34788 tok/s;  36191 sec
+[2020-12-28 04:18:08,405 INFO] Step 59700/100000; acc:  78.73; ppl:  2.22; xent: 0.80; lr: 0.00036; 32500/35065 tok/s;  36250 sec
+[2020-12-28 04:19:08,493 INFO] Step 59800/100000; acc:  80.59; ppl:  2.05; xent: 0.72; lr: 0.00036; 32351/34835 tok/s;  36311 sec
+[2020-12-28 04:20:08,370 INFO] Step 59900/100000; acc:  78.44; ppl:  2.25; xent: 0.81; lr: 0.00036; 32136/35133 tok/s;  36370 sec
+[2020-12-28 04:21:08,083 INFO] Step 60000/100000; acc:  78.51; ppl:  2.24; xent: 0.81; lr: 0.00036; 32032/35066 tok/s;  36430 sec
+[2020-12-28 04:21:08,086 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 04:21:08,123 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 04:21:18,638 INFO] Validation perplexity: 2.44523
+[2020-12-28 04:21:18,638 INFO] Validation accuracy: 79.3492
+[2020-12-28 04:21:18,717 INFO] Saving checkpoint data/wmt/run/model_step_60000.pt
+[2020-12-28 04:22:21,842 INFO] Step 60100/100000; acc:  79.42; ppl:  2.13; xent: 0.76; lr: 0.00036; 26800/28683 tok/s;  36504 sec
+[2020-12-28 04:23:22,923 INFO] Step 60200/100000; acc:  80.02; ppl:  2.08; xent: 0.73; lr: 0.00036; 31907/34519 tok/s;  36565 sec
+[2020-12-28 04:24:23,855 INFO] Step 60300/100000; acc:  80.48; ppl:  2.04; xent: 0.71; lr: 0.00036; 32141/34149 tok/s;  36626 sec
+[2020-12-28 04:25:24,355 INFO] Step 60400/100000; acc:  80.74; ppl:  2.01; xent: 0.70; lr: 0.00036; 32475/34650 tok/s;  36686 sec
+[2020-12-28 04:26:25,447 INFO] Step 60500/100000; acc:  79.39; ppl:  2.13; xent: 0.76; lr: 0.00036; 32693/34794 tok/s;  36747 sec
+[2020-12-28 04:27:25,961 INFO] Step 60600/100000; acc:  79.29; ppl:  2.14; xent: 0.76; lr: 0.00036; 32859/34859 tok/s;  36808 sec
+[2020-12-28 04:28:26,094 INFO] Step 60700/100000; acc:  77.68; ppl:  2.29; xent: 0.83; lr: 0.00036; 32905/34979 tok/s;  36868 sec
+[2020-12-28 04:29:26,061 INFO] Step 60800/100000; acc:  77.96; ppl:  2.27; xent: 0.82; lr: 0.00036; 33223/35134 tok/s;  36928 sec
+[2020-12-28 04:30:25,976 INFO] Step 60900/100000; acc:  74.28; ppl:  2.69; xent: 0.99; lr: 0.00036; 32844/35106 tok/s;  36988 sec
+[2020-12-28 04:31:25,453 INFO] Step 61000/100000; acc:  74.12; ppl:  2.71; xent: 1.00; lr: 0.00036; 32580/34886 tok/s;  37047 sec
+[2020-12-28 04:32:25,245 INFO] Step 61100/100000; acc:  75.91; ppl:  2.50; xent: 0.92; lr: 0.00036; 32498/34923 tok/s;  37107 sec
+[2020-12-28 04:33:24,663 INFO] Step 61200/100000; acc:  76.62; ppl:  2.42; xent: 0.88; lr: 0.00036; 32767/35031 tok/s;  37167 sec
+[2020-12-28 04:34:24,184 INFO] Step 61300/100000; acc:  80.57; ppl:  2.06; xent: 0.72; lr: 0.00036; 32139/34979 tok/s;  37226 sec
+[2020-12-28 04:35:24,062 INFO] Step 61400/100000; acc:  81.55; ppl:  1.98; xent: 0.68; lr: 0.00036; 32247/34930 tok/s;  37286 sec
+[2020-12-28 04:36:23,922 INFO] Step 61500/100000; acc:  78.15; ppl:  2.26; xent: 0.81; lr: 0.00036; 32515/35331 tok/s;  37346 sec
+[2020-12-28 04:37:23,802 INFO] Step 61600/100000; acc:  78.61; ppl:  2.21; xent: 0.79; lr: 0.00036; 32535/35278 tok/s;  37406 sec
+[2020-12-28 04:38:23,776 INFO] Step 61700/100000; acc:  80.32; ppl:  2.07; xent: 0.73; lr: 0.00036; 32968/34980 tok/s;  37466 sec
+[2020-12-28 04:39:23,198 INFO] Step 61800/100000; acc:  80.45; ppl:  2.05; xent: 0.72; lr: 0.00036; 33022/35095 tok/s;  37525 sec
+[2020-12-28 04:40:23,641 INFO] Step 61900/100000; acc:  80.68; ppl:  2.02; xent: 0.70; lr: 0.00036; 32726/34881 tok/s;  37586 sec
+[2020-12-28 04:41:23,834 INFO] Step 62000/100000; acc:  80.80; ppl:  2.01; xent: 0.70; lr: 0.00035; 33026/35147 tok/s;  37646 sec
+[2020-12-28 04:42:23,869 INFO] Step 62100/100000; acc:  80.29; ppl:  2.06; xent: 0.72; lr: 0.00035; 32749/35136 tok/s;  37706 sec
+[2020-12-28 04:43:24,985 INFO] Step 62200/100000; acc:  79.93; ppl:  2.08; xent: 0.73; lr: 0.00035; 32079/34675 tok/s;  37767 sec
+[2020-12-28 04:44:25,659 INFO] Step 62300/100000; acc:  78.05; ppl:  2.25; xent: 0.81; lr: 0.00035; 32783/34803 tok/s;  37828 sec
+[2020-12-28 04:45:26,334 INFO] Step 62400/100000; acc:  78.11; ppl:  2.25; xent: 0.81; lr: 0.00035; 33238/35269 tok/s;  37888 sec
+[2020-12-28 04:46:26,618 INFO] Step 62500/100000; acc:  76.22; ppl:  2.45; xent: 0.90; lr: 0.00035; 32694/34933 tok/s;  37949 sec
+[2020-12-28 04:47:27,428 INFO] Step 62600/100000; acc:  76.50; ppl:  2.42; xent: 0.88; lr: 0.00035; 32029/34160 tok/s;  38009 sec
+[2020-12-28 04:48:28,714 INFO] Step 62700/100000; acc:  76.75; ppl:  2.39; xent: 0.87; lr: 0.00035; 32007/34185 tok/s;  38071 sec
+[2020-12-28 04:49:28,819 INFO] Step 62800/100000; acc:  77.49; ppl:  2.32; xent: 0.84; lr: 0.00035; 32589/34954 tok/s;  38131 sec
+[2020-12-28 04:50:29,312 INFO] Step 62900/100000; acc:  81.07; ppl:  2.02; xent: 0.70; lr: 0.00035; 31832/34823 tok/s;  38191 sec
+[2020-12-28 04:51:29,456 INFO] Step 63000/100000; acc:  81.18; ppl:  2.00; xent: 0.69; lr: 0.00035; 32414/35090 tok/s;  38251 sec
+[2020-12-28 04:52:30,233 INFO] Step 63100/100000; acc:  80.66; ppl:  2.05; xent: 0.72; lr: 0.00035; 32039/34284 tok/s;  38312 sec
+[2020-12-28 04:53:31,420 INFO] Step 63200/100000; acc:  80.44; ppl:  2.05; xent: 0.72; lr: 0.00035; 32224/34577 tok/s;  38373 sec
+[2020-12-28 04:54:32,089 INFO] Step 63300/100000; acc:  80.92; ppl:  2.02; xent: 0.70; lr: 0.00035; 32058/34598 tok/s;  38434 sec
+[2020-12-28 04:55:33,222 INFO] Step 63400/100000; acc:  80.51; ppl:  2.04; xent: 0.71; lr: 0.00035; 31958/34503 tok/s;  38495 sec
+[2020-12-28 04:56:34,354 INFO] Step 63500/100000; acc:  80.77; ppl:  2.02; xent: 0.70; lr: 0.00035; 32215/34365 tok/s;  38556 sec
+[2020-12-28 04:57:35,359 INFO] Step 63600/100000; acc:  80.38; ppl:  2.05; xent: 0.72; lr: 0.00035; 32470/34537 tok/s;  38617 sec
+[2020-12-28 04:58:35,566 INFO] Step 63700/100000; acc:  80.86; ppl:  2.01; xent: 0.70; lr: 0.00035; 32658/34800 tok/s;  38678 sec
+[2020-12-28 04:59:36,423 INFO] Step 63800/100000; acc:  79.63; ppl:  2.11; xent: 0.75; lr: 0.00035; 33104/34880 tok/s;  38738 sec
+[2020-12-28 05:00:36,766 INFO] Step 63900/100000; acc:  78.61; ppl:  2.20; xent: 0.79; lr: 0.00035; 33036/35151 tok/s;  38799 sec
+[2020-12-28 05:01:37,531 INFO] Step 64000/100000; acc:  78.19; ppl:  2.23; xent: 0.80; lr: 0.00035; 33066/35230 tok/s;  38860 sec
+[2020-12-28 05:02:38,196 INFO] Step 64100/100000; acc:  78.24; ppl:  2.23; xent: 0.80; lr: 0.00035; 32074/34557 tok/s;  38920 sec
+[2020-12-28 05:03:37,794 INFO] Step 64200/100000; acc:  77.03; ppl:  2.35; xent: 0.86; lr: 0.00035; 32810/35196 tok/s;  38980 sec
+[2020-12-28 05:04:37,405 INFO] Step 64300/100000; acc:  75.72; ppl:  2.51; xent: 0.92; lr: 0.00035; 33212/35206 tok/s;  39039 sec
+[2020-12-28 05:05:37,469 INFO] Step 64400/100000; acc:  76.49; ppl:  2.42; xent: 0.88; lr: 0.00035; 33140/35193 tok/s;  39100 sec
+[2020-12-28 05:06:37,160 INFO] Step 64500/100000; acc:  78.14; ppl:  2.26; xent: 0.82; lr: 0.00035; 32570/35058 tok/s;  39159 sec
+[2020-12-28 05:07:36,417 INFO] Step 64600/100000; acc:  79.65; ppl:  2.14; xent: 0.76; lr: 0.00035; 32971/35668 tok/s;  39218 sec
+[2020-12-28 05:08:35,626 INFO] Step 64700/100000; acc:  82.57; ppl:  1.92; xent: 0.65; lr: 0.00035; 32102/35262 tok/s;  39278 sec
+[2020-12-28 05:09:35,420 INFO] Step 64800/100000; acc:  80.82; ppl:  2.04; xent: 0.71; lr: 0.00035; 32861/35175 tok/s;  39337 sec
+[2020-12-28 05:10:35,055 INFO] Step 64900/100000; acc:  80.15; ppl:  2.07; xent: 0.73; lr: 0.00035; 33076/35287 tok/s;  39397 sec
+[2020-12-28 05:11:35,450 INFO] Step 65000/100000; acc:  80.06; ppl:  2.08; xent: 0.73; lr: 0.00035; 32475/35039 tok/s;  39457 sec
+[2020-12-28 05:11:35,453 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 05:11:35,488 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 05:11:45,981 INFO] Validation perplexity: 2.39055
+[2020-12-28 05:11:45,981 INFO] Validation accuracy: 79.922
+[2020-12-28 05:11:46,062 INFO] Saving checkpoint data/wmt/run/model_step_65000.pt
+[2020-12-28 05:12:47,463 INFO] Step 65100/100000; acc:  80.41; ppl:  2.05; xent: 0.72; lr: 0.00035; 27385/29373 tok/s;  39529 sec
+[2020-12-28 05:13:47,582 INFO] Step 65200/100000; acc:  79.86; ppl:  2.09; xent: 0.74; lr: 0.00035; 33097/35263 tok/s;  39590 sec
+[2020-12-28 05:14:48,214 INFO] Step 65300/100000; acc:  80.15; ppl:  2.07; xent: 0.73; lr: 0.00035; 32702/34899 tok/s;  39650 sec
+[2020-12-28 05:15:48,784 INFO] Step 65400/100000; acc:  81.15; ppl:  1.98; xent: 0.68; lr: 0.00035; 32471/34630 tok/s;  39711 sec
+[2020-12-28 05:16:49,828 INFO] Step 65500/100000; acc:  82.31; ppl:  1.89; xent: 0.64; lr: 0.00035; 32134/34530 tok/s;  39772 sec
+[2020-12-28 05:17:50,871 INFO] Step 65600/100000; acc:  80.12; ppl:  2.07; xent: 0.73; lr: 0.00035; 32311/34424 tok/s;  39833 sec
+[2020-12-28 05:18:52,128 INFO] Step 65700/100000; acc:  79.46; ppl:  2.13; xent: 0.76; lr: 0.00034; 32838/34750 tok/s;  39894 sec
+[2020-12-28 05:19:53,186 INFO] Step 65800/100000; acc:  79.45; ppl:  2.12; xent: 0.75; lr: 0.00034; 32118/34433 tok/s;  39955 sec
+[2020-12-28 05:20:54,389 INFO] Step 65900/100000; acc:  80.23; ppl:  2.04; xent: 0.71; lr: 0.00034; 31831/33999 tok/s;  40016 sec
+[2020-12-28 05:21:54,341 INFO] Step 66000/100000; acc:  77.33; ppl:  2.34; xent: 0.85; lr: 0.00034; 33221/35293 tok/s;  40076 sec
+[2020-12-28 05:22:54,848 INFO] Step 66100/100000; acc:  74.73; ppl:  2.62; xent: 0.96; lr: 0.00034; 32731/34745 tok/s;  40137 sec
+[2020-12-28 05:23:54,968 INFO] Step 66200/100000; acc:  77.01; ppl:  2.36; xent: 0.86; lr: 0.00034; 32723/35104 tok/s;  40197 sec
+[2020-12-28 05:24:55,857 INFO] Step 66300/100000; acc:  79.65; ppl:  2.10; xent: 0.74; lr: 0.00034; 32101/34635 tok/s;  40258 sec
+[2020-12-28 05:25:56,161 INFO] Step 66400/100000; acc:  81.55; ppl:  1.98; xent: 0.68; lr: 0.00034; 32271/34890 tok/s;  40318 sec
+[2020-12-28 05:26:56,929 INFO] Step 66500/100000; acc:  83.98; ppl:  1.84; xent: 0.61; lr: 0.00034; 31013/33826 tok/s;  40379 sec
+[2020-12-28 05:27:58,362 INFO] Step 66600/100000; acc:  80.18; ppl:  2.10; xent: 0.74; lr: 0.00034; 31572/34000 tok/s;  40440 sec
+[2020-12-28 05:28:59,354 INFO] Step 66700/100000; acc:  79.61; ppl:  2.14; xent: 0.76; lr: 0.00034; 31859/34328 tok/s;  40501 sec
+[2020-12-28 05:30:00,634 INFO] Step 66800/100000; acc:  80.23; ppl:  2.07; xent: 0.73; lr: 0.00034; 32280/34435 tok/s;  40563 sec
+[2020-12-28 05:31:00,966 INFO] Step 66900/100000; acc:  80.87; ppl:  2.01; xent: 0.70; lr: 0.00034; 32717/34903 tok/s;  40623 sec
+[2020-12-28 05:32:01,859 INFO] Step 67000/100000; acc:  80.82; ppl:  2.01; xent: 0.70; lr: 0.00034; 32589/34780 tok/s;  40684 sec
+[2020-12-28 05:33:03,363 INFO] Step 67100/100000; acc:  80.97; ppl:  1.99; xent: 0.69; lr: 0.00034; 32509/34543 tok/s;  40745 sec
+[2020-12-28 05:34:04,789 INFO] Step 67200/100000; acc:  81.03; ppl:  2.00; xent: 0.69; lr: 0.00034; 32114/34305 tok/s;  40807 sec
+[2020-12-28 05:35:06,210 INFO] Step 67300/100000; acc:  81.50; ppl:  1.96; xent: 0.67; lr: 0.00034; 32265/34370 tok/s;  40868 sec
+[2020-12-28 05:36:07,699 INFO] Step 67400/100000; acc:  79.39; ppl:  2.13; xent: 0.76; lr: 0.00034; 32190/34835 tok/s;  40930 sec
+[2020-12-28 05:37:09,113 INFO] Step 67500/100000; acc:  79.38; ppl:  2.12; xent: 0.75; lr: 0.00034; 32317/34536 tok/s;  40991 sec
+[2020-12-28 05:38:10,559 INFO] Step 67600/100000; acc:  77.65; ppl:  2.31; xent: 0.84; lr: 0.00034; 32242/34230 tok/s;  41053 sec
+[2020-12-28 05:39:12,010 INFO] Step 67700/100000; acc:  77.81; ppl:  2.30; xent: 0.83; lr: 0.00034; 32299/34305 tok/s;  41114 sec
+[2020-12-28 05:40:13,498 INFO] Step 67800/100000; acc:  78.28; ppl:  2.25; xent: 0.81; lr: 0.00034; 31951/34027 tok/s;  41176 sec
+[2020-12-28 05:41:14,910 INFO] Step 67900/100000; acc:  78.86; ppl:  2.18; xent: 0.78; lr: 0.00034; 32236/34525 tok/s;  41237 sec
+[2020-12-28 05:42:16,177 INFO] Step 68000/100000; acc:  80.46; ppl:  2.08; xent: 0.73; lr: 0.00034; 31785/34425 tok/s;  41298 sec
+[2020-12-28 05:43:17,127 INFO] Step 68100/100000; acc:  81.36; ppl:  2.02; xent: 0.70; lr: 0.00034; 31390/34440 tok/s;  41359 sec
+[2020-12-28 05:44:12,007 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13656 sent
+Subword(SP/Tokenizer): 191631558 -> 243833132 tok
+
+[2020-12-28 05:44:12,007 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 05:44:16,887 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13485 sent
+Subword(SP/Tokenizer): 191592461 -> 243785848 tok
+
+[2020-12-28 05:44:16,887 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 05:44:18,192 INFO] Step 68200/100000; acc:  80.32; ppl:  2.08; xent: 0.73; lr: 0.00034; 32292/34407 tok/s;  41420 sec
+[2020-12-28 05:44:26,087 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13339 sent
+Subword(SP/Tokenizer): 191524358 -> 243677599 tok
+
+[2020-12-28 05:44:26,087 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 05:44:31,592 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13402 sent
+Subword(SP/Tokenizer): 191592944 -> 243804869 tok
+
+[2020-12-28 05:44:31,592 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 05:45:18,552 INFO] Step 68300/100000; acc:  80.72; ppl:  2.03; xent: 0.71; lr: 0.00034; 32711/34748 tok/s;  41481 sec
+[2020-12-28 05:46:18,785 INFO] Step 68400/100000; acc:  80.70; ppl:  2.04; xent: 0.71; lr: 0.00034; 32189/34984 tok/s;  41541 sec
+[2020-12-28 05:47:19,050 INFO] Step 68500/100000; acc:  81.37; ppl:  1.99; xent: 0.69; lr: 0.00034; 32120/34915 tok/s;  41601 sec
+[2020-12-28 05:48:19,241 INFO] Step 68600/100000; acc:  80.57; ppl:  2.04; xent: 0.71; lr: 0.00034; 33092/35371 tok/s;  41661 sec
+[2020-12-28 05:49:20,043 INFO] Step 68700/100000; acc:  81.09; ppl:  2.00; xent: 0.69; lr: 0.00034; 32514/34697 tok/s;  41722 sec
+[2020-12-28 05:50:20,693 INFO] Step 68800/100000; acc:  82.46; ppl:  1.89; xent: 0.64; lr: 0.00034; 32370/34692 tok/s;  41783 sec
+[2020-12-28 05:51:21,750 INFO] Step 68900/100000; acc:  82.76; ppl:  1.87; xent: 0.63; lr: 0.00034; 31771/34122 tok/s;  41844 sec
+[2020-12-28 05:52:22,067 INFO] Step 69000/100000; acc:  79.77; ppl:  2.10; xent: 0.74; lr: 0.00034; 33139/35103 tok/s;  41904 sec
+[2020-12-28 05:53:23,125 INFO] Step 69100/100000; acc:  79.98; ppl:  2.08; xent: 0.73; lr: 0.00034; 32874/35180 tok/s;  41965 sec
+[2020-12-28 05:54:23,839 INFO] Step 69200/100000; acc:  79.79; ppl:  2.10; xent: 0.74; lr: 0.00034; 32339/34368 tok/s;  42026 sec
+[2020-12-28 05:55:24,878 INFO] Step 69300/100000; acc:  79.96; ppl:  2.08; xent: 0.73; lr: 0.00034; 32444/34559 tok/s;  42087 sec
+[2020-12-28 05:56:26,320 INFO] Step 69400/100000; acc:  76.71; ppl:  2.41; xent: 0.88; lr: 0.00034; 32167/34481 tok/s;  42148 sec
+[2020-12-28 05:57:27,515 INFO] Step 69500/100000; acc:  75.47; ppl:  2.53; xent: 0.93; lr: 0.00034; 32436/34571 tok/s;  42210 sec
+[2020-12-28 05:58:28,834 INFO] Step 69600/100000; acc:  78.40; ppl:  2.22; xent: 0.80; lr: 0.00034; 32196/34609 tok/s;  42271 sec
+[2020-12-28 05:59:30,279 INFO] Step 69700/100000; acc:  80.21; ppl:  2.05; xent: 0.72; lr: 0.00033; 32229/34574 tok/s;  42332 sec
+[2020-12-28 06:00:31,707 INFO] Step 69800/100000; acc:  81.98; ppl:  1.96; xent: 0.67; lr: 0.00033; 31452/34106 tok/s;  42394 sec
+[2020-12-28 06:01:32,691 INFO] Step 69900/100000; acc:  83.53; ppl:  1.86; xent: 0.62; lr: 0.00033; 31073/33922 tok/s;  42455 sec
+[2020-12-28 06:02:34,177 INFO] Step 70000/100000; acc:  80.97; ppl:  2.03; xent: 0.71; lr: 0.00033; 31766/34053 tok/s;  42516 sec
+[2020-12-28 06:02:34,180 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 06:02:34,215 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 06:02:45,153 INFO] Validation perplexity: 2.3277
+[2020-12-28 06:02:45,153 INFO] Validation accuracy: 80.5048
+[2020-12-28 06:02:45,232 INFO] Saving checkpoint data/wmt/run/model_step_70000.pt
+[2020-12-28 06:03:48,511 INFO] Step 70100/100000; acc:  80.96; ppl:  2.02; xent: 0.70; lr: 0.00033; 26565/28440 tok/s;  42591 sec
+[2020-12-28 06:04:49,753 INFO] Step 70200/100000; acc:  81.14; ppl:  2.00; xent: 0.70; lr: 0.00033; 32243/34449 tok/s;  42652 sec
+[2020-12-28 06:05:51,108 INFO] Step 70300/100000; acc:  81.61; ppl:  1.97; xent: 0.68; lr: 0.00033; 32124/34310 tok/s;  42713 sec
+[2020-12-28 06:06:52,393 INFO] Step 70400/100000; acc:  81.56; ppl:  1.96; xent: 0.67; lr: 0.00033; 32403/34446 tok/s;  42774 sec
+[2020-12-28 06:07:53,022 INFO] Step 70500/100000; acc:  81.82; ppl:  1.94; xent: 0.66; lr: 0.00033; 32711/34784 tok/s;  42835 sec
+[2020-12-28 06:08:53,810 INFO] Step 70600/100000; acc:  82.05; ppl:  1.92; xent: 0.65; lr: 0.00033; 32780/34825 tok/s;  42896 sec
+[2020-12-28 06:09:54,104 INFO] Step 70700/100000; acc:  82.24; ppl:  1.89; xent: 0.64; lr: 0.00033; 33601/35176 tok/s;  42956 sec
+[2020-12-28 06:10:55,513 INFO] Step 70800/100000; acc:  80.55; ppl:  2.05; xent: 0.72; lr: 0.00033; 32214/34174 tok/s;  43018 sec
+[2020-12-28 06:11:55,820 INFO] Step 70900/100000; acc:  79.95; ppl:  2.10; xent: 0.74; lr: 0.00033; 32548/35117 tok/s;  43078 sec
+[2020-12-28 06:12:56,421 INFO] Step 71000/100000; acc:  77.79; ppl:  2.29; xent: 0.83; lr: 0.00033; 32761/34850 tok/s;  43138 sec
+[2020-12-28 06:13:57,302 INFO] Step 71100/100000; acc:  76.63; ppl:  2.40; xent: 0.88; lr: 0.00033; 32510/34905 tok/s;  43199 sec
+[2020-12-28 06:14:57,664 INFO] Step 71200/100000; acc:  78.54; ppl:  2.21; xent: 0.79; lr: 0.00033; 33153/35405 tok/s;  43260 sec
+[2020-12-28 06:15:59,061 INFO] Step 71300/100000; acc:  80.56; ppl:  2.04; xent: 0.71; lr: 0.00033; 31737/34095 tok/s;  43321 sec
+[2020-12-28 06:17:00,547 INFO] Step 71400/100000; acc:  81.79; ppl:  1.98; xent: 0.68; lr: 0.00033; 32154/34579 tok/s;  43383 sec
+[2020-12-28 06:18:01,933 INFO] Step 71500/100000; acc:  83.30; ppl:  1.89; xent: 0.63; lr: 0.00033; 32154/34345 tok/s;  43444 sec
+[2020-12-28 06:19:03,420 INFO] Step 71600/100000; acc:  79.86; ppl:  2.15; xent: 0.76; lr: 0.00033; 32087/34032 tok/s;  43505 sec
+[2020-12-28 06:20:04,630 INFO] Step 71700/100000; acc:  78.42; ppl:  2.26; xent: 0.82; lr: 0.00033; 32018/33827 tok/s;  43567 sec
+[2020-12-28 06:21:06,052 INFO] Step 71800/100000; acc:  76.34; ppl:  2.47; xent: 0.90; lr: 0.00033; 32325/33979 tok/s;  43628 sec
+[2020-12-28 06:22:07,523 INFO] Step 71900/100000; acc:  75.52; ppl:  2.56; xent: 0.94; lr: 0.00033; 32236/33375 tok/s;  43690 sec
+[2020-12-28 06:23:08,830 INFO] Step 72000/100000; acc:  75.97; ppl:  2.51; xent: 0.92; lr: 0.00033; 32408/33674 tok/s;  43751 sec
+[2020-12-28 06:24:09,854 INFO] Step 72100/100000; acc:  77.45; ppl:  2.38; xent: 0.87; lr: 0.00033; 32149/33732 tok/s;  43812 sec
+[2020-12-28 06:25:11,257 INFO] Step 72200/100000; acc:  77.37; ppl:  2.35; xent: 0.86; lr: 0.00033; 32346/33951 tok/s;  43873 sec
+[2020-12-28 06:26:12,267 INFO] Step 72300/100000; acc:  78.25; ppl:  2.26; xent: 0.82; lr: 0.00033; 32749/34521 tok/s;  43934 sec
+[2020-12-28 06:27:13,746 INFO] Step 72400/100000; acc:  76.30; ppl:  2.46; xent: 0.90; lr: 0.00033; 32757/34024 tok/s;  43996 sec
+[2020-12-28 06:28:15,125 INFO] Step 72500/100000; acc:  76.26; ppl:  2.46; xent: 0.90; lr: 0.00033; 33040/34260 tok/s;  44057 sec
+[2020-12-28 06:29:16,386 INFO] Step 72600/100000; acc:  75.42; ppl:  2.53; xent: 0.93; lr: 0.00033; 32740/34109 tok/s;  44118 sec
+[2020-12-28 06:30:17,667 INFO] Step 72700/100000; acc:  75.24; ppl:  2.54; xent: 0.93; lr: 0.00033; 32324/33865 tok/s;  44180 sec
+[2020-12-28 06:31:19,103 INFO] Step 72800/100000; acc:  77.17; ppl:  2.38; xent: 0.87; lr: 0.00033; 32428/33703 tok/s;  44241 sec
+[2020-12-28 06:32:20,302 INFO] Step 72900/100000; acc:  78.69; ppl:  2.26; xent: 0.81; lr: 0.00033; 32165/33310 tok/s;  44302 sec
+[2020-12-28 06:33:21,289 INFO] Step 73000/100000; acc:  77.91; ppl:  2.30; xent: 0.83; lr: 0.00033; 32720/34214 tok/s;  44363 sec
+[2020-12-28 06:34:21,961 INFO] Step 73100/100000; acc:  78.27; ppl:  2.26; xent: 0.81; lr: 0.00033; 32781/34341 tok/s;  44424 sec
+[2020-12-28 06:35:23,093 INFO] Step 73200/100000; acc:  78.12; ppl:  2.27; xent: 0.82; lr: 0.00033; 32561/34181 tok/s;  44485 sec
+[2020-12-28 06:36:24,275 INFO] Step 73300/100000; acc:  78.57; ppl:  2.22; xent: 0.80; lr: 0.00033; 32580/34327 tok/s;  44546 sec
+[2020-12-28 06:37:25,673 INFO] Step 73400/100000; acc:  75.68; ppl:  2.51; xent: 0.92; lr: 0.00033; 32586/33924 tok/s;  44608 sec
+[2020-12-28 06:38:26,888 INFO] Step 73500/100000; acc:  75.40; ppl:  2.54; xent: 0.93; lr: 0.00033; 32763/34196 tok/s;  44669 sec
+[2020-12-28 06:39:27,373 INFO] Step 73600/100000; acc:  76.67; ppl:  2.40; xent: 0.87; lr: 0.00033; 32876/34415 tok/s;  44729 sec
+[2020-12-28 06:40:28,087 INFO] Step 73700/100000; acc:  77.30; ppl:  2.33; xent: 0.84; lr: 0.00033; 32631/34514 tok/s;  44790 sec
+[2020-12-28 06:41:27,662 INFO] Step 73800/100000; acc:  77.61; ppl:  2.36; xent: 0.86; lr: 0.00033; 33080/34706 tok/s;  44850 sec
+[2020-12-28 06:42:28,222 INFO] Step 73900/100000; acc:  78.35; ppl:  2.29; xent: 0.83; lr: 0.00033; 32309/33690 tok/s;  44910 sec
+[2020-12-28 06:43:29,443 INFO] Step 74000/100000; acc:  77.92; ppl:  2.30; xent: 0.83; lr: 0.00032; 32160/34028 tok/s;  44971 sec
+[2020-12-28 06:44:30,225 INFO] Step 74100/100000; acc:  78.12; ppl:  2.28; xent: 0.82; lr: 0.00032; 32223/33982 tok/s;  45032 sec
+[2020-12-28 06:45:30,620 INFO] Step 74200/100000; acc:  77.83; ppl:  2.25; xent: 0.81; lr: 0.00032; 33003/35244 tok/s;  45093 sec
+[2020-12-28 06:46:31,105 INFO] Step 74300/100000; acc:  77.82; ppl:  2.25; xent: 0.81; lr: 0.00032; 32954/34906 tok/s;  45153 sec
+[2020-12-28 06:47:31,490 INFO] Step 74400/100000; acc:  76.69; ppl:  2.37; xent: 0.86; lr: 0.00032; 32811/35058 tok/s;  45214 sec
+[2020-12-28 06:48:31,233 INFO] Step 74500/100000; acc:  77.03; ppl:  2.34; xent: 0.85; lr: 0.00032; 32961/34955 tok/s;  45273 sec
+[2020-12-28 06:49:30,669 INFO] Step 74600/100000; acc:  78.63; ppl:  2.23; xent: 0.80; lr: 0.00032; 32513/34596 tok/s;  45333 sec
+[2020-12-28 06:50:31,113 INFO] Step 74700/100000; acc:  78.66; ppl:  2.23; xent: 0.80; lr: 0.00032; 32164/34295 tok/s;  45393 sec
+[2020-12-28 06:51:31,979 INFO] Step 74800/100000; acc:  78.45; ppl:  2.25; xent: 0.81; lr: 0.00032; 32250/34060 tok/s;  45454 sec
+[2020-12-28 06:52:32,399 INFO] Step 74900/100000; acc:  78.88; ppl:  2.20; xent: 0.79; lr: 0.00032; 32551/34610 tok/s;  45514 sec
+[2020-12-28 06:53:33,904 INFO] Step 75000/100000; acc:  80.12; ppl:  2.08; xent: 0.73; lr: 0.00032; 31764/33870 tok/s;  45576 sec
+[2020-12-28 06:53:33,908 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 06:53:33,946 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 06:53:44,540 INFO] Validation perplexity: 2.37385
+[2020-12-28 06:53:44,540 INFO] Validation accuracy: 79.8475
+[2020-12-28 06:53:44,621 INFO] Saving checkpoint data/wmt/run/model_step_75000.pt
+[2020-12-28 06:54:47,999 INFO] Step 75100/100000; acc:  78.43; ppl:  2.22; xent: 0.80; lr: 0.00032; 26770/28256 tok/s;  45650 sec
+[2020-12-28 06:55:49,242 INFO] Step 75200/100000; acc:  77.03; ppl:  2.36; xent: 0.86; lr: 0.00032; 31989/33965 tok/s;  45711 sec
+[2020-12-28 06:56:50,280 INFO] Step 75300/100000; acc:  77.47; ppl:  2.32; xent: 0.84; lr: 0.00032; 32292/33971 tok/s;  45772 sec
+[2020-12-28 06:57:51,062 INFO] Step 75400/100000; acc:  79.10; ppl:  2.19; xent: 0.79; lr: 0.00032; 31555/33569 tok/s;  45833 sec
+[2020-12-28 06:58:52,147 INFO] Step 75500/100000; acc:  78.40; ppl:  2.25; xent: 0.81; lr: 0.00032; 31652/33901 tok/s;  45894 sec
+[2020-12-28 06:59:53,322 INFO] Step 75600/100000; acc:  78.36; ppl:  2.25; xent: 0.81; lr: 0.00032; 31807/34021 tok/s;  45955 sec
+[2020-12-28 07:00:54,410 INFO] Step 75700/100000; acc:  78.93; ppl:  2.18; xent: 0.78; lr: 0.00032; 32061/34136 tok/s;  46016 sec
+[2020-12-28 07:01:55,199 INFO] Step 75800/100000; acc:  79.67; ppl:  2.11; xent: 0.75; lr: 0.00032; 32108/34032 tok/s;  46077 sec
+[2020-12-28 07:02:55,793 INFO] Step 75900/100000; acc:  78.65; ppl:  2.17; xent: 0.78; lr: 0.00032; 32944/34763 tok/s;  46138 sec
+[2020-12-28 07:03:55,732 INFO] Step 76000/100000; acc:  78.44; ppl:  2.19; xent: 0.78; lr: 0.00032; 33054/35099 tok/s;  46198 sec
+[2020-12-28 07:04:55,463 INFO] Step 76100/100000; acc:  76.08; ppl:  2.47; xent: 0.90; lr: 0.00032; 32905/34436 tok/s;  46257 sec
+[2020-12-28 07:05:55,890 INFO] Step 76200/100000; acc:  75.83; ppl:  2.49; xent: 0.91; lr: 0.00032; 32525/34343 tok/s;  46318 sec
+[2020-12-28 07:06:55,228 INFO] Step 76300/100000; acc:  77.23; ppl:  2.34; xent: 0.85; lr: 0.00032; 32559/34627 tok/s;  46377 sec
+[2020-12-28 07:07:54,867 INFO] Step 76400/100000; acc:  77.99; ppl:  2.26; xent: 0.82; lr: 0.00032; 32365/34673 tok/s;  46437 sec
+[2020-12-28 07:08:54,805 INFO] Step 76500/100000; acc:  78.78; ppl:  2.22; xent: 0.80; lr: 0.00032; 32575/34464 tok/s;  46497 sec
+[2020-12-28 07:09:54,623 INFO] Step 76600/100000; acc:  79.84; ppl:  2.15; xent: 0.76; lr: 0.00032; 32691/34418 tok/s;  46557 sec
+[2020-12-28 07:10:54,301 INFO] Step 76700/100000; acc:  78.15; ppl:  2.28; xent: 0.82; lr: 0.00032; 32968/35041 tok/s;  46616 sec
+[2020-12-28 07:11:54,241 INFO] Step 76800/100000; acc:  78.39; ppl:  2.25; xent: 0.81; lr: 0.00032; 33068/34983 tok/s;  46676 sec
+[2020-12-28 07:12:54,056 INFO] Step 76900/100000; acc:  78.81; ppl:  2.18; xent: 0.78; lr: 0.00032; 32652/34989 tok/s;  46736 sec
+[2020-12-28 07:13:54,129 INFO] Step 77000/100000; acc:  78.94; ppl:  2.16; xent: 0.77; lr: 0.00032; 32798/35084 tok/s;  46796 sec
+[2020-12-28 07:14:54,913 INFO] Step 77100/100000; acc:  79.52; ppl:  2.10; xent: 0.74; lr: 0.00032; 32743/34561 tok/s;  46857 sec
+[2020-12-28 07:15:56,056 INFO] Step 77200/100000; acc:  79.45; ppl:  2.11; xent: 0.75; lr: 0.00032; 32373/34414 tok/s;  46918 sec
+[2020-12-28 07:16:56,962 INFO] Step 77300/100000; acc:  78.47; ppl:  2.23; xent: 0.80; lr: 0.00032; 32395/34194 tok/s;  46979 sec
+[2020-12-28 07:17:57,853 INFO] Step 77400/100000; acc:  78.48; ppl:  2.23; xent: 0.80; lr: 0.00032; 32068/33731 tok/s;  47040 sec
+[2020-12-28 07:18:58,174 INFO] Step 77500/100000; acc:  75.80; ppl:  2.49; xent: 0.91; lr: 0.00032; 31394/34052 tok/s;  47100 sec
+[2020-12-28 07:19:58,250 INFO] Step 77600/100000; acc:  76.30; ppl:  2.42; xent: 0.88; lr: 0.00032; 31790/34284 tok/s;  47160 sec
+[2020-12-28 07:20:57,913 INFO] Step 77700/100000; acc:  77.41; ppl:  2.31; xent: 0.84; lr: 0.00032; 32272/34911 tok/s;  47220 sec
+[2020-12-28 07:21:57,615 INFO] Step 77800/100000; acc:  78.14; ppl:  2.25; xent: 0.81; lr: 0.00032; 32373/34723 tok/s;  47280 sec
+[2020-12-28 07:22:57,367 INFO] Step 77900/100000; acc:  78.59; ppl:  2.25; xent: 0.81; lr: 0.00032; 33260/34819 tok/s;  47339 sec
+[2020-12-28 07:23:57,317 INFO] Step 78000/100000; acc:  79.12; ppl:  2.20; xent: 0.79; lr: 0.00032; 33242/34842 tok/s;  47399 sec
+[2020-12-28 07:24:57,333 INFO] Step 78100/100000; acc:  78.94; ppl:  2.19; xent: 0.78; lr: 0.00032; 32143/34713 tok/s;  47459 sec
+[2020-12-28 07:25:57,288 INFO] Step 78200/100000; acc:  79.21; ppl:  2.16; xent: 0.77; lr: 0.00032; 32476/34964 tok/s;  47519 sec
+[2020-12-28 07:26:57,341 INFO] Step 78300/100000; acc:  79.40; ppl:  2.12; xent: 0.75; lr: 0.00032; 32698/35050 tok/s;  47579 sec
+[2020-12-28 07:27:57,202 INFO] Step 78400/100000; acc:  79.04; ppl:  2.15; xent: 0.76; lr: 0.00032; 32854/34985 tok/s;  47639 sec
+[2020-12-28 07:28:57,350 INFO] Step 78500/100000; acc:  77.97; ppl:  2.23; xent: 0.80; lr: 0.00032; 32983/35279 tok/s;  47699 sec
+[2020-12-28 07:29:57,356 INFO] Step 78600/100000; acc:  77.09; ppl:  2.33; xent: 0.85; lr: 0.00032; 33182/35026 tok/s;  47759 sec
+[2020-12-28 07:30:56,754 INFO] Step 78700/100000; acc:  75.26; ppl:  2.57; xent: 0.94; lr: 0.00032; 33191/34773 tok/s;  47819 sec
+[2020-12-28 07:31:56,349 INFO] Step 78800/100000; acc:  75.56; ppl:  2.54; xent: 0.93; lr: 0.00031; 32783/34709 tok/s;  47878 sec
+[2020-12-28 07:32:56,886 INFO] Step 78900/100000; acc:  76.47; ppl:  2.44; xent: 0.89; lr: 0.00031; 31624/34016 tok/s;  47939 sec
+[2020-12-28 07:33:58,042 INFO] Step 79000/100000; acc:  77.14; ppl:  2.36; xent: 0.86; lr: 0.00031; 31651/34327 tok/s;  48000 sec
+[2020-12-28 07:34:59,302 INFO] Step 79100/100000; acc:  79.32; ppl:  2.14; xent: 0.76; lr: 0.00031; 31982/34561 tok/s;  48061 sec
+[2020-12-28 07:35:59,444 INFO] Step 79200/100000; acc:  78.42; ppl:  2.22; xent: 0.80; lr: 0.00031; 32586/34631 tok/s;  48121 sec
+[2020-12-28 07:36:59,588 INFO] Step 79300/100000; acc:  77.33; ppl:  2.33; xent: 0.85; lr: 0.00031; 33140/34780 tok/s;  48182 sec
+[2020-12-28 07:37:59,966 INFO] Step 79400/100000; acc:  77.52; ppl:  2.31; xent: 0.84; lr: 0.00031; 32749/34831 tok/s;  48242 sec
+[2020-12-28 07:38:59,381 INFO] Step 79500/100000; acc:  78.03; ppl:  2.28; xent: 0.82; lr: 0.00031; 31985/35021 tok/s;  48301 sec
+[2020-12-28 07:39:59,545 INFO] Step 79600/100000; acc:  78.66; ppl:  2.21; xent: 0.79; lr: 0.00031; 32278/35119 tok/s;  48362 sec
+[2020-12-28 07:40:59,732 INFO] Step 79700/100000; acc:  79.62; ppl:  2.11; xent: 0.75; lr: 0.00031; 32695/34712 tok/s;  48422 sec
+[2020-12-28 07:42:00,289 INFO] Step 79800/100000; acc:  79.39; ppl:  2.12; xent: 0.75; lr: 0.00031; 32454/34759 tok/s;  48482 sec
+[2020-12-28 07:43:00,994 INFO] Step 79900/100000; acc:  79.45; ppl:  2.11; xent: 0.74; lr: 0.00031; 32359/34636 tok/s;  48543 sec
+[2020-12-28 07:44:01,760 INFO] Step 80000/100000; acc:  78.17; ppl:  2.23; xent: 0.80; lr: 0.00031; 32648/35016 tok/s;  48604 sec
+[2020-12-28 07:44:01,764 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 07:44:01,800 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 07:44:12,280 INFO] Validation perplexity: 2.41582
+[2020-12-28 07:44:12,281 INFO] Validation accuracy: 79.5024
+[2020-12-28 07:44:12,361 INFO] Saving checkpoint data/wmt/run/model_step_80000.pt
+[2020-12-28 07:45:14,273 INFO] Step 80100/100000; acc:  77.58; ppl:  2.29; xent: 0.83; lr: 0.00031; 27136/28930 tok/s;  48676 sec
+[2020-12-28 07:46:14,115 INFO] Step 80200/100000; acc:  76.89; ppl:  2.36; xent: 0.86; lr: 0.00031; 33137/35021 tok/s;  48736 sec
+[2020-12-28 07:47:14,205 INFO] Step 80300/100000; acc:  76.39; ppl:  2.42; xent: 0.88; lr: 0.00031; 32863/34856 tok/s;  48796 sec
+[2020-12-28 07:48:14,081 INFO] Step 80400/100000; acc:  76.89; ppl:  2.36; xent: 0.86; lr: 0.00031; 32586/34829 tok/s;  48856 sec
+[2020-12-28 07:49:13,602 INFO] Step 80500/100000; acc:  77.87; ppl:  2.26; xent: 0.81; lr: 0.00031; 32374/34945 tok/s;  48916 sec
+[2020-12-28 07:50:13,569 INFO] Step 80600/100000; acc:  78.76; ppl:  2.19; xent: 0.78; lr: 0.00031; 32757/35315 tok/s;  48976 sec
+[2020-12-28 07:51:13,191 INFO] Step 80700/100000; acc:  80.03; ppl:  2.09; xent: 0.74; lr: 0.00031; 32864/34990 tok/s;  49035 sec
+[2020-12-28 07:52:13,148 INFO] Step 80800/100000; acc:  78.55; ppl:  2.23; xent: 0.80; lr: 0.00031; 32219/34599 tok/s;  49095 sec
+[2020-12-28 07:53:13,839 INFO] Step 80900/100000; acc:  77.95; ppl:  2.29; xent: 0.83; lr: 0.00031; 31313/34058 tok/s;  49156 sec
+[2020-12-28 07:54:15,283 INFO] Step 81000/100000; acc:  78.66; ppl:  2.20; xent: 0.79; lr: 0.00031; 31455/33798 tok/s;  49217 sec
+[2020-12-28 07:55:16,243 INFO] Step 81100/100000; acc:  79.71; ppl:  2.10; xent: 0.74; lr: 0.00031; 32025/34424 tok/s;  49278 sec
+[2020-12-28 07:56:17,012 INFO] Step 81200/100000; acc:  79.61; ppl:  2.10; xent: 0.74; lr: 0.00031; 32385/34591 tok/s;  49339 sec
+[2020-12-28 07:57:17,403 INFO] Step 81300/100000; acc:  79.97; ppl:  2.07; xent: 0.73; lr: 0.00031; 32462/34672 tok/s;  49399 sec
+[2020-12-28 07:58:18,151 INFO] Step 81400/100000; acc:  78.88; ppl:  2.15; xent: 0.76; lr: 0.00031; 33067/34909 tok/s;  49460 sec
+[2020-12-28 07:59:19,458 INFO] Step 81500/100000; acc:  79.01; ppl:  2.13; xent: 0.76; lr: 0.00031; 32778/34791 tok/s;  49521 sec
+[2020-12-28 08:00:20,471 INFO] Step 81600/100000; acc:  76.33; ppl:  2.43; xent: 0.89; lr: 0.00031; 32251/33866 tok/s;  49583 sec
+[2020-12-28 08:01:21,739 INFO] Step 81700/100000; acc:  76.28; ppl:  2.44; xent: 0.89; lr: 0.00031; 32088/33840 tok/s;  49644 sec
+[2020-12-28 08:02:21,486 INFO] Step 81800/100000; acc:  76.69; ppl:  2.38; xent: 0.87; lr: 0.00031; 32489/34794 tok/s;  49704 sec
+[2020-12-28 08:03:21,560 INFO] Step 81900/100000; acc:  77.36; ppl:  2.31; xent: 0.84; lr: 0.00031; 32261/34571 tok/s;  49764 sec
+[2020-12-28 08:04:21,716 INFO] Step 82000/100000; acc:  79.71; ppl:  2.12; xent: 0.75; lr: 0.00031; 31892/34601 tok/s;  49824 sec
+[2020-12-28 08:05:22,423 INFO] Step 82100/100000; acc:  80.59; ppl:  2.05; xent: 0.72; lr: 0.00031; 31553/34223 tok/s;  49884 sec
+[2020-12-28 08:06:22,734 INFO] Step 82200/100000; acc:  77.13; ppl:  2.36; xent: 0.86; lr: 0.00031; 32356/34394 tok/s;  49945 sec
+[2020-12-28 08:07:23,230 INFO] Step 82300/100000; acc:  77.47; ppl:  2.32; xent: 0.84; lr: 0.00031; 32231/34540 tok/s;  50005 sec
+[2020-12-28 08:08:24,226 INFO] Step 82400/100000; acc:  80.12; ppl:  2.09; xent: 0.74; lr: 0.00031; 31148/34133 tok/s;  50066 sec
+[2020-12-28 08:09:24,627 INFO] Step 82500/100000; acc:  80.37; ppl:  2.06; xent: 0.72; lr: 0.00031; 32163/34805 tok/s;  50127 sec
+[2020-12-28 08:10:25,073 INFO] Step 82600/100000; acc:  80.14; ppl:  2.05; xent: 0.72; lr: 0.00031; 32727/34914 tok/s;  50187 sec
+[2020-12-28 08:11:25,305 INFO] Step 82700/100000; acc:  80.30; ppl:  2.04; xent: 0.71; lr: 0.00031; 32677/34695 tok/s;  50247 sec
+[2020-12-28 08:12:25,608 INFO] Step 82800/100000; acc:  79.79; ppl:  2.08; xent: 0.73; lr: 0.00031; 32699/35027 tok/s;  50308 sec
+[2020-12-28 08:13:25,890 INFO] Step 82900/100000; acc:  79.58; ppl:  2.09; xent: 0.74; lr: 0.00031; 32811/35082 tok/s;  50368 sec
+[2020-12-28 08:14:26,270 INFO] Step 83000/100000; acc:  78.38; ppl:  2.20; xent: 0.79; lr: 0.00031; 32856/35173 tok/s;  50428 sec
+[2020-12-28 08:15:26,515 INFO] Step 83100/100000; acc:  78.38; ppl:  2.20; xent: 0.79; lr: 0.00031; 32934/35104 tok/s;  50489 sec
+[2020-12-28 08:16:26,836 INFO] Step 83200/100000; acc:  76.24; ppl:  2.42; xent: 0.88; lr: 0.00031; 32798/34889 tok/s;  50549 sec
+[2020-12-28 08:17:27,451 INFO] Step 83300/100000; acc:  76.57; ppl:  2.38; xent: 0.87; lr: 0.00031; 32836/34451 tok/s;  50609 sec
+[2020-12-28 08:18:28,054 INFO] Step 83400/100000; acc:  76.73; ppl:  2.39; xent: 0.87; lr: 0.00031; 31524/33988 tok/s;  50670 sec
+[2020-12-28 08:19:28,835 INFO] Step 83500/100000; acc:  77.71; ppl:  2.29; xent: 0.83; lr: 0.00031; 31594/34345 tok/s;  50731 sec
+[2020-12-28 08:20:29,610 INFO] Step 83600/100000; acc:  80.48; ppl:  2.05; xent: 0.72; lr: 0.00031; 31365/34242 tok/s;  50792 sec
+[2020-12-28 08:21:30,510 INFO] Step 83700/100000; acc:  80.29; ppl:  2.07; xent: 0.73; lr: 0.00031; 31861/34922 tok/s;  50853 sec
+[2020-12-28 08:22:31,562 INFO] Step 83800/100000; acc:  77.97; ppl:  2.28; xent: 0.82; lr: 0.00031; 31453/34240 tok/s;  50914 sec
+[2020-12-28 08:23:31,567 INFO] Step 83900/100000; acc:  78.91; ppl:  2.18; xent: 0.78; lr: 0.00031; 32390/35375 tok/s;  50974 sec
+[2020-12-28 08:24:31,532 INFO] Step 84000/100000; acc:  80.67; ppl:  2.02; xent: 0.70; lr: 0.00030; 32607/34866 tok/s;  51034 sec
+[2020-12-28 08:25:31,996 INFO] Step 84100/100000; acc:  80.48; ppl:  2.02; xent: 0.71; lr: 0.00030; 32313/34801 tok/s;  51094 sec
+[2020-12-28 08:26:32,215 INFO] Step 84200/100000; acc:  80.76; ppl:  2.00; xent: 0.69; lr: 0.00030; 32734/35034 tok/s;  51154 sec
+[2020-12-28 08:27:32,402 INFO] Step 84300/100000; acc:  80.19; ppl:  2.05; xent: 0.72; lr: 0.00030; 32893/34767 tok/s;  51214 sec
+[2020-12-28 08:28:32,369 INFO] Step 84400/100000; acc:  80.00; ppl:  2.07; xent: 0.73; lr: 0.00030; 32863/34892 tok/s;  51274 sec
+[2020-12-28 08:29:32,584 INFO] Step 84500/100000; acc:  79.29; ppl:  2.13; xent: 0.76; lr: 0.00030; 33073/34953 tok/s;  51335 sec
+[2020-12-28 08:30:32,386 INFO] Step 84600/100000; acc:  78.87; ppl:  2.16; xent: 0.77; lr: 0.00030; 33234/35407 tok/s;  51394 sec
+[2020-12-28 08:31:32,003 INFO] Step 84700/100000; acc:  76.97; ppl:  2.36; xent: 0.86; lr: 0.00030; 32900/35165 tok/s;  51454 sec
+[2020-12-28 08:32:31,313 INFO] Step 84800/100000; acc:  75.23; ppl:  2.57; xent: 0.95; lr: 0.00030; 32744/34824 tok/s;  51513 sec
+[2020-12-28 08:33:31,693 INFO] Step 84900/100000; acc:  75.37; ppl:  2.55; xent: 0.93; lr: 0.00030; 32651/34635 tok/s;  51574 sec
+[2020-12-28 08:34:31,825 INFO] Step 85000/100000; acc:  75.83; ppl:  2.48; xent: 0.91; lr: 0.00030; 32527/34710 tok/s;  51634 sec
+[2020-12-28 08:34:31,828 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 08:34:31,864 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 08:34:42,396 INFO] Validation perplexity: 2.38425
+[2020-12-28 08:34:42,397 INFO] Validation accuracy: 79.8826
+[2020-12-28 08:34:42,476 INFO] Saving checkpoint data/wmt/run/model_step_85000.pt
+[2020-12-28 08:35:44,556 INFO] Step 85100/100000; acc:  78.02; ppl:  2.26; xent: 0.82; lr: 0.00030; 26882/29144 tok/s;  51707 sec
+[2020-12-28 08:36:44,202 INFO] Step 85200/100000; acc:  81.02; ppl:  2.01; xent: 0.70; lr: 0.00030; 31626/34765 tok/s;  51766 sec
+[2020-12-28 08:37:44,573 INFO] Step 85300/100000; acc:  80.09; ppl:  2.07; xent: 0.73; lr: 0.00030; 32559/35095 tok/s;  51827 sec
+[2020-12-28 08:38:44,558 INFO] Step 85400/100000; acc:  79.43; ppl:  2.12; xent: 0.75; lr: 0.00030; 32655/35061 tok/s;  51887 sec
+[2020-12-28 08:39:45,470 INFO] Step 85500/100000; acc:  79.70; ppl:  2.11; xent: 0.75; lr: 0.00030; 32203/34468 tok/s;  51948 sec
+[2020-12-28 08:40:46,398 INFO] Step 85600/100000; acc:  80.58; ppl:  2.05; xent: 0.72; lr: 0.00030; 32015/34341 tok/s;  52008 sec
+[2020-12-28 08:41:47,121 INFO] Step 85700/100000; acc:  80.41; ppl:  2.03; xent: 0.71; lr: 0.00030; 32234/34519 tok/s;  52069 sec
+[2020-12-28 08:42:47,550 INFO] Step 85800/100000; acc:  80.67; ppl:  2.01; xent: 0.70; lr: 0.00030; 32834/35067 tok/s;  52130 sec
+[2020-12-28 08:43:48,551 INFO] Step 85900/100000; acc:  80.88; ppl:  1.99; xent: 0.69; lr: 0.00030; 32421/34606 tok/s;  52191 sec
+[2020-12-28 08:44:49,156 INFO] Step 86000/100000; acc:  81.09; ppl:  1.97; xent: 0.68; lr: 0.00030; 32250/34967 tok/s;  52251 sec
+[2020-12-28 08:45:50,019 INFO] Step 86100/100000; acc:  79.35; ppl:  2.13; xent: 0.76; lr: 0.00030; 32480/34778 tok/s;  52312 sec
+[2020-12-28 08:46:51,490 INFO] Step 86200/100000; acc:  79.01; ppl:  2.16; xent: 0.77; lr: 0.00030; 32814/34737 tok/s;  52374 sec
+[2020-12-28 08:47:52,897 INFO] Step 86300/100000; acc:  77.88; ppl:  2.27; xent: 0.82; lr: 0.00030; 32335/34209 tok/s;  52435 sec
+[2020-12-28 08:48:54,342 INFO] Step 86400/100000; acc:  77.51; ppl:  2.30; xent: 0.83; lr: 0.00030; 31848/34185 tok/s;  52496 sec
+[2020-12-28 08:49:54,800 INFO] Step 86500/100000; acc:  77.11; ppl:  2.33; xent: 0.85; lr: 0.00030; 32447/34620 tok/s;  52557 sec
+[2020-12-28 08:50:55,636 INFO] Step 86600/100000; acc:  77.20; ppl:  2.32; xent: 0.84; lr: 0.00030; 32530/34765 tok/s;  52618 sec
+[2020-12-28 08:51:56,230 INFO] Step 86700/100000; acc:  78.13; ppl:  2.24; xent: 0.81; lr: 0.00030; 31953/34638 tok/s;  52678 sec
+[2020-12-28 08:52:56,420 INFO] Step 86800/100000; acc:  79.53; ppl:  2.13; xent: 0.75; lr: 0.00030; 31957/35016 tok/s;  52738 sec
+[2020-12-28 08:53:56,876 INFO] Step 86900/100000; acc:  81.54; ppl:  1.97; xent: 0.68; lr: 0.00030; 32745/34793 tok/s;  52799 sec
+[2020-12-28 08:54:57,074 INFO] Step 87000/100000; acc:  82.62; ppl:  1.89; xent: 0.64; lr: 0.00030; 32746/34808 tok/s;  52859 sec
+[2020-12-28 08:55:57,407 INFO] Step 87100/100000; acc:  80.79; ppl:  2.02; xent: 0.70; lr: 0.00030; 31995/34611 tok/s;  52919 sec
+[2020-12-28 08:56:56,880 INFO] Step 87200/100000; acc:  80.88; ppl:  2.01; xent: 0.70; lr: 0.00030; 32663/35516 tok/s;  52979 sec
+[2020-12-28 08:57:57,132 INFO] Step 87300/100000; acc:  80.32; ppl:  2.04; xent: 0.71; lr: 0.00030; 32895/35087 tok/s;  53039 sec
+[2020-12-28 08:58:57,267 INFO] Step 87400/100000; acc:  80.61; ppl:  2.02; xent: 0.70; lr: 0.00030; 32664/35197 tok/s;  53099 sec
+[2020-12-28 08:59:57,329 INFO] Step 87500/100000; acc:  81.79; ppl:  1.92; xent: 0.65; lr: 0.00030; 32816/34977 tok/s;  53159 sec
+[2020-12-28 09:00:58,166 INFO] Step 87600/100000; acc:  81.88; ppl:  1.91; xent: 0.65; lr: 0.00030; 32483/34434 tok/s;  53220 sec
+[2020-12-28 09:01:58,821 INFO] Step 87700/100000; acc:  79.38; ppl:  2.11; xent: 0.75; lr: 0.00030; 33425/35437 tok/s;  53281 sec
+[2020-12-28 09:02:59,835 INFO] Step 87800/100000; acc:  79.28; ppl:  2.12; xent: 0.75; lr: 0.00030; 33195/35249 tok/s;  53342 sec
+[2020-12-28 09:04:00,854 INFO] Step 87900/100000; acc:  77.98; ppl:  2.24; xent: 0.81; lr: 0.00030; 32151/34533 tok/s;  53403 sec
+[2020-12-28 09:05:01,919 INFO] Step 88000/100000; acc:  78.20; ppl:  2.22; xent: 0.80; lr: 0.00030; 32248/34587 tok/s;  53464 sec
+[2020-12-28 09:06:03,304 INFO] Step 88100/100000; acc:  75.88; ppl:  2.49; xent: 0.91; lr: 0.00030; 32026/34084 tok/s;  53525 sec
+[2020-12-28 09:07:04,175 INFO] Step 88200/100000; acc:  75.81; ppl:  2.49; xent: 0.91; lr: 0.00030; 32111/33987 tok/s;  53586 sec
+[2020-12-28 09:08:05,238 INFO] Step 88300/100000; acc:  78.17; ppl:  2.24; xent: 0.81; lr: 0.00030; 32082/34518 tok/s;  53647 sec
+[2020-12-28 09:09:06,069 INFO] Step 88400/100000; acc:  78.82; ppl:  2.18; xent: 0.78; lr: 0.00030; 32543/34646 tok/s;  53708 sec
+[2020-12-28 09:10:06,487 INFO] Step 88500/100000; acc:  80.39; ppl:  2.07; xent: 0.73; lr: 0.00030; 31628/34734 tok/s;  53769 sec
+[2020-12-28 09:11:06,740 INFO] Step 88600/100000; acc:  81.17; ppl:  2.00; xent: 0.69; lr: 0.00030; 32111/35174 tok/s;  53829 sec
+[2020-12-28 09:12:08,121 INFO] Step 88700/100000; acc:  81.80; ppl:  1.94; xent: 0.66; lr: 0.00030; 32471/34163 tok/s;  53890 sec
+[2020-12-28 09:13:09,180 INFO] Step 88800/100000; acc:  81.67; ppl:  1.95; xent: 0.67; lr: 0.00030; 32330/34546 tok/s;  53951 sec
+[2020-12-28 09:14:10,381 INFO] Step 88900/100000; acc:  80.04; ppl:  2.07; xent: 0.73; lr: 0.00030; 31788/34336 tok/s;  54012 sec
+[2020-12-28 09:15:11,854 INFO] Step 89000/100000; acc:  80.34; ppl:  2.05; xent: 0.72; lr: 0.00030; 32052/34481 tok/s;  54074 sec
+[2020-12-28 09:16:13,281 INFO] Step 89100/100000; acc:  80.42; ppl:  2.04; xent: 0.71; lr: 0.00030; 32530/34699 tok/s;  54135 sec
+[2020-12-28 09:17:14,119 INFO] Step 89200/100000; acc:  80.96; ppl:  1.99; xent: 0.69; lr: 0.00030; 32284/34484 tok/s;  54196 sec
+[2020-12-28 09:18:14,727 INFO] Step 89300/100000; acc:  82.43; ppl:  1.87; xent: 0.63; lr: 0.00030; 32355/34781 tok/s;  54257 sec
+[2020-12-28 09:19:15,337 INFO] Step 89400/100000; acc:  81.91; ppl:  1.91; xent: 0.65; lr: 0.00030; 32671/34670 tok/s;  54317 sec
+[2020-12-28 09:20:16,395 INFO] Step 89500/100000; acc:  79.46; ppl:  2.12; xent: 0.75; lr: 0.00030; 32634/34759 tok/s;  54378 sec
+[2020-12-28 09:21:16,500 INFO] Step 89600/100000; acc:  79.18; ppl:  2.14; xent: 0.76; lr: 0.00030; 32837/34882 tok/s;  54439 sec
+[2020-12-28 09:22:16,616 INFO] Step 89700/100000; acc:  78.97; ppl:  2.16; xent: 0.77; lr: 0.00030; 32417/35242 tok/s;  54499 sec
+[2020-12-28 09:23:17,404 INFO] Step 89800/100000; acc:  78.90; ppl:  2.16; xent: 0.77; lr: 0.00029; 32135/34572 tok/s;  54559 sec
+[2020-12-28 09:24:18,018 INFO] Step 89900/100000; acc:  77.91; ppl:  2.26; xent: 0.82; lr: 0.00029; 32984/34623 tok/s;  54620 sec
+[2020-12-28 09:25:18,927 INFO] Step 90000/100000; acc:  78.07; ppl:  2.25; xent: 0.81; lr: 0.00029; 32725/34516 tok/s;  54681 sec
+[2020-12-28 09:25:18,930 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 09:25:18,999 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 09:25:29,554 INFO] Validation perplexity: 2.33146
+[2020-12-28 09:25:29,554 INFO] Validation accuracy: 80.4468
+[2020-12-28 09:25:29,635 INFO] Saving checkpoint data/wmt/run/model_step_90000.pt
+[2020-12-28 09:26:32,215 INFO] Step 90100/100000; acc:  78.84; ppl:  2.18; xent: 0.78; lr: 0.00029; 27083/28852 tok/s;  54754 sec
+[2020-12-28 09:27:32,849 INFO] Step 90200/100000; acc:  79.24; ppl:  2.14; xent: 0.76; lr: 0.00029; 32529/34900 tok/s;  54815 sec
+[2020-12-28 09:28:33,030 INFO] Step 90300/100000; acc:  82.59; ppl:  1.92; xent: 0.65; lr: 0.00029; 31406/34472 tok/s;  54875 sec
+[2020-12-28 09:29:33,699 INFO] Step 90400/100000; acc:  82.10; ppl:  1.95; xent: 0.67; lr: 0.00029; 31584/34279 tok/s;  54936 sec
+[2020-12-28 09:30:34,725 INFO] Step 90500/100000; acc:  80.42; ppl:  2.06; xent: 0.72; lr: 0.00029; 32214/34435 tok/s;  54997 sec
+[2020-12-28 09:31:35,962 INFO] Step 90600/100000; acc:  80.34; ppl:  2.06; xent: 0.72; lr: 0.00029; 32101/34423 tok/s;  55058 sec
+[2020-12-28 09:32:37,015 INFO] Step 90700/100000; acc:  80.69; ppl:  2.03; xent: 0.71; lr: 0.00029; 32025/34438 tok/s;  55119 sec
+[2020-12-28 09:33:38,477 INFO] Step 90800/100000; acc:  80.69; ppl:  2.02; xent: 0.70; lr: 0.00029; 32220/34440 tok/s;  55181 sec
+[2020-12-28 09:34:39,862 INFO] Step 90900/100000; acc:  80.91; ppl:  2.00; xent: 0.69; lr: 0.00029; 32093/34509 tok/s;  55242 sec
+[2020-12-28 09:35:41,366 INFO] Step 91000/100000; acc:  81.26; ppl:  1.96; xent: 0.67; lr: 0.00029; 32168/34292 tok/s;  55303 sec
+[2020-12-28 09:36:42,793 INFO] Step 91100/100000; acc:  82.11; ppl:  1.90; xent: 0.64; lr: 0.00029; 32178/34164 tok/s;  55365 sec
+[2020-12-28 09:37:44,276 INFO] Step 91200/100000; acc:  81.15; ppl:  1.97; xent: 0.68; lr: 0.00029; 32292/34371 tok/s;  55426 sec
+[2020-12-28 09:38:45,693 INFO] Step 91300/100000; acc:  80.18; ppl:  2.05; xent: 0.72; lr: 0.00029; 32562/34706 tok/s;  55488 sec
+[2020-12-28 09:39:47,140 INFO] Step 91400/100000; acc:  79.61; ppl:  2.10; xent: 0.74; lr: 0.00029; 32256/34540 tok/s;  55549 sec
+[2020-12-28 09:40:48,586 INFO] Step 91500/100000; acc:  79.31; ppl:  2.14; xent: 0.76; lr: 0.00029; 31859/34170 tok/s;  55611 sec
+[2020-12-28 09:41:49,997 INFO] Step 91600/100000; acc:  78.60; ppl:  2.20; xent: 0.79; lr: 0.00029; 32177/34317 tok/s;  55672 sec
+[2020-12-28 09:42:51,216 INFO] Step 91700/100000; acc:  77.38; ppl:  2.33; xent: 0.85; lr: 0.00029; 32436/34439 tok/s;  55733 sec
+[2020-12-28 09:43:51,553 INFO] Step 91800/100000; acc:  78.05; ppl:  2.26; xent: 0.81; lr: 0.00029; 32651/35057 tok/s;  55794 sec
+[2020-12-28 09:44:51,861 INFO] Step 91900/100000; acc:  79.20; ppl:  2.15; xent: 0.77; lr: 0.00029; 32498/35237 tok/s;  55854 sec
+[2020-12-28 09:45:51,635 INFO] Step 92000/100000; acc:  80.54; ppl:  2.05; xent: 0.72; lr: 0.00029; 32561/34982 tok/s;  55914 sec
+[2020-12-28 09:46:10,618 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13728 sent
+Subword(SP/Tokenizer): 191682503 -> 243880480 tok
+
+[2020-12-28 09:46:10,618 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 09:46:15,443 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13578 sent
+Subword(SP/Tokenizer): 191647989 -> 243840305 tok
+
+[2020-12-28 09:46:15,443 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 09:46:27,682 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13419 sent
+Subword(SP/Tokenizer): 191570577 -> 243719059 tok
+
+[2020-12-28 09:46:27,683 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 09:46:33,170 INFO] Transform statistics for commoncrawl:
+Filtred sentence: 13492 sent
+Subword(SP/Tokenizer): 191653753 -> 243865224 tok
+
+[2020-12-28 09:46:33,170 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.en-zh.en, data/wmt/UNv1.0.en-zh.zh, align=None)...
+[2020-12-28 09:46:52,100 INFO] Step 92100/100000; acc:  83.34; ppl:  1.85; xent: 0.62; lr: 0.00029; 32302/34560 tok/s;  55974 sec
+[2020-12-28 09:47:53,100 INFO] Step 92200/100000; acc:  82.02; ppl:  1.94; xent: 0.66; lr: 0.00029; 32246/34783 tok/s;  56035 sec
+[2020-12-28 09:48:53,061 INFO] Step 92300/100000; acc:  81.17; ppl:  1.99; xent: 0.69; lr: 0.00029; 32124/35001 tok/s;  56095 sec
+[2020-12-28 09:49:53,558 INFO] Step 92400/100000; acc:  81.11; ppl:  1.98; xent: 0.68; lr: 0.00029; 32599/35160 tok/s;  56156 sec
+[2020-12-28 09:50:54,585 INFO] Step 92500/100000; acc:  81.66; ppl:  1.95; xent: 0.67; lr: 0.00029; 32170/34456 tok/s;  56217 sec
+[2020-12-28 09:51:55,421 INFO] Step 92600/100000; acc:  81.58; ppl:  1.95; xent: 0.67; lr: 0.00029; 32365/34539 tok/s;  56277 sec
+[2020-12-28 09:52:56,682 INFO] Step 92700/100000; acc:  82.25; ppl:  1.90; xent: 0.64; lr: 0.00029; 32180/34358 tok/s;  56339 sec
+[2020-12-28 09:53:57,886 INFO] Step 92800/100000; acc:  81.57; ppl:  1.94; xent: 0.66; lr: 0.00029; 32285/34404 tok/s;  56400 sec
+[2020-12-28 09:54:59,102 INFO] Step 92900/100000; acc:  81.30; ppl:  1.96; xent: 0.67; lr: 0.00029; 32182/34531 tok/s;  56461 sec
+[2020-12-28 09:55:59,972 INFO] Step 93000/100000; acc:  80.77; ppl:  2.01; xent: 0.70; lr: 0.00029; 32861/34758 tok/s;  56522 sec
+[2020-12-28 09:57:00,136 INFO] Step 93100/100000; acc:  80.46; ppl:  2.05; xent: 0.72; lr: 0.00029; 32445/34611 tok/s;  56582 sec
+[2020-12-28 09:58:00,967 INFO] Step 93200/100000; acc:  79.17; ppl:  2.16; xent: 0.77; lr: 0.00029; 32595/34816 tok/s;  56643 sec
+[2020-12-28 09:59:01,600 INFO] Step 93300/100000; acc:  75.74; ppl:  2.48; xent: 0.91; lr: 0.00029; 32870/34817 tok/s;  56704 sec
+[2020-12-28 10:00:02,214 INFO] Step 93400/100000; acc:  76.48; ppl:  2.40; xent: 0.88; lr: 0.00029; 32556/34906 tok/s;  56764 sec
+[2020-12-28 10:01:02,692 INFO] Step 93500/100000; acc:  79.91; ppl:  2.08; xent: 0.73; lr: 0.00029; 32747/35208 tok/s;  56825 sec
+[2020-12-28 10:02:03,276 INFO] Step 93600/100000; acc:  80.55; ppl:  2.03; xent: 0.71; lr: 0.00029; 32443/35265 tok/s;  56885 sec
+[2020-12-28 10:03:03,480 INFO] Step 93700/100000; acc:  83.32; ppl:  1.87; xent: 0.62; lr: 0.00029; 31549/34394 tok/s;  56946 sec
+[2020-12-28 10:04:03,874 INFO] Step 93800/100000; acc:  82.08; ppl:  1.94; xent: 0.66; lr: 0.00029; 32105/34783 tok/s;  57006 sec
+[2020-12-28 10:05:04,718 INFO] Step 93900/100000; acc:  80.77; ppl:  2.03; xent: 0.71; lr: 0.00029; 32296/34610 tok/s;  57067 sec
+[2020-12-28 10:06:05,385 INFO] Step 94000/100000; acc:  81.04; ppl:  2.00; xent: 0.69; lr: 0.00029; 32493/34722 tok/s;  57127 sec
+[2020-12-28 10:07:06,425 INFO] Step 94100/100000; acc:  82.33; ppl:  1.91; xent: 0.65; lr: 0.00029; 32370/34510 tok/s;  57188 sec
+[2020-12-28 10:08:06,863 INFO] Step 94200/100000; acc:  82.06; ppl:  1.92; xent: 0.65; lr: 0.00029; 32524/34754 tok/s;  57249 sec
+[2020-12-28 10:09:08,093 INFO] Step 94300/100000; acc:  81.80; ppl:  1.93; xent: 0.66; lr: 0.00029; 32477/34528 tok/s;  57310 sec
+[2020-12-28 10:10:09,030 INFO] Step 94400/100000; acc:  82.04; ppl:  1.91; xent: 0.65; lr: 0.00029; 32627/34777 tok/s;  57371 sec
+[2020-12-28 10:11:09,750 INFO] Step 94500/100000; acc:  82.58; ppl:  1.87; xent: 0.62; lr: 0.00029; 32972/34879 tok/s;  57432 sec
+[2020-12-28 10:12:10,472 INFO] Step 94600/100000; acc:  82.00; ppl:  1.91; xent: 0.65; lr: 0.00029; 32777/34706 tok/s;  57493 sec
+[2020-12-28 10:13:11,361 INFO] Step 94700/100000; acc:  80.08; ppl:  2.07; xent: 0.73; lr: 0.00029; 32342/34650 tok/s;  57553 sec
+[2020-12-28 10:14:12,015 INFO] Step 94800/100000; acc:  79.68; ppl:  2.11; xent: 0.75; lr: 0.00029; 32487/34768 tok/s;  57614 sec
+[2020-12-28 10:15:12,570 INFO] Step 94900/100000; acc:  77.35; ppl:  2.33; xent: 0.85; lr: 0.00029; 32666/34673 tok/s;  57675 sec
+[2020-12-28 10:16:13,471 INFO] Step 95000/100000; acc:  77.76; ppl:  2.28; xent: 0.83; lr: 0.00029; 33031/34813 tok/s;  57736 sec
+[2020-12-28 10:16:13,474 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 10:16:13,510 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 10:16:23,972 INFO] Validation perplexity: 2.27712
+[2020-12-28 10:16:23,972 INFO] Validation accuracy: 80.9222
+[2020-12-28 10:16:24,051 INFO] Saving checkpoint data/wmt/run/model_step_95000.pt
+[2020-12-28 10:17:26,868 INFO] Step 95100/100000; acc:  79.91; ppl:  2.08; xent: 0.73; lr: 0.00029; 26994/29008 tok/s;  57809 sec
+[2020-12-28 10:18:27,840 INFO] Step 95200/100000; acc:  80.60; ppl:  2.02; xent: 0.70; lr: 0.00029; 32611/35072 tok/s;  57870 sec
+[2020-12-28 10:19:28,660 INFO] Step 95300/100000; acc:  83.61; ppl:  1.85; xent: 0.61; lr: 0.00029; 32008/34480 tok/s;  57931 sec
+[2020-12-28 10:20:29,261 INFO] Step 95400/100000; acc:  83.11; ppl:  1.88; xent: 0.63; lr: 0.00029; 32174/34375 tok/s;  57991 sec
+[2020-12-28 10:21:29,937 INFO] Step 95500/100000; acc:  79.11; ppl:  2.19; xent: 0.79; lr: 0.00029; 32462/34522 tok/s;  58052 sec
+[2020-12-28 10:22:30,790 INFO] Step 95600/100000; acc:  78.79; ppl:  2.22; xent: 0.80; lr: 0.00029; 32666/34741 tok/s;  58113 sec
+[2020-12-28 10:23:31,344 INFO] Step 95700/100000; acc:  75.63; ppl:  2.54; xent: 0.93; lr: 0.00029; 32656/33954 tok/s;  58173 sec
+[2020-12-28 10:24:31,039 INFO] Step 95800/100000; acc:  75.96; ppl:  2.49; xent: 0.91; lr: 0.00029; 33396/34490 tok/s;  58233 sec
+[2020-12-28 10:25:30,492 INFO] Step 95900/100000; acc:  77.05; ppl:  2.39; xent: 0.87; lr: 0.00029; 33173/34700 tok/s;  58293 sec
+[2020-12-28 10:26:31,002 INFO] Step 96000/100000; acc:  77.37; ppl:  2.35; xent: 0.85; lr: 0.00029; 32772/34213 tok/s;  58353 sec
+[2020-12-28 10:27:31,847 INFO] Step 96100/100000; acc:  77.67; ppl:  2.31; xent: 0.84; lr: 0.00029; 32510/34441 tok/s;  58414 sec
+[2020-12-28 10:28:32,593 INFO] Step 96200/100000; acc:  77.38; ppl:  2.33; xent: 0.85; lr: 0.00028; 33017/34517 tok/s;  58475 sec
+[2020-12-28 10:29:33,060 INFO] Step 96300/100000; acc:  76.50; ppl:  2.43; xent: 0.89; lr: 0.00028; 33101/34539 tok/s;  58535 sec
+[2020-12-28 10:30:33,685 INFO] Step 96400/100000; acc:  76.43; ppl:  2.42; xent: 0.89; lr: 0.00028; 33313/34460 tok/s;  58596 sec
+[2020-12-28 10:31:34,507 INFO] Step 96500/100000; acc:  76.31; ppl:  2.42; xent: 0.88; lr: 0.00028; 32744/34174 tok/s;  58657 sec
+[2020-12-28 10:32:34,529 INFO] Step 96600/100000; acc:  76.72; ppl:  2.38; xent: 0.87; lr: 0.00028; 33463/35020 tok/s;  58717 sec
+[2020-12-28 10:33:34,739 INFO] Step 96700/100000; acc:  78.16; ppl:  2.28; xent: 0.82; lr: 0.00028; 32821/34063 tok/s;  58777 sec
+[2020-12-28 10:34:34,991 INFO] Step 96800/100000; acc:  77.74; ppl:  2.31; xent: 0.84; lr: 0.00028; 33004/34454 tok/s;  58837 sec
+[2020-12-28 10:35:35,443 INFO] Step 96900/100000; acc:  77.34; ppl:  2.35; xent: 0.85; lr: 0.00028; 32807/34268 tok/s;  58897 sec
+[2020-12-28 10:36:35,524 INFO] Step 97000/100000; acc:  78.17; ppl:  2.25; xent: 0.81; lr: 0.00028; 33109/34597 tok/s;  58958 sec
+[2020-12-28 10:37:35,716 INFO] Step 97100/100000; acc:  79.90; ppl:  2.10; xent: 0.74; lr: 0.00028; 33109/34842 tok/s;  59018 sec
+[2020-12-28 10:38:36,366 INFO] Step 97200/100000; acc:  78.19; ppl:  2.25; xent: 0.81; lr: 0.00028; 32879/34227 tok/s;  59078 sec
+[2020-12-28 10:39:36,826 INFO] Step 97300/100000; acc:  75.94; ppl:  2.47; xent: 0.90; lr: 0.00028; 33319/34659 tok/s;  59139 sec
+[2020-12-28 10:40:37,071 INFO] Step 97400/100000; acc:  76.24; ppl:  2.43; xent: 0.89; lr: 0.00028; 33125/34695 tok/s;  59199 sec
+[2020-12-28 10:41:37,298 INFO] Step 97500/100000; acc:  77.00; ppl:  2.35; xent: 0.85; lr: 0.00028; 32722/34370 tok/s;  59259 sec
+[2020-12-28 10:42:37,521 INFO] Step 97600/100000; acc:  77.50; ppl:  2.31; xent: 0.84; lr: 0.00028; 33011/34739 tok/s;  59320 sec
+[2020-12-28 10:43:37,505 INFO] Step 97700/100000; acc:  78.53; ppl:  2.25; xent: 0.81; lr: 0.00028; 32316/33882 tok/s;  59380 sec
+[2020-12-28 10:44:37,484 INFO] Step 97800/100000; acc:  78.09; ppl:  2.29; xent: 0.83; lr: 0.00028; 32786/34401 tok/s;  59440 sec
+[2020-12-28 10:45:38,139 INFO] Step 97900/100000; acc:  78.11; ppl:  2.29; xent: 0.83; lr: 0.00028; 32318/34100 tok/s;  59500 sec
+[2020-12-28 10:46:39,048 INFO] Step 98000/100000; acc:  78.04; ppl:  2.25; xent: 0.81; lr: 0.00028; 32372/34504 tok/s;  59561 sec
+[2020-12-28 10:47:40,031 INFO] Step 98100/100000; acc:  78.44; ppl:  2.19; xent: 0.78; lr: 0.00028; 32713/34677 tok/s;  59622 sec
+[2020-12-28 10:48:41,408 INFO] Step 98200/100000; acc:  77.35; ppl:  2.29; xent: 0.83; lr: 0.00028; 32566/34570 tok/s;  59683 sec
+[2020-12-28 10:49:42,452 INFO] Step 98300/100000; acc:  76.88; ppl:  2.34; xent: 0.85; lr: 0.00028; 32784/34685 tok/s;  59744 sec
+[2020-12-28 10:50:42,837 INFO] Step 98400/100000; acc:  76.99; ppl:  2.34; xent: 0.85; lr: 0.00028; 32240/34520 tok/s;  59805 sec
+[2020-12-28 10:51:42,848 INFO] Step 98500/100000; acc:  77.48; ppl:  2.30; xent: 0.83; lr: 0.00028; 32284/34632 tok/s;  59865 sec
+[2020-12-28 10:52:42,908 INFO] Step 98600/100000; acc:  78.80; ppl:  2.21; xent: 0.79; lr: 0.00028; 32511/34278 tok/s;  59925 sec
+[2020-12-28 10:53:42,801 INFO] Step 98700/100000; acc:  80.32; ppl:  2.09; xent: 0.73; lr: 0.00028; 32508/34519 tok/s;  59985 sec
+[2020-12-28 10:54:43,126 INFO] Step 98800/100000; acc:  80.14; ppl:  2.08; xent: 0.73; lr: 0.00028; 32657/34580 tok/s;  60045 sec
+[2020-12-28 10:55:43,256 INFO] Step 98900/100000; acc:  80.12; ppl:  2.07; xent: 0.73; lr: 0.00028; 32634/34813 tok/s;  60105 sec
+[2020-12-28 10:56:43,577 INFO] Step 99000/100000; acc:  77.31; ppl:  2.33; xent: 0.84; lr: 0.00028; 32888/34713 tok/s;  60166 sec
+[2020-12-28 10:57:43,551 INFO] Step 99100/100000; acc:  77.20; ppl:  2.34; xent: 0.85; lr: 0.00028; 32950/34692 tok/s;  60226 sec
+[2020-12-28 10:58:43,409 INFO] Step 99200/100000; acc:  78.59; ppl:  2.21; xent: 0.79; lr: 0.00028; 32109/34358 tok/s;  60285 sec
+[2020-12-28 10:59:43,238 INFO] Step 99300/100000; acc:  79.12; ppl:  2.16; xent: 0.77; lr: 0.00028; 32336/34272 tok/s;  60345 sec
+[2020-12-28 11:00:42,824 INFO] Step 99400/100000; acc:  79.07; ppl:  2.19; xent: 0.79; lr: 0.00028; 32649/34852 tok/s;  60405 sec
+[2020-12-28 11:01:42,180 INFO] Step 99500/100000; acc:  79.23; ppl:  2.17; xent: 0.78; lr: 0.00028; 32908/35083 tok/s;  60464 sec
+[2020-12-28 11:02:42,180 INFO] Step 99600/100000; acc:  78.61; ppl:  2.19; xent: 0.78; lr: 0.00028; 32578/34939 tok/s;  60524 sec
+[2020-12-28 11:03:41,573 INFO] Step 99700/100000; acc:  78.88; ppl:  2.16; xent: 0.77; lr: 0.00028; 33148/35201 tok/s;  60584 sec
+[2020-12-28 11:04:41,541 INFO] Step 99800/100000; acc:  79.36; ppl:  2.11; xent: 0.75; lr: 0.00028; 32643/34524 tok/s;  60644 sec
+[2020-12-28 11:05:41,818 INFO] Step 99900/100000; acc:  78.71; ppl:  2.17; xent: 0.77; lr: 0.00028; 33329/34834 tok/s;  60704 sec
+[2020-12-28 11:06:41,598 INFO] Step 100000/100000; acc:  77.23; ppl:  2.34; xent: 0.85; lr: 0.00028; 32848/34756 tok/s;  60764 sec
+[2020-12-28 11:06:41,601 INFO] Loading ParallelCorpus(data/wmt/UNv1.0.devset.en, data/wmt/UNv1.0.devset.zh, align=None)...
+[2020-12-28 11:06:41,644 INFO] Transform statistics for valid:
+Subword(SP/Tokenizer): 213988 -> 268543 tok
+
+[2020-12-28 11:06:52,097 INFO] Validation perplexity: 2.36008
+[2020-12-28 11:06:52,097 INFO] Validation accuracy: 79.8933
+[2020-12-28 11:06:52,178 INFO] Saving checkpoint data/wmt/run/model_step_100000.pt
