@@ -176,6 +176,18 @@ def cho_process_src(tag, read_file, write_file, src_token_list, tgt_token_list, 
         for line in source_file:
             if j < total_process_lines:
                 if i == line_number:
+                    if tag == 'triple':
+                        tri = j % 3
+                        if tri == 0:
+                            # insert choose tag with token to the specific line
+                            if random.randint(0, 2) == 0:
+                                token = src_token + ' ' + '<TO>' + ' ' + ran_token + ' ' + '<OR>' + ' ' + tgt_token
+                            else:
+                                token = src_token + ' ' + '<TO>' + ' ' + tgt_token + ' ' + '<OR>' + ' ' + ran_token
+                        if tri == 1:
+                            token = src_token + ' ' + '<TO>' + ' ' + tgt_token
+                        if tri == 2:
+                            token = tgt_token
                     if tag == 'cho':
                         # insert choose tag with token to the specific line
                         if random.randint(0, 2) == 0:
@@ -184,6 +196,8 @@ def cho_process_src(tag, read_file, write_file, src_token_list, tgt_token_list, 
                             token = src_token + ' ' + '<TO>' + ' ' + tgt_token + ' ' + '<OR>' + ' ' + ran_token
                     if tag == 'sp':
                         token = src_token + ' ' + '<TO>' + ' ' + tgt_token
+                    if tag == 'cp':
+                        token = tgt_token
                     line = insert_cho_tag(line, 'CHOOSE', token, src_token_list[j][1])
                     j += 1
                     if j < total_process_lines:
@@ -227,7 +241,7 @@ def main(para):
     # parameters: ratio, filenames
     # percentage of lines for processing
     print(datetime.datetime.now(), '---start main...')
-    ratio = int(para[3]) / 100
+    ratio = float(para[3]) / 100
 
     # path for dictionary
     dc = './' + para[5] + '.txt'
@@ -423,7 +437,7 @@ if __name__ == '__main__':
     # 1st argv: src file(read)
     # 2nd argv: tgt file(read)
     # 3rd argv: ratio in percentage
-    # 4th argv: cho or sp (or cp)
+    # 4th argv: cho or sp or cp or 'triple' ; each has a ratio = int( int (3rd argv) / 3)
     # 5th argv: en-zh or en-de or zh-en
     # output files = input file + ratio * 10 + 4th argv
     main(sys.argv)
